@@ -1,0 +1,1430 @@
+[
+  {
+    "companyName": "Arabot",
+    "logo": "./logos/arabot.jpeg",
+    "sector": ["Data, AI & ML"],
+    "city": "Amman",
+    "founder": "Abdallah Faza",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2016,
+    "website": "http://arabot.io/",
+    "email": "info@arabot.io",
+    "phone": "0777771018",
+    "location": { 
+      "latitude": 31.971976720923962,
+      "longitude": 35.86465058799863
+    }
+  },
+  {
+    "companyName": "Eqra Tech",
+    "logo": "./logos/Eqra_Tech.jpeg",
+    "sector": ["Data, AI & ML"],
+    "city":"Amman",
+    "founder": "Saleh Al Ghanim",
+    "numOfEmployees": 8,
+    "yearOfEstablishment": 2011,
+    "website": "https://eqratech.com/",
+    "email": "info@eqratech.com",
+    "phone": "065542456",
+    "location":{
+      "latitude": 31.951569,
+      "longitude": 35.923962
+    }
+  },
+  {
+    "companyName": "EYA",
+    "logo": "./logos/eya.jpeg",
+    "sector": ["Data, AI & ML"],
+    "city": "Amman",
+    "founder": "Majed Abdeen",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2017,
+    "website": "https://www.eyapro.com/",
+    "email": "info@eyapro.com",
+    "phone": "0795155845",
+    "location":{
+      "latitude": 31.971808,
+      "longitude": 35.832562
+    }
+  },
+  
+  {
+    "companyName": "Promptech Business Solutions",
+    "logo": "./logos/promptech.png",
+    "sector": ["Data, AI & ML", "Utility & Energy"],
+    "city": "Amman",
+    "founder": "Omaya Hattab",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2019,
+    "website": "http://www.promptech.com.jo/",
+    "email": "info@promptech.com.jo",
+    "phone": "0777888606",
+    "location":{
+      "latitude": 31.972474,
+      "longitude": 35.864602
+    }
+  },
+  {
+    "companyName": "Labiba for Artificial Intelligence",
+    "logo": "./logos/labiba.jpeg",
+    "sector": ["Data, AI & ML", "Fintech"],
+    "city": "Amman",
+    "founder": "Ali Hajjaj",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2016,
+    "website": "https://www.labiba.ai/",
+    "email": "info@labiba.ai",
+    "phone": "065515383",
+    "location":{
+      "latitude": 31.979282,
+      "longitude": 35.845621
+    }
+  },
+  {
+    "companyName": "PIXITOON",
+    "logo": "./logos/pixitoon.jpeg",
+    "sector": ["Gaming", "Edtech", "Entertainment"],
+    "city": "Amman",
+    "founder": "Shadi Nashwan",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2018,
+    "website": "https://www.pixitoon.com/",
+    "email":"Info@pixitoon.com",
+    "phone": "0795059036",
+    "location":{
+      "latitude": 31.951569,
+      "longitude": 35.923962
+    }
+  },
+  {
+    "companyName": "Play 3arabi",
+    "logo": "./logos/play3arabi.png",
+    "sector": ["Gaming"],
+    "city": "Amman",
+    "founder": "Joseph Shomali",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2014,
+    "website": "http://www.play3arabi.com/",
+    "email":"info@play3a.com",
+    "location":{
+      "latitude": 31.976203,
+      "longitude": 35.855218
+    }
+  },
+  {
+    "companyName": "Progressive Generation Inc",
+    "logo": "./logos/pixitoon.jpeg",
+    "sector": ["Gaming", "Creative - Art, Media & Design", "Entertainment"],
+    "city": "Amman",
+    "founder": "Ahmad Al Masri",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2011,
+    "website": "https://www.pg-holding.com",
+    "email":"info@pg-holding.com",
+    "phone": "0777820026",
+    "location":{
+      "latitude": 31.955896,
+      "longitude": 35.912041
+    }
+  },
+  {
+    "companyName": "Mad Hook",
+    "logo": "./logos/mad-hook.png",
+    "sector": ["Gaming"],
+    "city": "Amman",
+    "founder": "Hazim Al-nabali",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2018,
+    "website": "https://www.madhook.io/",
+    "email":"support@madhook.io",
+    "location":{
+      "latitude": 31.951569,
+      "longitude": 35.923962
+    }
+  },
+  {
+    "companyName": "Controlcast",
+    "logo": "./logos/controlcast.png",
+    "sector": ["Retail"],
+    "city": "Amman",
+    "founder": "Ahmad Al Masri",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2016,
+    "website": "https://www.controlcastapp.com/",
+    "email":"contact@controlcastapp.com",
+    "phone": "0790344430"
+  },
+  {
+    "companyName": "Figment POS",
+    "logo": "./logos/figment.png",
+    "sector": ["Retail", "Ecommerce"],
+    "city": "Amman",
+    "founder": "Shadi Dabbou",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2017,
+    "website": "https://www.posrocket.com/",
+    "email":"info@figmentech.com",
+    "phone": "0795428278",
+    "location":{
+      "latitude": 31.997351,
+      "longitude": 35.829970
+    }
+  },
+  {
+    "companyName": "Info seed",
+    "logo": "./logos/info_seed.jpeg",
+    "sector": ["Data, AI & ML", "Other Market Focus Area"],
+    "city": "Amman",
+    "founder": "Yousef Awadallah",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2020,
+    "website": "https://www.info-seed.com/",
+    "phone": "0796451655",
+    "location":{
+      "latitude": 31.95800167270676,
+      "longitude":  35.85586497670397
+    }
+  },
+  {
+    "companyName": "Naba360",
+    "logo": "./logos/naba360.png",
+    "sector": ["Data, AI & ML"],
+    "city": "Amman",
+    "founder": "Husein Kattab",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2017,
+    "website": "https://naba360.com/landingpage.aspx",
+    "email": "info@naba360.com",
+    "phone": "0795317710",
+    "location":{
+      "latitude": 31.9539,
+      "longitude":  35.9106
+    }
+  },
+  {
+    "companyName": "Whyise",
+    "logo": "./logos/whyise.png",
+    "sector": ["Data, AI & ML"],
+    "city": "Amman",
+    "founder": "Reem Khouri",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2018,
+    "website": "http://whyise.com/",
+    "phone": "0777166000",
+    "location":{
+      "latitude": 31.951569,
+      "longitude": 35.923962
+    }
+  },
+  {
+    "companyName": "Larimar Tech",
+    "logo": "./logos/larimar.png",
+    "sector": ["Data, AI & ML"],
+    "city": "Amman",
+    "founder": "Abeer Albashiti",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2017,
+    "website": "http://larimar.io/",
+    "email": "info@larimar.io",
+    "location":{
+      "latitude": 31.944444,
+      "longitude": 35.849975
+    }
+  },
+  {
+    "companyName": "Algebra Intelligence",
+    "logo": "./logos/algebra.png",
+    "sector": ["Data, AI & ML", "Utility & Energy"],
+    "city": "Amman",
+    "founder": "Ahmad Altawafsheh",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2020,
+    "website": "http://www.algebraintelligence.com",
+    "email": "hello@algebraintelligence.com",
+    "phone": "0792823079",
+    "location":{
+      "latitude": 31.9768488,
+      "longitude": 35.8557259
+    }
+  },
+  {
+    "companyName": "AmwalCom",
+    "logo": "./logos/amwalcom.jpeg",
+    "sector": ["Fintech"],
+    "city": "Amman",
+    "founder": "Fadi Oweis",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2018,
+    "website": "https://www.amwalcom.com/ar",
+    "email":"info@amwalcom.com",
+    "location":{
+      "latitude": 31.954788,
+      "longitude": 35.864289
+    }
+  },
+  {
+    "companyName": "Apex Payment Solutions Ltd",
+    "logo": "./logos/apex.png",
+    "sector": ["Fintech"],
+    "city": "Amman",
+    "founder": "Samer Alawneh",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2014,
+    "website": "http://www.Apex.jo",
+    "email":"info@apex.jo",
+    "phone": "065562679",
+    "location":{
+      "latitude": 31.986306,
+      "longitude": 35.866091
+    }
+  },
+  {
+    "companyName": "BEYE Group",
+    "logo": "./logos/beye.jpeg",
+    "sector": ["Fintech"],
+    "city": "Amman",
+    "founder": "Nizar Hawamdeh",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2013,
+    "website": "http://www.beyegroup.com/",
+    "email":"info@beyegroup.com",
+    "phone": "065337669",
+    "location":{
+      "latitude": 32.012084,
+      "longitude": 35.832950
+    }
+  },
+  {
+    "companyName": "Salalem",
+    "logo": "./logos/salalem.png",
+    "sector": ["Fintech", "Edtech", "Cyber Security"],
+    "city": "Amman",
+    "founder": "Zaid Masri",
+    "numOfEmployees": 200,
+    "yearOfEstablishment": 2015,
+    "website": "https://salalem.com",
+    "phone": "0781110323",
+    "location":{
+      "latitude": 31.964432677034054,
+      "longitude": 35.881066040029346
+    }
+  },
+  {
+    "companyName": "Quiq Claim",
+    "logo": "./logos/quiqclaim.png",
+    "sector": ["Fintech", "Healthtech"],
+    "city": "Amman",
+    "founder": "Ali Tabbalat",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2019,
+    "website": "https://www.quiqclaim.com/",
+    "email":"info@quiqclaim.com",
+    "phone": "0795161777",
+    "location":{
+      "latitude": 31.971831,
+      "longitude": 35.833729
+    }
+  },
+  {
+    "companyName": "Beeezcrowd",
+    "logo": "./logos/beeezcrowd.png",
+    "sector": ["Fintech"],
+    "city": "Amman",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2020,
+    "website": "https://www.beeezcrowd.com/",
+    "email":"info@beeezcrowd.com",
+    "phone": "0790640056",
+    "location":{
+      "latitude": 31.975165,
+      "longitude": 35.843899
+    }
+  },
+  {
+    "companyName": "DareebaTech",
+    "logo": "./logos/dareebatech.jpeg",
+    "sector": ["Fintech"],
+    "city": "Amman",
+    "founder": "Sofian Qurashi",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2016,
+    "website": "http://www.dareebatech.com",
+    "email":"info@dareebatech.com",
+    "phone": "0795009111"
+  },
+  {
+    "companyName": "Digital Analytica",
+    "logo": "./logos/digital_analytica.png",
+    "sector": ["Fintech", "Edtech"],
+    "city": "Amman",
+    "founder": "Jim Sterne",
+    "numOfEmployees": 200,
+    "yearOfEstablishment": 2019,
+    "website": "https://www.digitalanalytica.net",
+    "email":"sales@digitalanalytica.net",
+    "phone": "0772254467",
+    "location":{
+      "latitude": 31.977682280438533,
+      "longitude": 35.897323226537495
+    }
+  },
+  {
+    "companyName": "Changecom",
+    "logo": "./logos/Change-com.png",
+    "sector": ["Fintech"],
+    "city": "Amman",
+    "founder": "Yazan alkurdi",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2018,
+    "website": "https://changecom.co/",
+    "email":"info@changecom.co",
+    "phone": "0799552559",
+    "location":{
+      "latitude": 31.968404,
+      "longitude": 35.879846
+    }
+  },
+  {
+    "companyName": "Adventure PROS",
+    "logo": "./logos/adventure_pros.png",
+    "sector": ["Travel & Tourism"],
+    "city": "Amman",
+    "founder": "Ali Haddad",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2006,
+    "website": "http://www.fb.com/AdventurePROS",
+    "phone": "065857490",
+    "location":{
+      "latitude": 31.956266,
+      "longitude": 35.855527
+    }
+  },
+  {
+    "companyName": "Global Tribes",
+    "logo": "./logos/global_tribes.png",
+    "sector": ["Travel & Tourism"],
+    "city": "Amman",
+    "founder": "Alaa H. Al-Juneidi",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2020,
+    "website": "https://globaltribes.io/",
+    "email":"hello@globaltribes.io",
+    "phone": "065536086",
+    "location":{
+      "latitude": 31.9895563,
+      "longitude": 35.8492581
+    }
+  },
+  {
+    "companyName": "BookingWhizz",
+    "logo": "./logos/bookingWhizz.png",
+    "sector": ["Travel & Tourism"],
+    "city": "Amman",
+    "founder": "Karim Mawani",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2009,
+    "website": "https://bookingwhizz.com/",
+    "email":"inquiry.mena@bookinghizz.co.uk",
+    "phone": "0795032112",
+    "location":{
+      "latitude": 31.958689,
+      "longitude": 35.862507
+    }
+  },
+  {
+    "companyName": "Sawwah",
+    "logo": "./logos/sawwah.png",
+    "sector": ["Travel & Tourism"],
+    "city": "Amman",
+    "founder": "Sahar Barqawi",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2015,
+    "website": "https://sawwahtravel.com/",
+    "phone": "0799111574",
+    "location":{
+      "latitude": 31.9717754,
+      "longitude": 35.8317516
+    }
+  },
+  {
+    "companyName": "OMNIYAT Hospitality Management",
+    "logo": "./logos/omniyat-managment.png",
+    "sector": ["Travel & Tourism"],
+    "city": "Amman",
+    "founder": "Sahar Barqawi",
+    "numOfEmployees": 200,
+    "yearOfEstablishment": 2018,
+    "website": "https://www.omniyathospitality.com/",
+    "email":"info@omniyathospitality.com",
+    "phone": "0795032112",
+    "location":{
+      "latitude": 31.9586528,
+      "longitude": 35.8603188
+    }
+  },
+  {
+    "companyName": "WeCare Tech Limited",
+    "logo": "./logos/wecare.png",
+    "sector": ["Travel & Tourism", "Healthtech"],
+    "city": "Amman",
+    "founder": "Alaa Hussein",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2017,
+    "website": "https://wecare-app.net/",
+    "email":"info@wecare-app.net",
+    "phone": "0799401462",
+    "location":{
+      "latitude": 31.9946007,
+      "longitude": 35.8317456
+    }
+  },
+  {
+    "companyName": "Abjjad",
+    "logo": "./logos/abjjad.png",
+    "sector": ["Entertainment"],
+    "city": "Amman",
+    "founder": "Eman Hylooz",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2012,
+    "website": "https://www.abjjad.com/",
+    "email":"emanhylooz@abjjad.com"
+  },
+  {
+    "companyName": "Sada Podcast",
+    "logo": "./logos/sada.jpeg",
+    "sector": ["Entertainment", "Creative - Art, Media & Design"],
+    "city": "Amman",
+    "founder": "Nour (Rodan) Albadareen",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2021,
+    "website": "https://sadapodcast.com/",
+    "email":"Info@sadapodcast.com",
+    "phone": "065860095",
+    "location":{
+      "latitude": 31.9717977,
+      "longitude": 35.8316628
+    }
+  },
+  {
+    "companyName": "Digital Realism Studios",
+    "logo": "./logos/digital_realism.png",
+    "sector": ["Entertainment", "Creative - Art, Media & Design"],
+    "city": "Amman",
+    "founder": "George Awwad",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2019,
+    "website": "https://digitalrealismstudios.com/",
+    "email":"info@digitalrealismstudios.com",
+    "phone": "065151142",
+    "location":{
+      "latitude": 31.9887096,
+      "longitude": 35.8956898
+    }
+  },
+  {
+    "companyName": "Circle4Media",
+    "logo": "./logos/circle4media.jpeg",
+    "sector": ["Entertainment", "Creative - Art, Media & Design"],
+    "city": "Amman",
+    "founder": "Hamdi Alayed",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2007,
+    "website": "http://circle4media.com/",
+    "email":"support@grooni.com",
+    "phone": "0799998003",
+    "location":{
+      "latitude": 31.9560947,
+      "longitude": 35.9097795
+    }
+  },
+  {
+    "companyName": "dawatech",
+    "logo": "./logos/dawatech.png",
+    "sector": ["Healthtech", "Supply Chain & Logistics"],
+    "city": "Amman",
+    "founder": "Mohammad Musleh",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2019,
+    "website": "https://dawatech.com/",
+    "email":"info@dawatech.com",
+    "phone": "0799505060",
+    "location":{
+      "latitude": 32.0150525,
+      "longitude": 35.8313003
+    }
+  },
+  {
+    "companyName": "CONNECT TO FIT",
+    "logo": "./logos/connect_to_fit.png",
+    "sector": ["Sportstech"],
+    "city": "Amman",
+    "founder": "omar abu-injailah",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2016,
+    "website": "https://www.connecttofit.com",
+    "email":"team@connecttofit.com",
+    "phone": "0791000446",
+    "location":{
+      "latitude": 31.9862336,
+      "longitude": 35.8290111
+    }
+  },
+  {
+    "companyName": "Repzo Inc.",
+    "logo": "./logos/repzo.png",
+    "sector": ["Healthtech", "Blockchain", "Supply Chain & Logistics"],
+    "city": "Amman",
+    "founder": "Hassan Atmeh",
+    "numOfEmployees": 200,
+    "yearOfEstablishment": 2017,
+    "website": "http://www.repzo.com",
+    "email":"info@repzo.com",
+    "phone": "0796666347",
+    "location":{
+      "latitude": 31.98983,
+      "longitude": 35.8492822
+    }
+  },
+  {
+    "companyName": "FittiCoin",
+    "logo": "./logos/fitticoin.png",
+    "sector": ["Sportstech", "Healthtech"],
+    "city": "Amman",
+    "founder": "Hakam Shami",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2018,
+    "website": "http://www.fitticoin.com",
+    "email":"support@fitticoin.com",
+    "phone": "0776504634",
+    "location":{
+      "latitude": 31.9772177,
+      "longitude": 35.852228
+    }
+  },
+  {
+    "companyName": "Utrac",
+    "logo": "./logos/utrac.jpeg",
+    "sector": ["Supply Chain & Logistics"],
+    "city": "Amman",
+    "founder": "Karem Gaber Farahat",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2018,
+    "website": "https://www.utracjo.com/",
+    "phone": "0791111459",
+    "location":{
+      "latitude": 31.9647149,
+      "longitude": 35.8408022
+    }
+  },
+  {
+    "companyName": "KeyLife Electronics",
+    "logo": "./logos/keylife.png",
+    "sector": ["IoT"],
+    "city": "Amman",
+    "founder": "Abdulmoati Al-Hashem",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2015,
+    "website": "https://www.keylife.tech",
+    "email":"Keylife@KeyLife.tech",
+    "phone": "064650058",
+    "location":{
+      "latitude": 31.958968678589244,
+      "longitude": 35.9181688265371
+    }
+  },
+  {
+    "companyName": "Wasslz",
+    "logo": "./logos/Wasslz.png",
+    "sector": ["IoT"],
+    "city": "Amman",
+    "founder": "Abdulmoati Al-Hashem",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2019,
+    "website": "https://wasslz.com",
+    "email":"sales@wasslz.com",
+    "phone": "065300138",
+    "location":{
+      "latitude": 31.9713207,
+      "longitude": 35.8297771
+    }
+  },
+  {
+    "companyName": "iTank",
+    "logo": "./logos/itank.jpeg",
+    "sector": ["IoT"],
+    "city": "Amman",
+    "founder": "Loay Hasayen",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2017,
+    "website": "https://itanklevel.com/Landing",
+    "phone": "0797919991",
+    "location":{
+      "latitude": 31.967509,
+      "longitude": 35.899597
+    }
+  },
+  {
+    "companyName": "Jordan Steps For Logistic Services Est",
+    "logo": "./logos/jordan_steps.png",
+    "sector": ["Supply Chain & Logistics"],
+    "city": "Amman",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2018,
+    "website": "https://jordansteps.com/",
+    "email":"info@jordansteps.com",
+    "phone": "065333577",
+    "location":{
+      "latitude": 32.0228791,
+      "longitude": 35.8440649
+    }
+  },
+  {
+    "companyName": "gogo Global",
+    "logo": "./logos/gogo.png",
+    "sector": ["Supply Chain & Logistics"],
+    "city": "Amman",
+    "founder": "Zeid Samir Abu-Aisheh",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2018,
+    "website": "http://www.letsgogo.it",
+    "email":"team@letsgogo.it",
+    "phone": "0776607700",
+    "location":{
+      "latitude": 31.9552745,
+      "longitude": 35.9177141
+    }
+  },
+  {
+    "companyName": "kalamntina",
+    "logo": "./logos/kalamantina.png",
+    "sector": ["Other Market Focus Area"],
+    "city": "Amman",
+    "founder": "Suleiman Shannak",
+    "numOfEmployees": 50,
+    "website": "http://www.kalamntina.com",
+    "email":"info@kalamntina.com",
+    "phone": "0795208480",
+    "location":{
+      "latitude": 31.9537068,
+      "longitude": 35.8678047
+    }
+  },
+  {
+    "companyName": "Solvait",
+    "logo": "./logos/solvait.png",
+    "sector": ["Other Market Focus Area"],
+    "city": "Amman",
+    "founder": "Amer Atiyah",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2011,
+    "website": "http://www.solvait.com",
+    "email":"info@solvait.com",
+    "phone": "065658555",
+    "location":{
+      "latitude": 31.9873862,
+      "longitude": 35.9008145
+    }
+  },
+  {
+    "companyName": "SOLVillion Co.",
+    "logo": "./logos/SOLVillion.png",
+    "sector": ["Other Market Focus Area"],
+    "city": "Irbid",
+    "founder": "Motaz Al Thaher",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2018,
+    "website": "https://solvillion.com/",
+    "email":"info@solvillion.com",
+    "phone": "0787337958",
+    "location":{
+      "latitude": 32.555611,
+      "longitude": 35.849304
+    }
+  },
+  {
+    "companyName": "OpenSooq",
+    "logo": "./logos/opensooq.svg",
+    "sector": ["Ecommerce"],
+    "city": "Amman",
+    "founder": "Adey Salamin",
+    "numOfEmployees": 200,
+    "yearOfEstablishment": 2012,
+    "website": "https://opensooq.com/",
+    "email": "jo@opensooq.com",
+    "phone": "+962790180000",
+    "location": {
+      "latitude": 31.97611821,
+      "longitude": 35.860850085
+    }
+  },
+  {
+    "companyName": "Fitely",
+    "logo": "./logos/fitely.png",
+    "sector": ["Ecommerce", "Healthtech","Sportstech"],
+    "city": "Amman",
+    "founder": "Siwar Al-Khaled",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2018,
+    "website": "https://fitely.com/",
+    "email": "Support@Fitely.com",
+    "phone": "+962777948989",
+    "location": {
+      "latitude": 31.93762,
+      "longitude": 35.94455
+    }
+  },
+  {
+    "companyName": "Basket",
+    "logo": "./logos/basket.png",
+    "sector": ["Ecommerce"],
+    "city": "Amman",
+    "numOfEmployees": 500,
+    "yearOfEstablishment": 2018,
+    "website": "https://www.basket.app/",
+    "email": "wecare@basket.jo",
+    "phone": "+96265900400",
+    "location": {
+      "latitude": 31.9560219615,
+      "longitude": 35.847530365
+    }
+  },
+  {
+    "companyName": "LOGE",
+    "logo": "./logos/loge.png",
+    "sector": ["Ecommerce"],
+    "city": "Amman",
+    "founder": "Abdullah B.Ayesh",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2019,
+    "website": "https://whyloge.com/",
+    "email": "info@whyloge.com",
+    "location": {
+      "latitude": 31.937494745471753,
+      "longitude": 35.84671634603065
+    }
+  },
+  {
+    "companyName": "NUR Interactive",
+    "logo": "./logos/nur-interactive.png",
+    "sector": ["Ecommerce","Supply Chain & Logistics"],
+    "city": "Amman",
+    "founder": "Yazan Noufal",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2019,
+    "website": "http://www.nurinteractive.com/",
+    "email": "info@nurinteractive.jo",
+    "phone": "+96262225189",
+    "location": {
+      "latitude": 31.993433023802975,
+      "longitude": 35.86545078465645
+    }
+  },
+  {
+    "companyName": "Kader",
+    "logo": "./logos/kader.svg",
+    "sector": ["Ecommerce"],
+    "city": "Amman",
+    "founder": "Ra'd Al-Hassan",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2019,
+    "website": "http://kaderapp.com/",
+    "email": "rad@kaderapp.com",
+    "phone": "+962776990990",
+    "location": {
+      "latitude": 31.951569,
+      "longitude": 35.923962
+    }
+  },
+  {
+    "companyName": "PiniPay",
+    "logo": "./logos/piniPay.svg",
+    "sector": ["Ecommerce","Fintech"],
+    "city": "Amman",
+    "founder": "Ahmed Abu Taha",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2020,
+    "website": "https://pinipay.com/",
+    "phone": "+962798818891"
+  },
+  {
+    "companyName": "Qaleb Studio",
+    "logo": "./logos/QalebStudio.png",
+    "sector": ["Ecommerce","Creative - Art,Media & Design"],
+    "city": "Amman",
+    "founder": "Abbas Al Asmar",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2015,
+    "website": "https://creativemarket.com/QalebStudio",
+    "email": "Abbas@qalebstudio.com",
+    "phone": "+962786441813"
+  },
+  {
+    "companyName": "MATRIX",
+    "logo": "./logos/matrix.webp",
+    "sector": ["Ecommerce"],
+    "city": "Amman",
+    "founder": "Mohammed Farhoodh",
+    "numOfEmployees": 200,
+    "yearOfEstablishment": 2014,
+    "website": "http://www.matrix.jo",
+    "email": "info@matrix.jo",
+    "phone": "+96265532981",
+    "location": {
+      "latitude": 31.951569,
+      "longitude": 35.923962
+    }
+  },
+  {
+    "companyName": "Mrayti",
+    "logo": "./logos/mrayti.jpg",
+    "sector": ["Ecommerce","Other Market Focus Area"],
+    "city": "Amman",
+    "founder": "Romouz Sadeq",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2007,
+    "website": "http://www.mraytistore.com",
+    "email": "support@mrayti.me",
+    "phone": "+962797978050",
+    "location": {
+      "latitude": 31.96138064440321,
+      "longitude": 35.91560528465645
+    }
+  },
+  {
+    "companyName": "Kitchefy",
+    "logo": "./logos/kitchfy.png",
+    "sector": ["Foodtech"],
+    "city": "Amman",
+    "founder": "Abdullah Al absi",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2021,
+    "website": "http://www.kitchefy.com",
+    "email": "marwan@kitchefy.com",
+    "phone": "+962792082000",
+    "location": {
+      "latitude": 31.993336632976416,
+      "longitude": 35.8654451079354
+    }
+  },
+  {
+    "companyName": "ConnKit",
+    "logo": "./logos/connkit.png",
+    "sector": ["Foodtech"],
+    "city": "Amman",
+    "founder": "Zaid Abureyal",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2021,
+    "website": "http://www.ConnKit.com",
+    "email": "Amr@ConnKit.com",
+    "phone": "+962797222274",
+    "location": {
+      "latitude": 31.951569,
+      "longitude": 35.923962
+    }
+  },
+  {
+    "companyName": "B12 for Digital Services",
+    "logo": "./logos/B12App.png",
+    "sector": ["Edtech"],
+    "city": "Amman",
+    "founder": "Adeeb Shaban",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2006,
+    "website": "https://b12app.com",
+    "email": "info@b12app.com",
+    "phone": "+962796100508",
+    "location": {
+      "latitude": 31.97281533647221,
+      "longitude": 35.8324862232795
+    }
+  },
+  {
+    "companyName": "Abwaab",
+    "logo": "./logos/abwaab.png",
+    "sector": ["Edtech"],
+    "city": "Amman",
+    "founder": "Hamdi Tabbaa",
+    "numOfEmployees": 500,
+    "yearOfEstablishment": 2019,
+    "website": "https://abwaab.com/ar-JO",
+    "email": "support@abwaab.com",
+    "phone": "+962782000002",
+    "location": {
+      "latitude": 31.977251572518384,
+      "longitude": 35.8434024386236
+    }
+  },
+  {
+    "companyName": "Edunation LTD",
+    "logo": "./logos/Edunation.jpg",
+    "sector": ["Edtech"],
+    "city": "Amman",
+    "founder": "Firas Jabbour",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2013,
+    "website": "http://www.edu-nation.net",
+    "email": "info@edu-nation.net",
+    "phone": "+1 (703) 574-4061",
+    "location": {
+      "latitude": 31.964518778562482,
+      "longitude": 35.9043981460323
+    }
+  },
+  {
+    "companyName": "Jo Brains",
+    "logo": "./logos/jobrains.jpg",
+    "sector": ["Edtech"],
+    "city": "Irbid",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2021,
+    "website": "https://jobrains.com/en/",
+    "email": "info@jobrains.com",
+    "phone": "+962782954651",
+    "location": {
+      "latitude": 32.50164587833595,
+      "longitude": 36.0299010846559
+    }
+  },
+  {
+    "companyName": "ExcelMENA",
+    "logo": "./logos/excelmena.webp",
+    "sector": ["Edtech"],
+    "city": "Amman",
+    "founder": "Jad Al Qaisi ",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2020,
+    "website": "http://www.excelmena.com",
+    "email": "yousef@excelmena.com",
+    "phone": "+962779193877",
+    "location": {
+      "latitude": 31.954900977605472,
+      "longitude": 35.904189705441915
+    }
+  },
+  {
+    "companyName": "TechnoTouch",
+    "logo": "./logos/tecnoTouch.png",
+    "sector": ["Edtech"],
+    "city": "Amman",
+    "founder": "Mohammad Melhem",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2015,
+    "website": "https://technotouch.co/",
+    "email": "info@technotouch.com",
+    "phone": "+962785154151",
+    "location": {
+      "latitude": 31.972310208119083,
+      "longitude": 35.8328093
+    }
+  },
+  {
+    "companyName": "PortoKit",
+    "logo": "./logos/PortoKit.png",
+    "sector": ["Edtech"],
+    "city": "Amman",
+    "founder": "Ashraf Mustafa's",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2007,
+    "website": "http://www.PortoKit.com",
+    "email": "info@portokit.com",
+    "phone": "+962790907560",
+    "location": {
+      "latitude": 31.977154273328868,
+      "longitude": 35.8515696846559
+    }
+  },
+  {
+    "companyName": "Eon Dental",
+    "logo": "./logos/EonDental.svg",
+    "sector": ["Healthtech", "3D Printing"],
+    "city": "Amman",
+    "founder": "Sana AlQadi",
+    "numOfEmployees": 500,
+    "yearOfEstablishment": 2008,
+    "website": "https://www.eondental.com/",
+    "email": "info@eondental.com",
+    "location": {
+      "latitude": 31.968996368907014,
+      "longitude": 35.84228890000001
+    }
+  },
+  {
+    "companyName": "Printie3D",
+    "logo": "./logos/Printie-3D.png",
+    "sector": ["3D Printing", "Construction & Manufacturing"],
+    "city": "Amman",
+    "founder": "Sana AlQadi",
+    "numOfEmployees": 10,
+    "yearOfEstablishment": 2013,
+    "website": "https://printie3d.com/jo/",
+    "email": "info@printie3d.com",
+    "phone": "065372220",
+    "location": {
+      "latitude": 32.0152396306,
+      "longitude": 35.867400136
+    }
+  },
+  {
+    "companyName": "Konn",
+    "logo": "./logos/Konn.webp",
+    "sector": ["Construction & Manufacturing"],
+    "city": "Amman",
+    "founder": "Basel Uraiqat",
+    "numOfEmployees": 50,
+    "yearOfEstablishment": 2020,
+    "website": "http://konn.tech/",
+    "email": "info@konn.tech",
+    "phone": " +962796873625",
+    "location": {
+      "latitude": 31.97771675844733,
+      "longitude": 35.8639277306882
+    }
+  },
+  {
+    "companyName": "Jadwelha",
+    "logo": "./logos/jadwelha.png",
+    "sector": ["Construction & Manufacturing"],
+    "city": "Amman",
+    "founder": "Loay Altal",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2021,
+    "website": "https://jadwelha.com/",
+    "email": "info@jadwelha.com",
+    "phone": " +962796154789",
+    "location": {
+      "latitude": 31.98700569125642, 
+      "longitude": 35.8573606693118
+    }
+  },
+  {
+    "companyName": "Bunni",
+    "logo": "./logos/bunni.jpg",
+    "sector": ["Construction & Manufacturing"],
+    "city": "Amman",
+    "founder": "James Lynes",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2018,
+    "website": "http://www.bunni.coffee/",
+    "email": "info@bunni.coffee",
+    "phone": "(06) 463 8080",
+    "location": {
+      "latitude": 31.954532786959764, 
+      "longitude":35.926534261376396
+    }
+  },
+  {
+    "companyName": "PiezoClean",
+    "logo": "./logos/piez.png",
+    "sector": ["Utility & Energy"],
+    "city": "Amman",
+    "founder": "Maher Yousef",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2015,
+    "website": "http://www.solarpiezoclean.com",
+    "email": "info@solarpiezoclean.com",
+    "phone": "+962799667177",
+    "location": {
+      "latitude": 31.98810608004867, 
+      "longitude":35.8782897153441
+    }
+  },
+  {
+    "companyName": "Heliotaics",
+    "logo": "./logos/heliotaics.png",
+    "sector": ["Utility & Energy","Agritech"],
+    "city": "Amman",
+    "founder": "Miroslav Macko",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2015,
+    "website": "https://www.heliotaics.com/",
+    "email": "info@heliotaics.de",
+    "phone": "+962782508591",
+    "location": {
+      "latitude": 31.972598616732164, 
+      "longitude":35.8338515 
+    }
+  },
+  {
+    "companyName": "Sager",
+    "logo": "./logos/sager1.png",
+    "sector": ["Utility & Energy","Agritech","IOT"],
+    "city": "Amman",
+    "founder": "Samir Talhhouni",
+    "numOfEmployees":50,
+    "yearOfEstablishment": 2008,
+    "website": "https://sagerdrone.com/",
+    "email": "info@sagerdrone.com",
+    "phone": "+962777704242",
+    "location": {
+      "latitude": 31.972790282986786,
+      "longitude": 35.8326394693118
+    }
+  },
+  {
+    "companyName": "Future Advanced internet solutions",
+    "logo": "./logos/fais.png",
+    "sector": ["Cyber Security"],
+    "city": "Amman",
+    "founder": "Ahmad Y Alnajjar",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2017,
+    "website": "http://www.fuais.com/",
+    "email": "alnajjar@FuAIS.com",
+    "phone": "+962796669096",
+    "location": {
+      "latitude": 31.99519792651218, 
+      "longitude":35.8585316227528
+    }
+  },
+  {
+    "companyName": "Green Circle Company LLC",
+    "logo": "./logos/green-circle.png",
+    "sector": ["Cyber Security"],
+    "city": "Amman",
+    "founder": "Muhammad Al-Khudari",
+    "numOfEmployees":50,
+    "yearOfEstablishment": 2007,
+    "website": "http://www.grcico.com",
+    "email": "info@grcico.com",
+    "phone": "+96265810982",
+    "location": {
+      "latitude": 32.031016671175955,
+      "longitude": 35.87414708465645 
+    }
+  },
+  {
+    "companyName": "Risk Mission",
+    "logo": "./logos/risk.png",
+    "sector": ["Cyber Security"],
+    "city": "Amman",
+    "founder": "Dr Omran Salem",
+    "numOfEmployees":50,
+    "yearOfEstablishment": 2014,
+    "website": "http://www.riskmission.com",
+    "email": "info@riskmission.com",
+    "phone": "+962792912525",
+    "location": {
+      "latitude": 31.971592,
+      "longitude": 35.832775
+    }
+  },
+  {
+    "companyName": "Twig",
+    "logo": "./logos/TWIG.jpg",
+    "sector": ["Agritech"],
+    "city": "Amman",
+    "numOfEmployees":50,
+    "yearOfEstablishment": 2021,
+    "website": "http://www.twigjor.com/",
+    "email": "contact@twigjo.com",
+    "phone": "+962777193008"
+  },
+  {
+    "companyName": "Mahsool",
+    "logo": "./logos/mahsool.png",
+    "sector": ["Agritech"],
+    "city": "Amman",
+    "founder": "Belal Alqaisi ",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2019,
+    "website": "http://www.mhsul.com/",
+    "email": "osa.alqeisi@gmail.com",
+    "phone": "+962797383672",
+    "location": {
+      "latitude": 31.951569,
+      "longitude": 35.923962
+    }
+  },
+  {
+    "companyName": "Juthour",
+    "logo": "./logos/juthour.avif",
+    "sector": ["Agritech","Healthtech"],
+    "city": "Amman",
+    "founder": "Luma Khalaf",
+    "numOfEmployees":50,
+    "yearOfEstablishment": 2005,
+    "website": "http://www.Juthour.com/",
+    "email": "luma.khalaf@juthour.com",
+    "phone": " (06) 586 4182",
+    "location": {
+      "latitude":31.94783347865916, 
+      "longitude": 35.8340418539677
+    }
+  },
+  {
+    "companyName": "Sales Leads",
+    "logo": "./logos/salesLeads.png",
+    "sector": ["Social Media"],
+    "city": "Amman",
+    "numOfEmployees":50,
+    "yearOfEstablishment": 2017,
+    "website": "http://www.salesleads-mena.com/",
+    "email": "luma.khalaf@juthour.com",
+    "phone": "+962797002961",
+    "location": {
+      "latitude":31.98877097950778, 
+      "longitude":  35.8672632
+    }
+  },
+  {
+    "companyName": "Designs Field Agency",
+    "logo": "./logos/designLogo.png",
+    "sector": ["Social Media","Creative-Art Media & Design"],
+    "city": "Amman",
+    "founder": "Saif Al-Ali",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2016,
+    "website": "http://www.designsfield.com/",
+    "email": "info@designsfield.com",
+    "phone": "+962796360518",
+    "location": {
+      "latitude": 31.997847591800802, 
+      "longitude": 35.8444592306882
+    }
+  },
+  {
+    "companyName": "SahhaTech",
+    "logo": "./logos/sahha.png",
+    "sector": ["Social Media","Healthtech"],
+    "city": "Amman",
+    "founder": "Batool Dabbass",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2022,
+    "website": "http://sahhatech.com/",
+    "location": {
+      "latitude": 31.967331962682582, 
+      "longitude":35.8819 
+    }
+  },
+  {
+    "companyName": "POSRocket",
+    "logo": "./logos/posrocket.svg",
+    "sector": ["Retail"],
+    "city": "Amman",
+    "founder": "Zeid Husban",
+    "numOfEmployees":50,
+    "yearOfEstablishment": 2016,
+    "website": "http://www.posrocket.com",
+    "email": "sales-jo@posrocket.com",
+    "phone": "+962 6 200 55 88",
+    "location": {
+      "latitude": 31.97684379109716,
+      "longitude": 35.8610484
+    }
+  },
+  {
+    "companyName": "Rubikomm",
+    "logo": "./logos/rubikomm.jpg",
+    "sector": ["Retail"],
+    "city": "Amman",
+    "founder": "Mohammed Al-Anesi",
+    "numOfEmployees":50,
+    "yearOfEstablishment": 2010,
+    "website": "http://www.rubikomm.com",
+    "email": "Sales@rubikomm.com",
+    "phone": "+962792760079",
+    "location": {
+      "latitude": 31.99759689408929, 
+      "longitude":35.8492072
+    }
+  },
+  {
+    "companyName": "InvoiceQ",
+    "logo": "./logos/InvoiceQ-logo.png",
+    "sector": ["Retail","Fintech"],
+    "city": "Amman",
+    "founder": "Amer Ayyad",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2020,
+    "website": "https://invoiceq.com/",
+    "phone": "+962796790508",
+    "location": {
+      "latitude": 31.972842203899162,
+      "longitude": 35.833195984655895 
+    }
+  },
+  {
+    "companyName": "Yotta Solutions",
+    "logo": "./logos/yotta.png",
+    "sector": ["Social Media","Other Market Focus Area"],
+    "city": "Amman",
+    "founder": "Mohammed Atoum",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2015,
+    "website": "https://yotta.solutions/",
+    "email":"info@yotta.solutions",
+    "phone": "+962-7-77847700"
+  },
+  {
+    "companyName": "Ejaak",
+    "logo": "./logos/ejaak.png",
+    "sector": ["Social Media"],
+    "city": "Amman",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2019,
+    "website": "https://ejaak.com/",
+    "email": "ejaakservice@gmail.com",
+    "phone": "+9627 9625 9420"
+  },
+  {
+    "companyName": "Ivvest",
+    "logo": "./logos/ivvest1.png",
+    "sector": ["Agritech","Fintech"],
+    "city": "Amman",
+    "founder": "Abdel Rahman Alzubaidi",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2020,
+    "website": "https://ivvest.com/",
+    "phone": "+9627 9995 6765",
+    "location": {
+      "latitude":32.10744508604603, 
+      "longitude":35.872608115343546
+    }
+  },
+  {
+    "companyName": "Ghoorcom",
+    "logo": "./logos/ghoorcom.png",
+    "sector": ["Agritech"],
+    "city": "Amman",
+    "founder": "Mohammad Oqeili",
+    "numOfEmployees":10,
+    "yearOfEstablishment": 2017,
+    "website": "https://ghoorcom.com/",
+    "phone": "+9627 9123 9995",
+    "location": {
+      "latitude":31.95093000504259, 
+      "longitude":35.928556979307345 
+    }
+  },
+  {
+    "companyName": "BravoBravo",
+    "logo": "./logos/bravo.png",
+    "sector": ["Edtech"],
+    "city": "Amman",
+    "founder": "Zeid Fahoum",
+    "numOfEmployees":50,
+    "yearOfEstablishment": 2015,
+    "website": "https://www.bravobravoapp.com/",
+    "email": "info@bravobravoapp.com",
+    "phone": "(06) 535 5335",
+    "location": {
+      "latitude": 31.9546776479487, 
+      "longitude":35.91054916931181
+    }
+  },
+  {
+    "companyName": "Tamatem Games",
+    "logo": "./logos/tamatem.png",
+    "sector": ["Gaming"],
+    "city": "Amman",
+    "founder": "Hussam Hammo",
+    "numOfEmployees": 200,
+    "yearOfEstablishment": 2013,
+    "website": "https://www.tamatem.co",
+    "phone": "065860010",
+    "location":{
+      "latitude": 31.9789869,
+      "longitude": 35.8232367
+    }
+  }
+]
