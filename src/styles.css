@@ -4,8 +4,16 @@ html, body { height: 100%; }
     /* font-family: 'Cormorant Garamond', serif !important;  */
     font-family: "Open Sans", sans-serif !important;
     font-size: 18px;
-    
-    
+
+}
+:root{
+    --primary-color:rgba(12, 97, 133, 0.952);
+    --secound-color: rgba(8, 76, 105, 0.952);
+    --third-color: #FFF;
+    --plus-color:#D1D1D4;
+    --four-color: rgb(206, 201, 201);
+    --shadow-color:#aca0aa;
+    --back-color:rgb(0, 0, 0);
 }
 
 

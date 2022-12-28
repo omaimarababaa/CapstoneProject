@@ -1,0 +1,29 @@
+.container {
+    background-image: url(/assets/image/startups.webp);
+    width: 100%;
+    background-size: cover;
+    height: 450px;
+    /* background-blend-mode: color; */
+    font-weight: 700;
+
+    background-position: center;
+    margin: top 85px;;
+  }
+  .imageText-title{
+    color: var(--third-color);
+    font-size: 48px;
+    text-align: center;
+    top: 126px;
+    position: relative;
+    word-spacing: 9px;
+    line-height: 73px;
+    text-transform: capitalize;
+  }
+  .imageText-par{
+    color: var(--third-color); 
+    font-size: 21px;
+    text-align: center;
+    top: 138px;
+    position: relative;
+    line-height: 31px;
+  }

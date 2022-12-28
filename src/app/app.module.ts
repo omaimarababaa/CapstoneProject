@@ -8,6 +8,13 @@ import { LayoutComponent } from './lib/components/layouts/layout/layout.componen
 import { HeaderComponent } from './lib/components/header/header.component';
 import { FooterComponent } from './lib/components/footer/footer.component';
 
+import { HomeComponent } from './pages/home/home.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { enviroment } from 'src/enviroments/enviroment';
+import { FormsModule } from '@angular/forms';
+import { AuthModule } from './pages/auth/auth.module';
+import { LandingComponent } from './pages/enduser/landing/landing.component';
 
 
 @NgModule({
@@ -15,16 +22,22 @@ import { FooterComponent } from './lib/components/footer/footer.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-   LayoutComponent
+    LayoutComponent,
+    HomeComponent,
+    LandingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    
+    AngularFireModule.initializeApp(enviroment.firebase),
+    AngularFireAuthModule,
+    FormsModule,
+    AuthModule,
+  
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

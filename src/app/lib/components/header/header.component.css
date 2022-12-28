@@ -8,8 +8,8 @@
   .toolbar {
     display: flex;
     justify-content: space-between;
-    background-color: white;
-    box-shadow: 1px 0px 2px #aca0aa;
+    background-color: var(--third-color);
+    box-shadow: 1px 0px 2px var(--shadow-color);
   }
   .scrollChangeP {
     padding: 55px;
@@ -28,7 +28,7 @@
     display: contents;
   }
   .colorChang {
-    color: rgba(12, 97, 133, 0.952);
+    color: var(--primary-color);
     margin-left: 2px;
     margin-top: 4px;
   }
@@ -37,7 +37,7 @@
   }
   .links > *,
   .btnLink {
-    color: black;
+    color: var(--black-color);
     text-decoration: none;
     margin: 10px;
   }

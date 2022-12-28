@@ -5,7 +5,8 @@ import {MatButtonModule} from '@angular/material/button';
 
 const material=[
   MatToolbarModule,
-  MatButtonModule
+  MatButtonModule,
+  
 ]
 
 @NgModule({

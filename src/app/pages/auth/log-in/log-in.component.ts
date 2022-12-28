@@ -31,10 +31,10 @@ export class LogInComponent {
         this.auth.signIn(
           this.email?.value+'',
           this.password?.value+''
-        ).then((user)=> {
+        ).then((response)=> {
           //navigate to admin/
           this.router.navigate(['admin/']);
-          console.log(user);
+          console.log(response);
         }).catch((error)=> {
           console.log(error)
         });

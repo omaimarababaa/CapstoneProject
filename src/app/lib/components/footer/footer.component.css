@@ -1,16 +1,16 @@
 
 .titleCopy {
-  color: white;
+  color: var(--third-color);
 }
 .active {
-  background-color: rgb(206, 201, 201);
+  background-color:var(--four-color);
   padding: 20px;
 }
 .toolbar2 {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(12, 97, 133, 0.952);
-  box-shadow: 1px 0px 2px #aca0aa;
+  background-color: var(--primary-color);
+  box-shadow: 1px 0px 2px var(--shadow-color);
   height: 70px;
 }
 .social > * {
