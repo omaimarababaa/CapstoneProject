@@ -1,0 +1,18 @@
+
+.titleCopy {
+  color: white;
+}
+.active {
+  background-color: rgb(206, 201, 201);
+  padding: 20px;
+}
+.toolbar2 {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(12, 97, 133, 0.952);
+  box-shadow: 1px 0px 2px #aca0aa;
+  height: 70px;
+}
+.social > * {
+  margin: 5px;
+}

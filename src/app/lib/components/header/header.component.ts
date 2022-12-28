@@ -1,11 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.css']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
-export class LayoutComponent {
+export class HeaderComponent {
   scrollChangeP=true;
   titleChange=true;
   titleH=false;
@@ -22,5 +22,4 @@ export class LayoutComponent {
        this.titleH=false;
     }
    }
-
 }

@@ -1,0 +1,49 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 1px 0px 2px #aca0aa;
+  }
+  .scrollChangeP {
+    padding: 55px;
+  }
+  .icon {
+    display: flex;
+  }
+  .homeLink {
+    text-decoration: none;
+  }
+  .titleChange {
+    display: grid;
+    justify-items: center;
+  }
+  .titleH {
+    display: contents;
+  }
+  .colorChang {
+    color: rgba(12, 97, 133, 0.952);
+    margin-left: 2px;
+    margin-top: 4px;
+  }
+  .links {
+    text-align: right;
+  }
+  .links > *,
+  .btnLink {
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+  }
+  
+  button {
+    margin: 5px;
+  }
+ 
+  
