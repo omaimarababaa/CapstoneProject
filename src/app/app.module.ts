@@ -15,6 +15,7 @@ import { enviroment } from 'src/enviroments/enviroment';
 import { FormsModule } from '@angular/forms';
 import { AuthModule } from './pages/auth/auth.module';
 import { LandingComponent } from './pages/enduser/landing/landing.component';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 
 @NgModule({
@@ -31,10 +32,12 @@ import { LandingComponent } from './pages/enduser/landing/landing.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    AngularFirestoreModule,
     AngularFireModule.initializeApp(enviroment.firebase),
     AngularFireAuthModule,
     FormsModule,
     AuthModule,
+   
   
   ],
   providers: [],
