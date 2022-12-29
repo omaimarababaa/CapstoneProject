@@ -14,10 +14,10 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { enviroment } from 'src/enviroments/enviroment';
 import { FormsModule } from '@angular/forms';
 import { AuthModule } from './pages/auth/auth.module';
-import { LandingComponent } from './pages/enduser/landing/landing.component';
+
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AdminModule } from './pages/admin/admin.module';
-
+import { EnduserModule } from './pages/enduser/enduser.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,6 @@ import { AdminModule } from './pages/admin/admin.module';
     FooterComponent,
     LayoutComponent,
     HomeComponent,
-    LandingComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,8 +37,8 @@ import { AdminModule } from './pages/admin/admin.module';
     AngularFireAuthModule,
     FormsModule,
     AuthModule,
-   AdminModule
-  
+    AdminModule,
+    EnduserModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
