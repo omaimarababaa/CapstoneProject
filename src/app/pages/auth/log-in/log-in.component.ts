@@ -44,9 +44,9 @@ export class LogInComponent implements OnInit {
         this.users.getUser().subscribe((response) => {
           this.data = response;
           this.data.forEach((element) => {
-            console.log(element.email + ' eeee  ' + this.email?.value +"Admin" + this.email?.value);
+           
                  if(this.email?.value == element.email ){
-                  console.log("Admin" +element.isAdmin);
+                 
                   if(element.isAdmin == true)
                      this.router.navigate(['admin/']);
                      else

@@ -1,6 +1,6 @@
 export interface users {
     payload: any;
-    id:string,
+    userId:string,
     name:string,
     email:string,
     isAdmin:boolean
