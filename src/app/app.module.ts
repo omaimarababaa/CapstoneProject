@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthModule } from './pages/auth/auth.module';
 import { LandingComponent } from './pages/enduser/landing/landing.component';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AdminModule } from './pages/admin/admin.module';
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     AngularFireAuthModule,
     FormsModule,
     AuthModule,
-   
+   AdminModule
   
   ],
   providers: [],
