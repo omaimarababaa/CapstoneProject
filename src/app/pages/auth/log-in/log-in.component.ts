@@ -13,7 +13,7 @@ import { UserFirebaseService } from 'src/app/lib/services/users/user-firebase.se
 })
 export class LogInComponent implements OnInit {
   data: users[] = [];
-  // adminCheck:{}[] = [];
+  userid?: string;
   form = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(8)]],
@@ -24,9 +24,7 @@ export class LogInComponent implements OnInit {
     private router: Router,
     private users: UserFirebaseService
   ) {}
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
   get email() {
     return this.form.get('email');
@@ -42,16 +40,15 @@ export class LogInComponent implements OnInit {
       .then((response) => {
         console.log(response);
         this.users.getUser().subscribe((response) => {
-          this.data = response;
-          this.data.forEach((element) => {
-           
-                 if(this.email?.value == element.email ){
-                 
-                  if(element.isAdmin == true)
-                     this.router.navigate(['admin/']);
-                     else
-                    this.router.navigate(['user/']); 
-                  } 
+          this.auth.user$.subscribe((user) => {
+            this.userid = user?.uid;
+            this.data = response;
+            this.data.forEach((element) => {
+              if (this.userid == element.userId) {
+                if (element.isAdmin == true) this.router.navigate(['admin/']);
+                else this.router.navigate(['user/']);
+              }
+            });
           });
         });
       })

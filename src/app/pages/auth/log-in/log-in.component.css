@@ -126,13 +126,6 @@
 	transition: .2s;
 }
 
-/* .login__submit:active,
-.login__submit:focus,
-.login__submit:hover {
-	border-color: var(--primary-color);
-	outline: none;
-} */
-
 .button__icon {
 	font-size: 24px;
 	margin-left: auto;
