@@ -46,7 +46,8 @@ export class LogInComponent implements OnInit {
             this.data = response;
             this.data.forEach((element) => {
               if (this.userid == element.userId) {
-                if (element.isAdmin == true) this.router.navigate(['admin/']);
+                if (element.isAdmin == true) 
+                this.router.navigate(['admin/']);
                 else this.router.navigate(['user/']);
               }
             });

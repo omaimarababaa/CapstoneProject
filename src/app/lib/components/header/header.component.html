@@ -11,11 +11,14 @@
             <a>About Us</a>
             <a>Contect Us</a>
         </div>
-        <!--  -->
-        <div class="btn"  >
-            <!-- <span *ngIf="auth.userState$ | async as user;else #logoutB"></span> -->
-             <a routerLink="/login" class="btnLink"><button mat-raised-button>Log in</button></a>
-           <ng-template #logoutB > <a class="btnLink"><button mat-raised-button >Log Out</button></a></ng-template>
+
+        <div class="btn">
+            <a *ngIf="isLoggedn" class="btnLink">
+                <button mat-raised-button  (click)="logOut()">Log out</button>
+            </a>
+            <a *ngIf="!isLoggedn" class="btnLink" routerLink="/login">
+                <button mat-raised-button>Log in</button>
+            </a>
         </div>
     </mat-toolbar>
 </div>
