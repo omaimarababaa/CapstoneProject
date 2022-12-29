@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { users } from '../../interfaces/users';
 import { AuthService } from '../../services/auth/auth.service';
@@ -14,9 +15,12 @@ export class HeaderComponent {
   scrollChangeP:boolean=true;
   titleChange:boolean=true;
   titleH:boolean=false;
- 
-  constructor(public auth:AuthService,private fireAuth:AngularFireAuth ){
-    
+  isLoggedn:boolean=false;
+  constructor(private auth:AuthService,private fireAuth:AngularFireAuth,
+    private router: Router ){
+    auth.userState$.subscribe(response=> {
+      this.isLoggedn = response?.uid == null ? false:true;
+    });
   }
   @HostListener("document:scroll")
    scrollFunction (){
@@ -33,6 +37,7 @@ export class HeaderComponent {
    }
 
    logOut(){
-    return this.fireAuth.signOut();
+     this.fireAuth.signOut();
+     this.router.navigate(['login/']);
   }
 }
