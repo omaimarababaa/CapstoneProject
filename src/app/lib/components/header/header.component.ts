@@ -1,5 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Observable } from 'rxjs';
+import { users } from '../../interfaces/users';
 import { AuthService } from '../../services/auth/auth.service';
 
 
@@ -12,8 +14,9 @@ export class HeaderComponent {
   scrollChangeP:boolean=true;
   titleChange:boolean=true;
   titleH:boolean=false;
+ 
   constructor(public auth:AuthService,private fireAuth:AngularFireAuth ){
-
+    
   }
   @HostListener("document:scroll")
    scrollFunction (){
