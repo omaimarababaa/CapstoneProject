@@ -12,6 +12,7 @@ import { UserFirebaseService } from 'src/app/lib/services/users/user-firebase.se
   styleUrls: ['./log-in.component.css'],
 })
 export class LogInComponent implements OnInit {
+  massegError:string | undefined;
   data: users[] = [];
   userid?: string;
   form = this.fb.group({
@@ -53,7 +54,7 @@ export class LogInComponent implements OnInit {
         });
       })
       .catch((error) => {
-        console.log(error);
+         this.massegError="Email Or Password Is Incorrect";
       });
   }
 }

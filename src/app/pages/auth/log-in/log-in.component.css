@@ -132,4 +132,9 @@
 	color: var(--primary-color);
 	
 }
+.Error{
+	color: var(--color-error);
+	font-size: 13px;
+	font-weight: bold;
+}
 

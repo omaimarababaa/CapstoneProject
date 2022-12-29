@@ -14,8 +14,6 @@ export class AuthService {
 
 
   signIn(email:string, password: string){
-
-
     return this.fireAuth.signInWithEmailAndPassword(email, password);
   }
  
