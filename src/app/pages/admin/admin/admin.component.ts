@@ -21,7 +21,7 @@ export class AdminComponent implements AfterViewInit, OnInit {
     this.dataSource.paginator = this.paginator;
     this.data.getStartups().subscribe((response) => {
       this.dataSource = new MatTableDataSource(response);
-      this.Allstartups = response;
+    
     });
   }
   ngOnInit(): void {
