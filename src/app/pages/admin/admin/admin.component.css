@@ -23,6 +23,7 @@ th{
   color: var( --primary-color);
  
 }
-.margin_100{
-margin-top: 100px;
+.website{
+  text-decoration: none;
+  color: var( --primary-color);
 }
