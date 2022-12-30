@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import {
   AngularFirestore,
   AngularFirestoreCollection,
-  fromCollectionRef,
 } from '@angular/fire/compat/firestore';
-import { OperatorFunction } from 'rxjs';
 
 import { users } from '../../interfaces/users';
 

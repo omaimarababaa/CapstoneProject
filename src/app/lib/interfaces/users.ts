@@ -1,5 +1,5 @@
 export interface users {
-    payload: any;
+    payload: any,
     userId:string,
     name:string,
     email:string,
