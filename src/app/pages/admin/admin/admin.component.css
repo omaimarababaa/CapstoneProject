@@ -23,3 +23,6 @@ th{
   color: var( --primary-color);
  
 }
+.margin_100{
+margin-top: 100px;
+}

@@ -1,4 +1,5 @@
 export interface startups {
+  id?:number;
   companyName: string;
   logo?: string;
   sector: string[];
