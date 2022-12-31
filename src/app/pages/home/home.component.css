@@ -41,7 +41,7 @@
   .titleS{
     color: var(--primary-color);
     font-weight: bold;
-    margin: 50px;
+    margin: 5px 5px 60px 10px ;
   }
   .company-box {
     display: inline-block;
@@ -108,7 +108,7 @@
     left: 0;
     width: 300px;
     height: 42px;
-    margin:47px 210px 10px auto;
+    margin:5px 192px 10px auto;
     /* z-index: 1; */
   }
   
