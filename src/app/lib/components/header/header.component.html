@@ -8,13 +8,14 @@
         </div>
         <div class="links">
             <a routerLinkActive="active" routerLink="/">Home</a>
-            <a>About Us</a>
-            <a>Contect Us</a>
+            <a routerLinkActive="active" routerLink="/">Add Startup</a>
+            <a routerLinkActive="active" routerLink="/about">About</a>
+
         </div>
-          <!-- Switch button -->
+        <!-- Switch button -->
         <div class="btn">
             <a *ngIf="isLoggedn" class="btnLink">
-                <button mat-raised-button  (click)="logOut()">Log out</button>
+                <button mat-raised-button (click)="logOut()">Log out</button>
             </a>
             <a *ngIf="!isLoggedn" class="btnLink" routerLink="/login">
                 <button mat-raised-button>Log in</button>

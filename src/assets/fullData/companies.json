@@ -201,21 +201,7 @@
       "longitude":  35.9106
     }
   },
-  {
-    "companyName": "Whyise",
-    "logo": "./logos/whyise.png",
-    "sector": ["Data, AI & ML"],
-    "city": "Amman",
-    "founder": "Reem Khouri",
-    "numOfEmployees": 50,
-    "yearOfEstablishment": 2018,
-    "website": "http://whyise.com/",
-    "phone": "0777166000",
-    "location":{
-      "latitude": 31.951569,
-      "longitude": 35.923962
-    }
-  },
+ 
   {
     "companyName": "Larimar Tech",
     "logo": "./logos/larimar.png",

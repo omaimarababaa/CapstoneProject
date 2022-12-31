@@ -8,7 +8,6 @@ import { LayoutComponent } from './lib/components/layouts/layout/layout.componen
 import { HeaderComponent } from './lib/components/header/header.component';
 import { FooterComponent } from './lib/components/footer/footer.component';
 
-import { HomeComponent } from './pages/home/home.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { enviroment } from 'src/enviroments/enviroment';
@@ -18,6 +17,7 @@ import { AuthModule } from './pages/auth/auth.module';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AdminModule } from './pages/admin/admin.module';
 import { EnduserModule } from './pages/enduser/enduser.module';
+import { HomeModule } from './pages/home/home.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { EnduserModule } from './pages/enduser/enduser.module';
     HeaderComponent,
     FooterComponent,
     LayoutComponent,
-    HomeComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -39,6 +39,7 @@ import { EnduserModule } from './pages/enduser/enduser.module';
     AuthModule,
     AdminModule,
     EnduserModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
