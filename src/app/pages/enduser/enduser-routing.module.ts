@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingComponent } from './landing/landing.component';
+import { AddstartupComponent } from './addstartup/addstartup.component';
+
 
 const routes: Routes = [
-  { path:'user',component:LandingComponent}
+  { path:'addstartup',component:AddstartupComponent}
 ];
 
 @NgModule({

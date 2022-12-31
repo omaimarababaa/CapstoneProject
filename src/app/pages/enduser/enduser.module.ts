@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { EnduserRoutingModule } from './enduser-routing.module';
-import { LandingComponent } from './landing/landing.component';
+import { AddstartupComponent } from './addstartup/addstartup.component';
+
 
 
 @NgModule({
-  declarations: [LandingComponent],
+  declarations: [
+    AddstartupComponent
+  ],
   imports: [
     CommonModule,
     EnduserRoutingModule

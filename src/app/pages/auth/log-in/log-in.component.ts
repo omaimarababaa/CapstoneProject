@@ -48,7 +48,7 @@ export class LogInComponent implements OnInit {
               if (this.userid == element.userId) {
                 if (element.isAdmin == true) 
                 this.router.navigate(['admin/']);
-                else this.router.navigate(['user/']);
+                else this.router.navigate(['addstartup/']);
               }
             });
           });
