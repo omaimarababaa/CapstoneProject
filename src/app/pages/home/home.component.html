@@ -6,13 +6,25 @@
 </div>
 
 <div class="titleStartup">
+ 
     <h1 class="titleS">Explore the Startups in Jordan</h1>
+    <div class="box">
+      <select>
+        <option>Filter By Sector</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+      </select>
+    </div>
+  
+
   <div  class="cardsCompany">
       <div class="a-box" *ngFor="let company of companyInfo">
           <div class="img-container">
             <div class="img-inner">
             
-                <img src="assets/fullData/{{company.logo}}" class="logoCompany">
+               <a href=""> <img src="assets/fullData/{{company.logo}}" class="logoCompany"></a>
              
             </div>
           </div>
