@@ -40,4 +40,5 @@ export class HeaderComponent {
      this.fireAuth.signOut();
      this.router.navigate(['login/']);
   }
+
 }

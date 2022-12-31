@@ -6,7 +6,7 @@ import { AuthService } from '../services/auth/auth.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class AddstartupGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router){}
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -14,10 +14,10 @@ export class AuthGuard implements CanActivate {
       let guardObsv  =this.authService.userState$
       .pipe(
         map((value)=> {
-          if(value) return true;
+          if(!value) return true;
           else {
-            //navigate to auth/login
-            this.router.navigate(['admin/']);
+           
+            this.router.navigate(['login/']);
     
             return false;
           } 
