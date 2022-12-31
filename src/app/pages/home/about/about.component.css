@@ -1,21 +1,23 @@
 * {
-  font-size: 25px;
+  font-size: 20px;
   line-height: 40px;
 }
 .conteiner {
-  margin-top: 100px;
+  margin-top: 132px;
   margin-bottom: 50px;
   width: 62%;
-  height: 800px;
+  height: 750px;
   padding: 40px;
   position: relative;
   left: 20%;
   border-radius: 25px;
   background: var(--third-color);
-  box-shadow: 1px 13px 26px var(--shadow-color), 1px 3px 9px var(--third-color);
+  box-shadow: 1px 13px 17px var(--shadow-color), 1px 3px 9px var(--third-color);
+  overflow: overlay;
 }
 h1 {
   color: var(--primary-color);
   margin: 20px;
   text-align: center;
+  font-weight: bold;
 }
