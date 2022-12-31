@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
     const url: string = '../../assets/fullData/companies.json';
     this.http.get(url).subscribe((response) => {
       this.companyInfo = response;
-      console.log(this.companyInfo + 'hhhh');
+      
     });
   }
 }

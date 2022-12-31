@@ -18,17 +18,20 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AdminModule } from './pages/admin/admin.module';
 import { EnduserModule } from './pages/enduser/enduser.module';
 import { HomeModule } from './pages/home/home.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
+   
     HeaderComponent,
     FooterComponent,
     LayoutComponent,
-    
   ],
   imports: [
     BrowserModule,
+    
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
@@ -39,7 +42,7 @@ import { HomeModule } from './pages/home/home.module';
     AuthModule,
     AdminModule,
     EnduserModule,
-    HomeModule
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
