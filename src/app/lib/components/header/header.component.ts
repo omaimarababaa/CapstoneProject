@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { users } from '../../interfaces/users';
 import { AuthService } from '../../services/auth/auth.service';
 
@@ -40,5 +40,19 @@ export class HeaderComponent {
      this.fireAuth.signOut();
      this.router.navigate(['login/']);
   }
-
+  clickAdd(){
+    this.auth.userState$
+       .pipe(
+         map((value)=> {
+           if(value) return true;
+           else {
+             //navigate to auth/login
+             this.router.navigate(['login/']);
+     
+             return false;
+           } 
+     
+         })
+       )
+     }
 }

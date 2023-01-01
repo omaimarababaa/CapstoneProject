@@ -1,28 +1,30 @@
-<div class="mat-elevation-z8"  >
+<div class="mat-elevation-z8" class="display" >
+    <div><app-slider></app-slider></div>
+    <div>
     <table mat-table [dataSource]="dataSource" >
 
-        <!-- Position Column -->
-        <ng-container matColumnDef="Id">
+        <!-- Logo Column -->
+        <!-- <ng-container matColumnDef="Id">
             <th mat-header-cell *matHeaderCellDef> Id </th>
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-        </ng-container>
+        </ng-container> -->
 
         <ng-container matColumnDef="Logo">
             <th mat-header-cell *matHeaderCellDef > Logo </th>
-            <td mat-cell *matCellDef="let element"><img src="assets/fullData/{{element.Logo}} " alt="logo" width="40px" height="40px" ></td>
+            <td mat-cell *matCellDef="let element"><img src="assets/fullData/{{element.logo}} " alt="logo" width="40px" height="40px" ></td>
         </ng-container>
 
-        <!-- Name Column -->
+        <!-- companyName Column -->
         <ng-container matColumnDef="Company Name">
             <th mat-header-cell *matHeaderCellDef>Company Name </th>
             <td mat-cell *matCellDef="let element"> {{element.companyName}} </td>
         </ng-container>
 
 
-        <!-- Weight Column -->
+        <!-- City Column -->
         <ng-container matColumnDef="City">
             <th mat-header-cell *matHeaderCellDef> City </th>
-            <td mat-cell *matCellDef="let element"> {{element.City}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.city}} </td>
         </ng-container>
 
         <!-- Symbol Column -->
@@ -40,6 +42,7 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+    <mat-paginator [pageSizeOptions]="[2, 9, 15]" showFirstLastButtons aria-label="Select page of periodic elements">
     </mat-paginator>
+</div>
 </div>

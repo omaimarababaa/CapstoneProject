@@ -12,7 +12,7 @@ import { DataService } from 'src/app/lib/services/data/data.service';
 })
 export class AdminComponent implements AfterViewInit, OnInit {
   public Allstartups: any;
-  displayedColumns: string[] = ['Id', 'Logo', 'Company Name', 'City', 'Sector' , 'Websit'];
+  displayedColumns: string[] = [ 'Logo', 'Company Name', 'City', 'Sector' , 'Websit'];
   dataSource = new MatTableDataSource<startups>();
   constructor(private data: DataService) {}
   @ViewChild(MatPaginator) paginator!: MatPaginator;

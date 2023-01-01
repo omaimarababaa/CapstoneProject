@@ -27,3 +27,7 @@ th{
   text-decoration: none;
   color: var( --primary-color);
 }
+.display{
+  display: flex;
+  flex-direction: row;
+}
