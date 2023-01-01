@@ -1,8 +1,14 @@
 .slidbar{
     margin-top: 110px;
     background-color: var(--primary-color);
-    color: white;
-    height: 570px;
+    color: var(--third-color);
+    height: 586px;
+}
+.search__input{
+    margin: 10px;
+}
+.fbs{
+    padding-top: 15px;
 }
 ul,li {
     margin: 10px;
@@ -28,18 +34,18 @@ ul,li {
       align-items: center;
       justify-content: center;
       background-color: #7f5a83;
-      background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+      background-image: linear-gradient(315deg,var(--primary-color)  0%, #0d324d 74%);
       background-size: 200% 100%;
       background-position: left;
       background-repeat: no-repeat;
       transition: 500ms;
-      color: white;
+      color: var(--third-color);
   }
   
   button:before {
       
       color: rgba(255,255,255,0.5);
-      font-size: 16px;
+      font-size: 14px;
       position: absolute;
       display: flex;
       align-items: center;
@@ -50,18 +56,9 @@ ul,li {
       background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
       transition: 500ms;
   }
-  #btn1{
-    content: 'ADD Sector';
 
-  }
-  #btn2{
-    content: 'Delet Sector';
     
-  }
-  #btn3{
-    content: 'Updat Sector';
-    
-  }
+  
   button:hover {
       background-position: right;
   }

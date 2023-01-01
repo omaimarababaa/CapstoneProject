@@ -1,5 +1,5 @@
 table{
-  margin-top: 100px;
+  margin-top: 106px;
 }
 .demo-table {
   width: 100%;
@@ -30,4 +30,7 @@ th{
 .display{
   display: flex;
   flex-direction: row;
+}
+.icon{
+  margin: 4px;
 }

@@ -1,48 +1,65 @@
-<div class="mat-elevation-z8" class="display" >
-    <div><app-slider></app-slider></div>
+<div class="mat-elevation-z8" class="display">
     <div>
-    <table mat-table [dataSource]="dataSource" >
+        <app-slider></app-slider>
+    </div>
+    <div>
+        <table mat-table [dataSource]="dataSource">
 
-        <!-- Logo Column -->
-        <!-- <ng-container matColumnDef="Id">
+            <!-- Logo Column -->
+            <!-- <ng-container matColumnDef="Id">
             <th mat-header-cell *matHeaderCellDef> Id </th>
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
         </ng-container> -->
 
-        <ng-container matColumnDef="Logo">
-            <th mat-header-cell *matHeaderCellDef > Logo </th>
-            <td mat-cell *matCellDef="let element"><img src="assets/fullData/{{element.logo}} " alt="logo" width="40px" height="40px" ></td>
-        </ng-container>
+            <ng-container matColumnDef="Logo">
+                <th *matHeaderCellDef> Logo </th>
+                <td mat-cell *matCellDef="let element"><img src="assets/fullData/{{element.logo}} " alt="logo"
+                        width="40px" height="40px"></td>
+            </ng-container>
 
-        <!-- companyName Column -->
-        <ng-container matColumnDef="Company Name">
-            <th mat-header-cell *matHeaderCellDef>Company Name </th>
-            <td mat-cell *matCellDef="let element"> {{element.companyName}} </td>
-        </ng-container>
+            <!-- companyName Column -->
+            <ng-container matColumnDef="Company Name">
+                <th *matHeaderCellDef>Company Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.companyName}} </td>
+            </ng-container>
 
 
-        <!-- City Column -->
-        <ng-container matColumnDef="City">
-            <th mat-header-cell *matHeaderCellDef> City </th>
-            <td mat-cell *matCellDef="let element"> {{element.city}} </td>
-        </ng-container>
+            <!-- City Column -->
+            <ng-container matColumnDef="City">
+                <th *matHeaderCellDef> City </th>
+                <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+            </ng-container>
 
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="Sector">
-            <th mat-header-cell *matHeaderCellDef> Sector </th>
-            <td mat-cell *matCellDef="let element"> {{element.sector}} </td>
-        </ng-container>
+            <!--  Column -->
+            <ng-container matColumnDef="Sector">
+                <th *matHeaderCellDef> Sector </th>
+                <td mat-cell *matCellDef="let element"> {{element.sector}} </td>
+            </ng-container>
 
-        <ng-container matColumnDef="Websit">
-            <th mat-header-cell *matHeaderCellDef> Websit </th>
-            <td mat-cell *matCellDef="let element"> <a href="{{element.website}}" class="website">{{element.website}}</a></td>
-        </ng-container>
+            <ng-container matColumnDef="yearOfEstablishment">
+                <th *matHeaderCellDef> yearOfEstablishment </th>
+                <td mat-cell *matCellDef="let element"> {{element.yearOfEstablishment}} </td>
+            </ng-container>
+            <ng-container matColumnDef="Websit">
+                <th *matHeaderCellDef> Websit </th>
+                <td mat-cell *matCellDef="let element"> <a href="{{element.website}}"
+                        class="website">{{element.website}}</a></td>
+            </ng-container>
+            <!-- kkk -->
+            <ng-container matColumnDef="actions">
+                <th  *matHeaderCellDef>Actions</th>
+                <td mat-cell *matCellDef="let element">
+                <a href="" class="icon"><img src="../../../../assets/icons/edit.png" alt="edit" width="20px" height="20px"></a>
+                <a href="" class="icon"><img src="../../../../assets/icons/trash.png" alt="edit" width="20px" height="20px"></a>
+                  </td>
+              </ng-container>
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
 
-    <mat-paginator [pageSizeOptions]="[2, 9, 15]" showFirstLastButtons aria-label="Select page of periodic elements">
-    </mat-paginator>
-</div>
+        <mat-paginator [pageSizeOptions]="[2, 9, 15]" showFirstLastButtons
+            aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
 </div>

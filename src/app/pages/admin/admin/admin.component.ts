@@ -12,17 +12,24 @@ import { DataService } from 'src/app/lib/services/data/data.service';
 })
 export class AdminComponent implements AfterViewInit, OnInit {
   public Allstartups: any;
-  displayedColumns: string[] = [ 'Logo', 'Company Name', 'City', 'Sector' , 'Websit'];
+  displayedColumns: string[] = [
+    'Logo',
+    'Company Name',
+    'City',
+    'Sector',
+    'yearOfEstablishment',
+    'Websit',
+    'actions'
+  ];
   dataSource = new MatTableDataSource<startups>();
   constructor(private data: DataService) {}
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
     this.data.getStartups().subscribe((response) => {
       this.dataSource = new MatTableDataSource(response);
-    
     });
+    this.dataSource.paginator = this.paginator;
   }
   ngOnInit(): void {
     this.data.getStartups().subscribe((response) => {
