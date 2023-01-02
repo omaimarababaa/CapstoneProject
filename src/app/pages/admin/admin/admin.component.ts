@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
+// import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { startups } from 'src/app/lib/interfaces/startups';
@@ -22,18 +22,19 @@ export class AdminComponent implements AfterViewInit, OnInit {
     'actions'
   ];
   dataSource = new MatTableDataSource<startups>();
-  constructor(private data: DataService) {}
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  constructor(private data: DataService) {
+   
+  }
+  // @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngAfterViewInit() {
-    this.data.getStartups().subscribe((response) => {
-      this.dataSource = new MatTableDataSource(response);
-    });
-    this.dataSource.paginator = this.paginator;
+   
+  //  this.dataSource.paginator = this.paginator;
   }
   ngOnInit(): void {
+  
     this.data.getStartups().subscribe((response) => {
-      this.Allstartups = response;
+      this.dataSource = new MatTableDataSource(response);
     });
   }
 }
