@@ -1,1 +1,56 @@
-<p>Add Startup</p>
+<h1>Add Startup</h1>
+<div class="container">
+    <form #form="ngForm">
+      
+        <mat-form-field>
+            <mat-label>Company Name</mat-label>
+            <input matInput name="companyName" ngModel>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Logo</mat-label>
+            <input matInput name="logo" ngModel>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Sector</mat-label>
+            <input matInput name="sector" ngModel>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>City</mat-label>
+            <input matInput name="city" ngModel>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Founder</mat-label>
+            <input matInput name="founder" ngModel>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>numOfEmployees</mat-label>
+            <input matInput name="numOfEmployees" ngModel>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>yearOfEstablishment</mat-label>
+            <input matInput name="yearOfEstablishment" ngModel>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Website</mat-label>
+            <input matInput name="website" ngModel>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput name="email" ngModel>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>phone</mat-label>
+            <input matInput name="phone" ngModel>
+        </mat-form-field>
+        <button >ADD</button>
+    </form>
+    <!-- <form [formGroup]="form" (ngSubmit)="submit()" >
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput type="text" formControlName="name">
+            <mat-error *ngIf="name?.hasError('required')">Todo Name is required</mat-error>
+        </mat-form-field>
+       
+        <button type="submit" mat-raised-button color="primary" [disabled]="form.invalid">Add Todo</button>    
+    </form> -->
+</div>

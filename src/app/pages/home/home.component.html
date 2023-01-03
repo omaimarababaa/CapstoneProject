@@ -4,71 +4,21 @@
     research center in Jordan, working to uncover the momentum <br>
     of startup technology and accelerate its growth.</p>
 </div>
-
 <div class="titleStartup">
-
   <h1 class="titleS">Explore the Startups in Jordan</h1>
- 
-  <form id="app-cover">
-    <div id="select-box">
-      <input type="checkbox" id="options-view-button">
-      <div id="select-button" class="brd">
-        <div id="selected-value">
-          <span>Filter By Sector</span>
-        </div>
-        <div id="chevrons">
-          <i class="fas fa-chevron-up"></i>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-      </div>
-      <div id="options">
-        <div class="option">
-          <input class="s-c top" type="radio" name="platform" value="codepen">
-          <span class="label">Ecommerce</span>
-          <span class="opt-val">Ecommerce</span>
-        </div>
-        <div class="option">
-          <input class="s-c top" type="radio" name="platform" value="dribbble">
-          <span class="label">Fintech</span>
-          <span class="opt-val">Fintech</span>
-        </div>
-        <div class="option">
-          <input class="s-c top" type="radio" name="platform" value="behance">
-          <span class="label">Social Media</span>
-          <span class="opt-val">Social Media</span>
-        </div>
-        <div class="option">
-          <input class="s-c top" type="radio" name="platform" value="hackerrank">
-          <span class="label">Healthtech</span>
-          <span class="opt-val">Healthtech</span>
-        </div>
-        <div class="option">
-          <input class="s-c top" type="radio" name="platform" value="stackoverflow">
-          <span class="label">Foodtech</span>
-          <span class="opt-val">Foodtech</span>
-        </div>
-        <div class="option">
-          <input class="s-c top" type="radio" name="platform" value="freecodecamp">
-          <span class="label">Sportech</span>
-          <span class="opt-val">Sportech</span>
-        </div>
-        <div id="option-bg"></div>
-      </div>
-    </div>
-  </form>
-
-
+  <select class="selectSector">
+   <option>Filter By sector</option>
+    <option  *ngFor="let sector of sectors">
+      {{sector.namesector}}
+    </option>
+  </select>
   <div class="cardsCompany">
-    <div class="a-box" *ngFor="let company of companyInfo">
+    <div class="a-box" *ngFor="let logo of companyLogo">
       <div class="img-container">
         <div class="img-inner">
-
-          <a href=""> <img src="assets/fullData/{{company.logo}}" class="logoCompany"></a>
-
+          <a href=""> <img src="{{logo.logo}}" class="logoCompany"></a>
         </div>
       </div>
-
     </div>
   </div>
-
 </div>

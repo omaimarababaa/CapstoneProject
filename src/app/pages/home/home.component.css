@@ -82,7 +82,15 @@
     text-decoration: none;
     margin: 8px;
   }
-
+  .selectSector{
+    background-color: var(--third-color);
+    font-size: 16px;
+    text-align: center;
+    width: 200px;
+    border-color: var(--primary-color);
+    padding: 10px;
+  }
+/* ---------------------------------------------------------------------------- */
   /* select */
   .brd {
     border: 1px solid #e2eded;

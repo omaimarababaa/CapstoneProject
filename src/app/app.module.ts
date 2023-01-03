@@ -42,6 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     AdminModule,
     EnduserModule,
     HomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
