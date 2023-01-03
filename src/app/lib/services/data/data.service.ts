@@ -13,7 +13,7 @@ export class DataService {
  
 }
 getStartups() {
-  return this.startupCollection.valueChanges();
+  return this.startupCollection.valueChanges({"idField":'uid'});
 }
  getStartupsFilter(sectorF: string): Observable<startups[]>{
 
@@ -22,11 +22,14 @@ getStartups() {
     ('Startups', ref => ref.where('sector', '==', sectorF)).valueChanges(); //server-side filter 
 }
 
-// addStartups(startup: startups){
-//   let addedTodo = this.startupCollection.add(startup);
-//   return from(addedTodo);
+addStartups(startup: startups){
+  let addedstartup = this.startupCollection.add(startup);
+  return from(addedstartup);
 
-// }
+}
+deleteStartups(id: string){
+  return from(this.startupCollection.doc(id).delete());
+}
 // getTodos(userId: string): Observable<Todo[]>{
 
 //    return this.fireStore

@@ -25,6 +25,11 @@
     <div>
         <table mat-table [dataSource]="dataSource">
 
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Id. </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+              </ng-container>
+
             <ng-container matColumnDef="Logo">
                 <th *matHeaderCellDef> Logo </th>
                 <td mat-cell *matCellDef="let element"><img src="{{element.logo}} " alt="logo" width="40px"
@@ -63,7 +68,7 @@
             <ng-container matColumnDef="actions">
                 <th *matHeaderCellDef>Actions</th>
                 <td mat-cell *matCellDef="let element">
-                    <a href="" class="icon"><img src="../../../../assets/icons/edit.png" alt="edit" width="20px"
+                    <a href="" class="icon" (click)="deleteStartup(element.uid)"><img src="../../../../assets/icons/edit.png" alt="edit" width="20px"
                             height="20px"></a>
                     <a href="" class="icon"><img src="../../../../assets/icons/trash.png" alt="edit" width="20px"
                             height="20px"></a>

@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
 import { AddComponent } from '../add/add.component';
+import { DeletestartupsComponent } from '../deletestartups/deletestartups.component';
 
 @Component({
   selector: 'app-admin',
@@ -15,6 +16,7 @@ import { AddComponent } from '../add/add.component';
 export class AdminComponent implements AfterViewInit, OnInit {
   public Allstartups: any;
   displayedColumns: string[] = [
+    'id',
     'Logo',
     'Company Name',
     'City',
@@ -35,6 +37,30 @@ export class AdminComponent implements AfterViewInit, OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
+  deleteStartup(id:string){
+
+  }
+  // deleteStudent(id: string){
+  //   console.log(id);
+  //   let dialogRef = this.dialog.open(DeletestartupsComponent, {
+  //      width: '500px',
+  //      data: {id: id}
+  //    });
+  //    dialogRef.afterClosed().subscribe((result)=> {
+  //        console.log(result); 
+ 
+  //        //refresh table 
+  //        //this.students = this.studentsService.getStudents();
+       
+  //    });
+  //   }
+  // openDialogDelete(){
+  //   const dialogRef = this.dialog.open(DeletestartupsComponent);
+
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log(`Dialog result: ${result}`);
+  //   });
+  // }
   // @Component({
   //   selector: 'app-add',
   //   templateUrl: './add.component.html',

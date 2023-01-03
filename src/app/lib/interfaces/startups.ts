@@ -1,8 +1,8 @@
 export interface startups {
-  id?:number;
+  uid?:number;
   companyName: string;
   logo?: string;
-  sector: string[];
+  sector: string;
   city: string;
   founder?: string;
   numOfEmployees?: number;

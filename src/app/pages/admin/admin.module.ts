@@ -6,13 +6,14 @@ import { AdminComponent } from './admin/admin.component';
 import { MaterialModule } from 'src/app/lib/components/material/material/material.module';
 import { AddComponent } from './add/add.component';
 import { FormsModule } from '@angular/forms';
+import { DeletestartupsComponent } from './deletestartups/deletestartups.component';
 
 
 
 
 
 @NgModule({
-  declarations: [AdminComponent, AddComponent],
+  declarations: [AdminComponent, AddComponent, DeletestartupsComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

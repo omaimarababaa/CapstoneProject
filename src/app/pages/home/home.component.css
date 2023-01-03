@@ -56,8 +56,8 @@
     display: grid;
     align-items: center;
     padding: 10px;
-    height: 140px;
-    width: 150px;
+    height: 173px;
+    width: 155px;
     margin: 10px;
     border: 1px solid var(--four-color);
   }

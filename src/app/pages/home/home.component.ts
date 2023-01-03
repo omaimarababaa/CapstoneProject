@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
   }
   getValue(key: any) {
     let fsector = key.target.value;
-
     console.log(fsector);
     if (fsector == 'Filter By sector') {
       this.companyLogo = this.startup.getStartups().subscribe((response) => {
