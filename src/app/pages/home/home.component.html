@@ -5,13 +5,15 @@
     of startup technology and accelerate its growth.</p>
 </div>
 <div class="titleStartup">
+  <div class="titleselect">
   <h1 class="titleS">Explore the Startups in Jordan</h1>
-  <select class="selectSector">
-   <option>Filter By sector</option>
-    <option  *ngFor="let sector of sectors">
+  <select class="selectSector" (change)="getValue($event)" >
+   <option  >Filter By sector</option>
+    <option  *ngFor="let sector of sectors" >
       {{sector.namesector}}
     </option>
   </select>
+</div>
   <div class="cardsCompany">
     <div class="a-box" *ngFor="let logo of companyLogo">
       <div class="img-container">

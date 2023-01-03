@@ -41,7 +41,7 @@
   .titleS{
     color: var(--primary-color);
     font-weight: bold;
-    margin: 5px 5px 60px 10px ;
+    /* margin: 5px 5px 60px 10px ; */
   }
   .company-box {
     display: inline-block;
@@ -81,6 +81,13 @@
     color: var(--black-color);
     text-decoration: none;
     margin: 8px;
+  }
+
+  .titleselect{
+display: flex;
+
+justify-content:space-between;
+margin: 5px 5px 60px 10px
   }
   .selectSector{
     background-color: var(--third-color);
