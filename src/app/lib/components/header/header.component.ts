@@ -16,10 +16,14 @@ export class HeaderComponent {
   titleChange:boolean=true;
   titleH:boolean=false;
   isLoggedn:boolean=false;
+  isAdmin:boolean=false;
   constructor(private auth:AuthService,private fireAuth:AngularFireAuth,
     private router: Router ){
     auth.userState$.subscribe(response=> {
       this.isLoggedn = response?.uid == null ? false:true;
+    });
+    auth.userState$.subscribe(response=> {
+      this.isAdmin = response?.uid == null ? false:true;
     });
   }
   @HostListener("document:scroll")
@@ -40,19 +44,19 @@ export class HeaderComponent {
      this.fireAuth.signOut();
      this.router.navigate(['login/']);
   }
-  clickAdd(){
-    this.auth.userState$
-       .pipe(
-         map((value)=> {
-           if(value) return true;
-           else {
-             //navigate to auth/login
-             this.router.navigate(['login/']);
+
+  // clickAdd(){
+  //   this.auth.userState$
+  //      .pipe(
+  //        map((value)=> {
+  //          if(value) return true;
+  //          else {
+  //            //navigate to auth/login
+  //            this.router.navigate(['login/']);
+  //            return false;
+  //          } 
      
-             return false;
-           } 
-     
-         })
-       )
-     }
+  //        })
+  //      )
+  //    }
 }

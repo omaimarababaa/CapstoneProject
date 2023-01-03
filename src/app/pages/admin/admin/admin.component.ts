@@ -1,9 +1,11 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 // import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
+import { AddComponent } from '../add/add.component';
 
 @Component({
   selector: 'app-admin',
@@ -20,11 +22,26 @@ export class AdminComponent implements AfterViewInit, OnInit {
     'yearOfEstablishment',
     'Websit',
     'actions'
+    
   ];
   dataSource = new MatTableDataSource<startups>();
-  constructor(private data: DataService) {
+  constructor(private data: DataService,public dialog: MatDialog) {
    
   }
+  openDialog() {
+    const dialogRef = this.dialog.open(AddComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  // @Component({
+  //   selector: 'app-add',
+  //   templateUrl: './add.component.html',
+  // })
+  // export class AddComponent{}
+  
+  
   // @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngAfterViewInit() {

@@ -4,8 +4,10 @@ import { AuthGuard } from './lib/guards/auth.guard';
 import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-
+  {
+    path: '',
+    children: [{ path: '', component: HomeComponent, pathMatch: 'full' }],
+  },
   {
     path: 'admin',
     loadChildren: () =>

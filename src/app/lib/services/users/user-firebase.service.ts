@@ -19,4 +19,6 @@ export class UserFirebaseService {
   getUser() {
     return this.userCollection.valueChanges();
   }
+  
+
 }
