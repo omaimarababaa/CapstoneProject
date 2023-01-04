@@ -1,27 +1,5 @@
-<div class="mat-elevation-z8" class="display">
-    <div>
-        <div class="slidbar">
-            <div class="search__container">
-                <input class="search__input" type="text" placeholder="Search">
-            </div>
-
-            <ul>
-                <li>
-                    <button mat-button class="btnstyle" (click)="openDialog()">ADD Startup</button>
-                </li>
-                <li class="fbs">Filter By Sector
-                    <ul class="sector">
-                        <li><input type="radio" name="sector" value="Ecommerce">
-                            <label for="Ecommerce">Ecommerce</label>
-                        </li>
-                    </ul>
-                </li>
-                <li><button class="noselect buttonStyle" id="btn1"> ADD Sector</button></li>
-                <li><button class="noselect buttonStyle" id="btn2">Delet Sector</button></li>
-                <li><button class="noselect buttonStyle" id="btn3">Updat Sector</button></li>
-            </ul>
-        </div>
-    </div>
+<div class="display">
+<app-slidbar></app-slidbar>
 
     <div>
         <table mat-table [dataSource]="dataSource">

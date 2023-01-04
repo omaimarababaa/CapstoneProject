@@ -1,0 +1,101 @@
+.slidbar{
+    margin-top: 110px;
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    height: 590px;
+  }
+  .search__input{
+    margin: 10px;
+  }
+  .fbs{
+    padding-top: 15px;
+  }
+  ul,li {
+    margin: 10px;
+    list-style-type: none;
+  }
+  .sector > *{
+    padding: 3px;
+  }
+  /* button */
+  .noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+          -webkit-tap-highlight-color: transparent;
+  }
+  
+  .buttonStyle {
+      width: 110px;
+      height: 40px;
+      font-size: 12px;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #7f5a83;
+      background-image: linear-gradient(315deg,var(--primary-color)  0%, #0d324d 74%);
+      background-size: 200% 100%;
+      background-position: left;
+      background-repeat: no-repeat;
+      transition: 500ms;
+      color: var(--third-color);
+      margin: 5px;
+  }
+  .btnstyle{
+    color: var(--third-color);
+    cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #7f5a83;
+      background-image: linear-gradient(315deg,var(--primary-color)  0%, #0d324d 74%);
+      background-size: 200% 100%;
+      background-position: left;
+      background-repeat: no-repeat;
+      transition: 500ms;
+      
+   
+  }
+  .btnDelete{
+    color:var(--third-color);
+    display: flex;
+  }
+  
+  /* button:before {
+      
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 20px;
+      background-color: #1b2845;
+      background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+      transition: 500ms;
+  } */
+  
+    
+  
+  button:hover {
+      background-position: right;
+  }
+  
+  button:hover:before {
+      color: rgba(255,255,255,0.8);
+  }
+  
+  button:focus {
+      outline: none;
+  }
+  .flex{
+    display:flex;
+   
+  }

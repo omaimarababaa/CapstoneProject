@@ -40,8 +40,10 @@ deleteStartups(id: string){
 getStartupById(id : string){
   return this.startupCollection.doc(id).valueChanges();
 }
-
 updateStartup(id: string, startup: startups){
   return from(this.startupCollection.doc(id).update({...startup}));
+}
+updateStartupRequest(id: string){
+  return from(this.startupCollection.doc(id).update({isApproved:true}));
 }
 }

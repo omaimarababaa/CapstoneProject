@@ -30,13 +30,13 @@ export class AdminComponent implements AfterViewInit, OnInit {
   constructor(private data: DataService,public dialog: MatDialog) {
    
   }
-  openDialog() {
-    const dialogRef = this.dialog.open(AddComponent);
+  // openDialog() {
+  //   const dialogRef = this.dialog.open(AddComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log(`Dialog result: ${result}`);
+  //   });
+  // }
   deleteStartup(id:string){
       console.log(id);
       let dialogRef = this.dialog.open(DeletestartupsComponent, {
