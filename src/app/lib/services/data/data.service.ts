@@ -30,18 +30,11 @@ addStartups(startup: startups){
 deleteStartups(id: string){
   return from(this.startupCollection.doc(id).delete());
 }
-// getTodos(userId: string): Observable<Todo[]>{
+getStartupById(id : string){
+  return this.startupCollection.doc(id).valueChanges();
+}
 
-//    return this.fireStore
-//    .collection<Todo>
-//    ('todos', ref => ref.where('userId', '==', userId)).valueChanges({"idField":'id'}); //server-side filter 
-// }
-
-// updateTodo(id: string, todo: Todo){
-//    return from(this.todosCollection.doc<Todo>(id).update({...todo}));
-// }
-
-// getTodo(id: string){
-//   return this.todosCollection.doc<Todo>(id).valueChanges();
-// }
+updateStartup(id: string, startup: startups){
+  return from(this.startupCollection.doc(id).update({...startup}));
+}
 }

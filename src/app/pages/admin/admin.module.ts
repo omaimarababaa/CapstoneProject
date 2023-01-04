@@ -7,13 +7,15 @@ import { MaterialModule } from 'src/app/lib/components/material/material/materia
 import { AddComponent } from './add/add.component';
 import { FormsModule } from '@angular/forms';
 import { DeletestartupsComponent } from './deletestartups/deletestartups.component';
+import { EditstartupsComponent } from './editstartups/editstartups.component';
+import { RequstAdminComponent } from './requst-admin/requst-admin.component';
 
 
 
 
 
 @NgModule({
-  declarations: [AdminComponent, AddComponent, DeletestartupsComponent],
+  declarations: [AdminComponent, AddComponent, DeletestartupsComponent, EditstartupsComponent, RequstAdminComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

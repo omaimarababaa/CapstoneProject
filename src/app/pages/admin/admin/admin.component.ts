@@ -7,6 +7,7 @@ import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
 import { AddComponent } from '../add/add.component';
 import { DeletestartupsComponent } from '../deletestartups/deletestartups.component';
+import { EditstartupsComponent } from '../editstartups/editstartups.component';
 
 @Component({
   selector: 'app-admin',
@@ -16,7 +17,6 @@ import { DeletestartupsComponent } from '../deletestartups/deletestartups.compon
 export class AdminComponent implements AfterViewInit, OnInit {
   public Allstartups: any;
   displayedColumns: string[] = [
-    'id',
     'Logo',
     'Company Name',
     'City',
@@ -38,35 +38,27 @@ export class AdminComponent implements AfterViewInit, OnInit {
     });
   }
   deleteStartup(id:string){
-
-  }
-  // deleteStudent(id: string){
-  //   console.log(id);
-  //   let dialogRef = this.dialog.open(DeletestartupsComponent, {
-  //      width: '500px',
-  //      data: {id: id}
-  //    });
-  //    dialogRef.afterClosed().subscribe((result)=> {
-  //        console.log(result); 
- 
-  //        //refresh table 
-  //        //this.students = this.studentsService.getStudents();
+      console.log(id);
+      let dialogRef = this.dialog.open(DeletestartupsComponent, {
+         width: '500px',
+         data: {id: id}
+       });
+       dialogRef.afterClosed().subscribe((result)=> {
+           console.log(result); 
+       })
+   
+     }
+     editStartup(id:string){
+      let dialogRef = this.dialog.open(EditstartupsComponent, {
        
-  //    });
-  //   }
-  // openDialogDelete(){
-  //   const dialogRef = this.dialog.open(DeletestartupsComponent);
-
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log(`Dialog result: ${result}`);
-  //   });
-  // }
-  // @Component({
-  //   selector: 'app-add',
-  //   templateUrl: './add.component.html',
-  // })
-  // export class AddComponent{}
+        data: {id: id}
+      });
+      dialogRef.afterClosed().subscribe((result)=> {
+          console.log(result); 
   
+      })
+     }
+   
   
   // @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -77,7 +69,9 @@ export class AdminComponent implements AfterViewInit, OnInit {
   ngOnInit(): void {
   
     this.data.getStartups().subscribe((response) => {
-      this.dataSource = new MatTableDataSource(response);
+      this.Allstartups=response;
+      this.dataSource = new MatTableDataSource(this.Allstartups);
+      
     });
   }
 }

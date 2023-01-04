@@ -26,16 +26,6 @@ export class AddComponent {
 
      
     });
-    // .subscribe({
-      
-    // next: (response)=> {
-       
-    // },
-    // error: (error)=> {
-    //   alert(JSON.stringify(error));
-    // },
-    // complete: ()=> console.log('completed')
-  // });
-    //navigate
+    
   }
 }
