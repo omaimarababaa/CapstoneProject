@@ -2,6 +2,7 @@ export interface startups {
   uid?:number;
   companyName: string;
   logo?: string;
+  isApproved:boolean;
   sector: string;
   city: string;
   founder?: string;

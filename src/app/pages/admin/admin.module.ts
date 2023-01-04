@@ -4,10 +4,10 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin/admin.component';
 import { MaterialModule } from 'src/app/lib/components/material/material/material.module';
-import { AddComponent } from './add/add.component';
+import { AddComponent } from './startups/add/add.component';
 import { FormsModule } from '@angular/forms';
-import { DeletestartupsComponent } from './deletestartups/deletestartups.component';
-import { EditstartupsComponent } from './editstartups/editstartups.component';
+import { DeletestartupsComponent } from './startups/deletestartups/deletestartups.component';
+import { EditstartupsComponent } from './startups/editstartups/editstartups.component';
 import { RequstAdminComponent } from './requst-admin/requst-admin.component';
 
 

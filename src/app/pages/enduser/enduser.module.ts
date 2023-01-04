@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { EnduserRoutingModule } from './enduser-routing.module';
 import { AddstartupComponent } from './addstartup/addstartup.component';
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from 'src/app/lib/components/material/material/material.module';
 
 
 
@@ -12,7 +14,9 @@ import { AddstartupComponent } from './addstartup/addstartup.component';
   ],
   imports: [
     CommonModule,
-    EnduserRoutingModule
+    EnduserRoutingModule,
+    MaterialModule,
+    FormsModule
   ]
 })
 export class EnduserModule { }

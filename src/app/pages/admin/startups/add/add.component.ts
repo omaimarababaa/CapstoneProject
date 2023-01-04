@@ -12,16 +12,17 @@ export class AddComponent {
   startups: startups = {
     sector: '',
     city: '',
-    companyName: ''
+    companyName: '',
+    isApproved:true
   }
   startup:startups[] = [];
-  constructor(private studentsService:DataService, private router: Router){
+  constructor(private startupService:DataService, private router: Router){
   }
 
 
   submit(){
     //this.student.id = this.id++;
-    this.studentsService.addStartups({
+    this.startupService.addStartups({
       ...this.startups
 
      

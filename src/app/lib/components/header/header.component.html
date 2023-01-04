@@ -9,7 +9,8 @@
         <div class="links">
             <a  routerLink="/">Home</a>
             <a  routerLink="addstartup" *ngIf="!isAdmin" >AddStartup</a>
-            <a  routerLink="" *ngIf="isAdmin" >Admin</a>
+            <a  routerLink="admin" *ngIf="isAdmin" >Admin</a>
+            <a  routerLink="request" *ngIf="isAdmin" >Request</a>
             <a  routerLink="/about">About</a>
 
         </div>

@@ -5,9 +5,9 @@ import { MatTableDataSource } from '@angular/material/table';
 
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
-import { AddComponent } from '../add/add.component';
-import { DeletestartupsComponent } from '../deletestartups/deletestartups.component';
-import { EditstartupsComponent } from '../editstartups/editstartups.component';
+import { AddComponent } from '../startups/add/add.component';
+import { DeletestartupsComponent } from '../startups/deletestartups/deletestartups.component';
+import { EditstartupsComponent } from '../startups/editstartups/editstartups.component';
 
 @Component({
   selector: 'app-admin',

@@ -13,13 +13,20 @@ export class DataService {
  
 }
 getStartups() {
-  return this.startupCollection.valueChanges({"idField":'uid'});
+  return this.firestore
+  .collection<startups>
+  ('Startups', ref => ref.where('isApproved', '==', true)).valueChanges({"idField":'uid'});
+}
+getStartupsRequest() {
+  return this.firestore
+  .collection<startups>
+  ('Startups', ref => ref.where('isApproved', '==', false)).valueChanges({"idField":'uid'});
 }
  getStartupsFilter(sectorF: string): Observable<startups[]>{
 
     return this.firestore
     .collection<startups>
-    ('Startups', ref => ref.where('sector', '==', sectorF)).valueChanges(); //server-side filter 
+    ('Startups', ref => ref.where('sector', '==', sectorF ).where( 'isApproved', '==', true)).valueChanges(); //server-side filter 
 }
 
 addStartups(startup: startups){

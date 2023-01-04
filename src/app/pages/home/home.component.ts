@@ -20,7 +20,8 @@ export class HomeComponent implements OnInit {
 
   public ngOnInit(): void {
     this.companyLogo = this.startup.getStartups().subscribe((response) => {
-      this.companyLogo = response;
+      this.companyLogo = response ;
+    
     });
     this.sectors = this.sector.getSectors().subscribe((response) => {
       this.sectors = response;
