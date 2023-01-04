@@ -1,3 +1,7 @@
-table{
-    margin-top: 106px;
-  }
+.margintop{
+  margin-top: 115px;
+}
+h2{
+  color: var(--primary-color);
+text-align: center;
+}
