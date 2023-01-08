@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { startups } from 'src/app/lib/interfaces/startups';
@@ -7,32 +8,37 @@ import { DataService } from 'src/app/lib/services/data/data.service';
 @Component({
   selector: 'app-editstartups',
   templateUrl: './editstartups.component.html',
-  styleUrls: ['./editstartups.component.css']
+  styleUrls: ['./editstartups.component.css'],
 })
-export class EditstartupsComponent {
-  // startup?: startups;
-  // startups$!: Observable<startups | undefined>;
-  // id!: string;
-  // constructor(private route: ActivatedRoute, 
-  //   private editstartup: DataService,
-  //   private router: Router){
+export class EditstartupsComponent implements OnInit {
+  public startups: any;
+  public companyInfo: any;
+  id!: string;
 
-  //   this.startups$ = this.route.paramMap.pipe(
-  //     switchMap((value)=> {
-  //       this.id = value.get('id')+'';
-  //       return this.editstartup.getStartupById(this.id)
-      
-  //     }
+  constructor(
+    private route: ActivatedRoute,
+    private editstartup: DataService,
+    private fs: AngularFirestore,
+    private router: Router
+  ) {
+    this.route.params.subscribe((query) => {
+      return (this.startups = query['id']);
+    });
+  }
+  ngOnInit(): void {
+    this.fs
+      .collection<startups>('Startups')
+      .doc(this.startups)
+      .valueChanges()
+      .subscribe((response) => {
+        if (response) this.companyInfo = response;
+        console.log(this.companyInfo);
+      });
+  }
 
-  //     )
-  //   )
-    
-  // }
-  // editStartup(student: any){
-  //   console.log(student,'on edit student');
-  //   this.editstartup.updateStartup(this.id, student);
-  //   this.router.navigate(['Admin/']);
-  // }
-
+  editStartup(startupE: any) {
+    console.log(startupE, 'on edit student');
+    this.editstartup.updateStartup(this.startups, startupE);
+    this.router.navigate(['admin/']);
+  }
 }
-

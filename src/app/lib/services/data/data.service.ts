@@ -12,37 +12,44 @@ export class DataService {
     this.startupCollection = this.firestore.collection('Startups');
  
 }
+// get all startups 
 getStartups() {
   return this.firestore
   .collection<startups>
   ('Startups', ref => ref.where('isApproved', '==', true)).valueChanges({"idField":'uid'});
 }
+// get all startups add by users
 getStartupsRequest() {
   return this.firestore
   .collection<startups>
   ('Startups', ref => ref.where('isApproved', '==', false)).valueChanges({"idField":'uid'});
 }
+// get all startup filter by sectors
  getStartupsFilter(sectorF: string): Observable<startups[]>{
 
     return this.firestore
     .collection<startups>
-    ('Startups', ref => ref.where('sector', '==', sectorF ).where( 'isApproved', '==', true)).valueChanges(); //server-side filter 
+    ('Startups', ref => ref.where('sector', '==', sectorF ).where( 'isApproved', '==', true)).valueChanges(); 
 }
-
+//  add new startup
 addStartups(startup: startups){
   let addedstartup = this.startupCollection.add(startup);
   return from(addedstartup);
 
 }
+// delete startups
 deleteStartups(id: string){
   return from(this.startupCollection.doc(id).delete());
 }
+// get startups by Id 
 getStartupById(id : string){
   return this.startupCollection.doc(id).valueChanges();
 }
+//  update startups 
 updateStartup(id: string, startup: startups){
   return from(this.startupCollection.doc(id).update({...startup}));
 }
+//  update startup for accept by admin
 updateStartupRequest(id: string){
   return from(this.startupCollection.doc(id).update({isApproved:true}));
 }

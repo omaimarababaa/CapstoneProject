@@ -37,6 +37,7 @@ export class RequstAdminComponent implements AfterViewInit, OnInit {
        })
    
      }
+     
      acceptStartup(id:string){
             this.data.updateStartupRequest(id);
      }

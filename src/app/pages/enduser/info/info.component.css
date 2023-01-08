@@ -1,0 +1,30 @@
+.info {
+  margin: 130px;
+  display: flex;
+}
+img {
+ width: 250px;
+ height: 250px;
+}
+.imagInfo{
+     width: 300px;
+  height: 300px;
+  padding: 20px;
+}
+
+.company{
+    margin-top: 65px;
+}
+.colorS{
+    color: var(--secound-color);
+    font-weight: bold;
+}
+.paddingleft{
+    /* display: block; */
+    padding-left: 10px;
+    /* padding-top: 10px; */
+}
+.link{
+    text-decoration: none;
+    color: var(--black-color);
+}

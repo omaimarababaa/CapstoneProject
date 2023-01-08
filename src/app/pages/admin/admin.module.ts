@@ -9,14 +9,16 @@ import { FormsModule } from '@angular/forms';
 import { DeletestartupsComponent } from './startups/deletestartups/deletestartups.component';
 import { EditstartupsComponent } from './startups/editstartups/editstartups.component';
 import { RequstAdminComponent } from './requst-admin/requst-admin.component';
-import { SlidbarComponent } from './slidbar/slidbar.component';
+import { AddsectorComponent } from './sectors/addsector/addsector.component';
+
+
 
 
 
 
 
 @NgModule({
-  declarations: [AdminComponent, AddComponent, DeletestartupsComponent, EditstartupsComponent, RequstAdminComponent, SlidbarComponent],
+  declarations: [AdminComponent, AddComponent, DeletestartupsComponent, EditstartupsComponent, RequstAdminComponent, AddsectorComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

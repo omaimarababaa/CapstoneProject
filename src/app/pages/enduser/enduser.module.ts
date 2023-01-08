@@ -5,12 +5,14 @@ import { EnduserRoutingModule } from './enduser-routing.module';
 import { AddstartupComponent } from './addstartup/addstartup.component';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/lib/components/material/material/material.module';
+import { InfoComponent } from './info/info.component';
 
 
 
 @NgModule({
   declarations: [
-    AddstartupComponent
+    AddstartupComponent,
+    InfoComponent
   ],
   imports: [
     CommonModule,

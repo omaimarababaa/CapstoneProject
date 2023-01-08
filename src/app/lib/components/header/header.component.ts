@@ -1,9 +1,10 @@
 import { Component, HostListener } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-import { map, Observable } from 'rxjs';
 import { users } from '../../interfaces/users';
+
 import { AuthService } from '../../services/auth/auth.service';
+import { UserFirebaseService } from '../../services/users/user-firebase.service';
 
 
 @Component({
@@ -17,14 +18,28 @@ export class HeaderComponent {
   titleH:boolean=false;
   isLoggedn:boolean=false;
   isAdmin:boolean=false;
+  data: users[] = [];
+  userid?: string;
   constructor(private auth:AuthService,private fireAuth:AngularFireAuth,
-    private router: Router ){
+    private router: Router, private users: UserFirebaseService ){
     auth.userState$.subscribe(response=> {
       this.isLoggedn = response?.uid == null ? false:true;
     });
-    auth.userState$.subscribe(response=> {
-      this.isAdmin = response?.uid == null ? false:true;
+  // Cheack isAdmin
+    this.users.getUser().subscribe((response) => {
+      this.auth.user$.subscribe((user) => {
+        this.userid = user?.uid;
+        this.data = response;
+        this.data.forEach((element) => {
+          if (this.userid == element.userId) {
+            if (element.isAdmin == true) 
+            this.isAdmin=true;
+            else   this.isAdmin=false;
+          }
+        });
+      });
     });
+
   }
   @HostListener("document:scroll")
    scrollFunction (){

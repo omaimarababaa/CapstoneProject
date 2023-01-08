@@ -10,7 +10,7 @@
   <select class="selectSector" (change)="getValue($event)" >
    <option  >Filter By sector</option>
     <option  *ngFor="let sector of sectors" >
-      {{sector.namesector}}
+      {{sector.sectorName}}
     </option>
   </select>
 </div>
@@ -18,7 +18,7 @@
     <div class="a-box" *ngFor="let logo of companyLogo">
       <div class="img-container">
         <div class="img-inner">
-          <a href=""> <img src="{{logo.logo}}" class="logoCompany"></a>
+          <a  (click)="getInfo(logo.uid)"><img src="{{logo.logo}}" class="logoCompany"></a>
         </div>
       </div>
     </div>

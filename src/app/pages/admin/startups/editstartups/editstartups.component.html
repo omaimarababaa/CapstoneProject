@@ -1,47 +1,48 @@
-<!-- <h1>Edit Startup</h1>
+
 <div class="container">
+    <h1>Edit Startup</h1>
     <form #form="ngForm" (ngSubmit)="editStartup(form.value)" >
         <mat-form-field>
             <mat-label>Company Name</mat-label>
-            <input matInput  name="companyName" [(ngModel)]='startups.companyName'>
+            <input matInput  name="companyName" [(ngModel)]='companyInfo.companyName'>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Logo</mat-label>
-            <input matInput name="logo" [(ngModel)]='startups.logo'>
+            <input matInput name="logo" [(ngModel)]='companyInfo.logo'>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Sector</mat-label>
-            <input matInput name="sector" [(ngModel)]='startups.sector'>
+            <input matInput name="sector" [(ngModel)]='companyInfo.sector'>
         </mat-form-field>
         <mat-form-field>
             <mat-label>City</mat-label>
-            <input matInput name="city" [(ngModel)]='startups.city'>
+            <input matInput name="city" [(ngModel)]='companyInfo.city'>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Founder</mat-label>
-            <input matInput name="founder" [(ngModel)]='startups.founder'>
+            <input matInput name="founder" [(ngModel)]='companyInfo.founder'>
         </mat-form-field>
         <mat-form-field>
             <mat-label>numOfEmployees</mat-label>
-            <input matInput name="numOfEmployees" [(ngModel)]='startups.numOfEmployees'>
+            <input matInput name="numOfEmployees" [(ngModel)]='companyInfo.numOfEmployees'>
         </mat-form-field>
         <mat-form-field>
             <mat-label>yearOfEstablishment</mat-label>
-            <input matInput name="yearOfEstablishment" [(ngModel)]='startups.yearOfEstablishment'>
+            <input matInput name="yearOfEstablishment" [(ngModel)]='companyInfo.yearOfEstablishment'>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Website</mat-label>
-            <input matInput name="website" [(ngModel)]='startups.website'>
+            <input matInput name="website" [(ngModel)]='companyInfo.website'>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Email</mat-label>
-            <input matInput name="email" [(ngModel)]='startups.email'>
+            <input matInput name="email" [(ngModel)]='companyInfo.email'>
         </mat-form-field>
         <mat-form-field>
             <mat-label>phone</mat-label>
-            <input matInput name="phone" [(ngModel)]='startups.phone'>
+            <input matInput name="phone" [(ngModel)]='companyInfo.phone'>
         </mat-form-field>
-        <button (click)="submit()">ADD</button>
+        <button  >Update</button>
     </form>
   
-</div> -->
+</div>

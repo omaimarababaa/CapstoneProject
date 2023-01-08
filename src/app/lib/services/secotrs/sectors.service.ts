@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { from } from 'rxjs';
 import { sectors } from '../../interfaces/sectors';
 
 @Injectable({
@@ -7,17 +8,17 @@ import { sectors } from '../../interfaces/sectors';
 })
 export class SectorsService {
 
-  startupCollection!: AngularFirestoreCollection<sectors>;
+ sectorsCollection!: AngularFirestoreCollection<sectors>;
   constructor(private firestore: AngularFirestore) {
-    this.startupCollection = this.firestore.collection('sectors');
+    this.sectorsCollection = this.firestore.collection('sectors');
  
 }
 getSectors() {
-  return this.startupCollection.valueChanges();
+  return this.sectorsCollection.valueChanges();
 }
-// addStartups(startup: sectors){
-//   let addedTodo = this.startupCollection.add(startup);
-//   return from(addedTodo);
+addSsctor(sector: sectors){
+  let addedTodo = this.sectorsCollection.add(sector);
+  return from(addedTodo);
 
-// }
+}
 }
