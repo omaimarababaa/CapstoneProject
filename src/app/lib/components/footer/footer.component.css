@@ -16,3 +16,9 @@
 .social > * {
   margin: 5px;
 }
+@media  screen and (width <= 450px) {
+  .toolbar2 {
+    display: block;
+   
+  }
+}

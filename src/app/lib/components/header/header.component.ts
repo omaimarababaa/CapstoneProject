@@ -59,7 +59,9 @@ export class HeaderComponent {
 
    logOut(){
      this.fireAuth.signOut();
-     this.router.navigate(['']);
+    //  this.router.navigate(['']);
+     window.location.reload();
+
   }
   openMenu(){
     this.menuVar=!this.menuVar;

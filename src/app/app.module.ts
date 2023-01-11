@@ -7,6 +7,9 @@ import { MaterialModule } from './lib/components/material/material/material.modu
 import { LayoutComponent } from './lib/components/layouts/layout/layout.component';
 import { HeaderComponent } from './lib/components/header/header.component';
 import { FooterComponent } from './lib/components/footer/footer.component';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -30,6 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    ShareButtonsModule,
+  ShareIconsModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,

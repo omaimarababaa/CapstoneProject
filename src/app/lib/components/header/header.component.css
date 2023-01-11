@@ -63,7 +63,7 @@ button {
     display: block;
     position: absolute;
     right: 50px;
-    top: 40px;
+    /* top: 40px; */
    
   }
   a {
@@ -79,7 +79,8 @@ button {
 }
   .links{
     display: none;
-    background-color: var( --plus-color);
+ border: 1px solid var(--shadow-color);
+ background-color: var(--third-color);
     position: relative;
     top: 467px;
     left: 56px;

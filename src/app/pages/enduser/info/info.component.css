@@ -28,3 +28,10 @@ img {
     text-decoration: none;
     color: var(--black-color);
 }
+/* Responsive */
+@media  screen and (width <= 450px) {
+    .info {
+        margin: 130px 0px 30px 12px;
+        display: block;
+      }
+  }
