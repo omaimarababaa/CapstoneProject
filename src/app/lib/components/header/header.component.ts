@@ -13,6 +13,8 @@ import { UserFirebaseService } from '../../services/users/user-firebase.service'
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+    
+  menuVar:boolean=false;
   scrollChangeP:boolean=true;
   titleChange:boolean=true;
   titleH:boolean=false;
@@ -59,5 +61,7 @@ export class HeaderComponent {
      this.fireAuth.signOut();
      this.router.navigate(['']);
   }
-
+  openMenu(){
+    this.menuVar=!this.menuVar;
+  }
 }

@@ -68,7 +68,7 @@ span{
     clear: both;
   }
   .buttonStyle {
-    width: 200px;
+    width: 165px;
     height: 40px;
     font-size: 12px;
     cursor: pointer;
@@ -77,7 +77,7 @@ span{
     align-items: center;
     justify-content: center;
     background-color: var(--primary-color);
-    /* transition: 500ms; */
+ 
     color: var(--third-color);
 
     /* margin-left: 20%; */

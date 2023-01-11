@@ -26,7 +26,10 @@ export class AdminComponent implements AfterViewInit, OnInit {
     'City',
     'Sector',
     'yearOfEstablishment',
+    'numOfEmployees',
     'Websit',
+    'email',
+    'founder',
     'actions'
     
   ];

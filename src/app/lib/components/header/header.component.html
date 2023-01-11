@@ -6,22 +6,26 @@
                 <span class="colorChang">TechStartups</span>
             </a>
         </div>
-        <div class="links">
-            <a  routerLink="/">Home</a>
-            <a routerLinkActive="active" routerLink="addstartup" *ngIf="!isAdmin" >AddStartup</a>
-            <a  routerLinkActive="active" routerLink="admin" *ngIf="isAdmin" >Admin</a>
-            <a  routerLinkActive="active" routerLink="request" *ngIf="isAdmin">Request</a>
-            <a routerLinkActive="active"  routerLink="/about">About</a>
-
+        <div class="iconMenu" (click)="openMenu()">
+            <img src="./../../../../assets/icons/menu.png" alt="menu" width="35px" height="35px">
         </div>
-        <!-- Switch button -->
-        <div class="btn">
+        <div class="links" [class.menuVar]="menuVar">
+            <a routerLink="/">Home</a>
+            <a routerLinkActive="active" routerLink="addstartup" *ngIf="!isAdmin">AddStartup</a>
+            <a routerLinkActive="active" routerLink="admin" *ngIf="isAdmin">Admin</a>
+            <a routerLinkActive="active" routerLink="request" *ngIf="isAdmin">Request</a>
+            <a routerLinkActive="active" routerLink="/about">About</a>
+
             <a *ngIf="isLoggedn" class="btnLink">
                 <button mat-raised-button (click)="logOut()">Log out</button>
             </a>
             <a *ngIf="!isLoggedn" class="btnLink" routerLink="/login">
                 <button mat-raised-button>Log in</button>
             </a>
+
         </div>
+        <!-- Switch button -->
+
+
     </mat-toolbar>
 </div>
