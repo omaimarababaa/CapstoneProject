@@ -1,17 +1,45 @@
+.container {
 
+  margin-top:130px;
+
+}
+form{
+  width: 50%;
+  height: 933px;
+
+    /* padding: 20px; */
+    position: relative;
+    left: 20%;
+    margin: 12px;
+    border-radius: 12px;
+    box-shadow: 1px 10px 10px var(--primary-color), 1px 3px 9px var(--third-color);
+}
+h1{
+  color: var(--primary-color);
+text-align: center;
+  font-weight: bold;
+}
+span{
+  color: red ;
+  display: block;
+  /* font-family:12px !important; */
+}
   input[type=text], select {
-    width: 50%;
+    width: 80%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    resize: vertical;
   }
   
   label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
+    padding: 12px 12px 12px 12px;
+    /* display: inline-block; */
+    /* margin-left: 10%; */
+    
   }
-  
+  .row{
+    margin-left: 10%;
+  }
   input[type=submit] {
     background-color: var(--secound-color);
     color: white;
@@ -20,29 +48,16 @@
     border-radius: 4px;
     cursor: pointer;
    
-  }
-  
-  input[type=submit]:hover {
-    background-color: var(--primary-color);
-  }
-  
-  .container {
-    border-radius: 5px;
-    background-color: var( --plus-color);
-    padding: 20px;
-    margin-top: 80px;
-    width: 100%;
-  }
-  
+  } 
   .col-25 {
-    float: left;
-    width: 25%;
+    /* float: left;
+    width: 25%; */
     margin-top: 6px;
   }
   
   .col-75 {
-    float: left;
-    width: 75%;
+    /* float: left;
+    width: 75%; */
     margin-top: 6px;
   }
   
@@ -52,8 +67,24 @@
     display: table;
     clear: both;
   }
-  
-  
+  .buttonStyle {
+    width: 200px;
+    height: 40px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    /* transition: 500ms; */
+    color: var(--third-color);
+
+    /* margin-left: 20%; */
+}
+  /* input.ng-valid{
+    border: 1px solid red;
+  } */
   @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
       width: 100%;

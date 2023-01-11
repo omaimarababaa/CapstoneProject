@@ -57,21 +57,7 @@ export class HeaderComponent {
 
    logOut(){
      this.fireAuth.signOut();
-     this.router.navigate(['login/']);
+     this.router.navigate(['']);
   }
 
-  // clickAdd(){
-  //   this.auth.userState$
-  //      .pipe(
-  //        map((value)=> {
-  //          if(value) return true;
-  //          else {
-  //            //navigate to auth/login
-  //            this.router.navigate(['login/']);
-  //            return false;
-  //          } 
-     
-  //        })
-  //      )
-  //    }
 }

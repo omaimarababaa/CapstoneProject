@@ -47,7 +47,7 @@ getStartupById(id : string){
 }
 //  update startups 
 updateStartup(id: string, startup: startups){
-  return from(this.startupCollection.doc(id).update({...startup}));
+  return this.startupCollection.doc(id).update({...startup});
 }
 //  update startup for accept by admin
 updateStartupRequest(id: string){

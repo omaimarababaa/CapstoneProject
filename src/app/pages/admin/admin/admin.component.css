@@ -1,5 +1,11 @@
-table{
+/* table{
   margin-top: 106px;
+} */
+.containerTable{
+  margin-top: 106px;
+  /* width: 100%;
+    height: 589px;
+    overflow: auto; */
 }
 .demo-table {
   width: 100%;
@@ -66,7 +72,7 @@ ul,li {
 }
 
 .buttonStyle {
-    width: 110px;
+    width: 200px;
     height: 40px;
     font-size: 12px;
     cursor: pointer;
@@ -75,7 +81,7 @@ ul,li {
     align-items: center;
     justify-content: center;
     background-color: #7f5a83;
-    background-image: linear-gradient(315deg,var(--primary-color)  0%, #0d324d 74%);
+    background-image: linear-gradient(315deg,var(--primary-color)  0%, #1d415a 74%);
     background-size: 200% 100%;
     background-position: left;
     background-repeat: no-repeat;

@@ -1,48 +1,95 @@
 
 <div class="container">
-    <h1>Edit Startup</h1>
-    <form #form="ngForm" (ngSubmit)="editStartup(form.value)" >
-        <mat-form-field>
-            <mat-label>Company Name</mat-label>
-            <input matInput  name="companyName" [(ngModel)]='companyInfo.companyName'>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Logo</mat-label>
-            <input matInput name="logo" [(ngModel)]='companyInfo.logo'>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Sector</mat-label>
-            <input matInput name="sector" [(ngModel)]='companyInfo.sector'>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>City</mat-label>
-            <input matInput name="city" [(ngModel)]='companyInfo.city'>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Founder</mat-label>
-            <input matInput name="founder" [(ngModel)]='companyInfo.founder'>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>numOfEmployees</mat-label>
-            <input matInput name="numOfEmployees" [(ngModel)]='companyInfo.numOfEmployees'>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>yearOfEstablishment</mat-label>
-            <input matInput name="yearOfEstablishment" [(ngModel)]='companyInfo.yearOfEstablishment'>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Website</mat-label>
-            <input matInput name="website" [(ngModel)]='companyInfo.website'>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input matInput name="email" [(ngModel)]='companyInfo.email'>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>phone</mat-label>
-            <input matInput name="phone" [(ngModel)]='companyInfo.phone'>
-        </mat-form-field>
-        <button  >Update</button>
+    
+    <form #form="ngForm" (ngSubmit)="editStartup(form.value)">
+      <h1>Edit Startup</h1>
+      <div class="row">
+        <div class="col-25">
+          <label for="companyName">Company Name :</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="companyName"  [(ngModel)]='companyInfo.companyName'>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="city">City :</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="city" [(ngModel)]='companyInfo.city'>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="yearOfEstablishment">Years of Extablishment : </label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="yearOfEstablishment"  [(ngModel)]='companyInfo.yearOfEstablishment'>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="numOfEmployees">Number of Employees :</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="numOfEmployees" [(ngModel)]='companyInfo.numOfEmployees'>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="logo">Logo :</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="logo"   [(ngModel)]='companyInfo.logo'>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="sector">Sectors :</label>
+        </div>
+        
+        <div class="col-75">
+            <input type="text" id="lname" name="sector" [(ngModel)]='companyInfo.sector'>
+        </div>
+        </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="website">Website :</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="lname" name="website"   [(ngModel)]='companyInfo.website'>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="email">Email :</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="lname" name="email"  [(ngModel)]='companyInfo.email'>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="phone">Phone : </label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="lname" name="phone"  [(ngModel)]='companyInfo.phone'>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="founder">Founder :</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="lname" name="founder"  [(ngModel)]='companyInfo.founder'>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label ></label>
+        </div>
+        <button class="noselect buttonStyle"> Update startup</button>
+      </div>
     </form>
-  
-</div>
+  </div>

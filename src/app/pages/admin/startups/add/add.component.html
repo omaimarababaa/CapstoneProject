@@ -1,55 +1,53 @@
-<h1>Add Startup</h1>
+
 <div class="container">
+    <h1>Add Startup</h1>
     <form #form="ngForm" >
-        <mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-error  *ngIf="cName.invalid">Company name is required</mat-error>
             <mat-label>Company Name</mat-label>
-            <input matInput  name="companyName" [(ngModel)]='startups.companyName'>
+            <input matInput #cName="ngModel" required  name="companyName" [(ngModel)]='startups.companyName'>
         </mat-form-field>
-        <mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <mat-error  *ngIf="lName.invalid">Logo is required</mat-error>
             <mat-label>Logo</mat-label>
-            <input matInput name="logo" [(ngModel)]='startups.logo'>
+            <input matInput #lName="ngModel" required name="logo" [(ngModel)]='startups.logo'>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-error  *ngIf="sName.invalid">Sector is required</mat-error>
             <mat-label>Sector</mat-label>
-            <input matInput name="sector" [(ngModel)]='startups.sector'>
+            <input matInput  #sName="ngModel" required name="sector" [(ngModel)]='startups.sector'>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-error  *ngIf="cName.invalid">City is required</mat-error>
             <mat-label>City</mat-label>
-            <input matInput name="city" [(ngModel)]='startups.city'>
+            <input matInput  #cName="ngModel" required name="city" [(ngModel)]='startups.city'>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <mat-label>Founder</mat-label>
             <input matInput name="founder" [(ngModel)]='startups.founder'>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <mat-label>numOfEmployees</mat-label>
             <input matInput name="numOfEmployees" [(ngModel)]='startups.numOfEmployees'>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <mat-label>yearOfEstablishment</mat-label>
             <input matInput name="yearOfEstablishment" [(ngModel)]='startups.yearOfEstablishment'>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-error  *ngIf="wName.invalid">Website is required</mat-error>
             <mat-label>Website</mat-label>
-            <input matInput name="website" [(ngModel)]='startups.website'>
+            <input matInput  #wName="ngModel" required name="website" [(ngModel)]='startups.website'>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
             <input matInput name="email" [(ngModel)]='startups.email'>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <mat-label>phone</mat-label>
             <input matInput name="phone" [(ngModel)]='startups.phone'>
         </mat-form-field>
-        <button (click)="submit()">ADD</button>
+        <button class="buttonStyle"  [disabled]="form.invalid" (click)="submit()"> Add New Startup</button>
     </form>
-    <!-- <form [formGroup]="form" (ngSubmit)="submit()" >
-        <mat-form-field>
-            <mat-label>Name</mat-label>
-            <input matInput type="text" formControlName="name">
-            <mat-error *ngIf="name?.hasError('required')">Todo Name is required</mat-error>
-        </mat-form-field>
-       
-        <button type="submit" mat-raised-button color="primary" [disabled]="form.invalid">Add Todo</button>    
-    </form> -->
 </div>

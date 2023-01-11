@@ -21,12 +21,13 @@ export class AddstartupComponent {
   constructor(private startupService:DataService, private router: Router){
   }
   submit(){
-    //this.student.id = this.id++;
+   
     this.startupService.addStartups({
-      ...this.startups
-
-     
+      ...this.startups   
     });
+    alert("Thanks For Added")
+    this.router.navigate(['']);
+    
     
   }
 }

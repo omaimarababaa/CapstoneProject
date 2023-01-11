@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { sectors } from 'src/app/lib/interfaces/sectors';
 import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
 
@@ -8,6 +10,7 @@ import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
   styleUrls: ['./addsector.component.css']
 })
 export class AddsectorComponent {
+  massge:any;
   sectors: sectors = {
     sectorName: '',
     logo:'',
@@ -16,14 +19,17 @@ export class AddsectorComponent {
     ParentCategoryName:''
   }
   sector:sectors[] = [];
-  constructor(private sectorAdd:SectorsService){
+  constructor(private sectorAdd:SectorsService,  private router: Router,private dialogRef: MatDialogRef<AddsectorComponent>){
   }
   submit(){
     //this.student.id = this.id++;
     this.sectorAdd.addSsctor({
       ...this.sectors,
       
+      
     });
+      this.massge='success';
+    // this.dialogRef.close(true);
     
   }
 }

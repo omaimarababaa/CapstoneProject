@@ -21,8 +21,8 @@ export class EditstartupsComponent implements OnInit {
     private fs: AngularFirestore,
     private router: Router
   ) {
-    this.route.params.subscribe((query) => {
-      return (this.startups = query['id']);
+    this.route.params.subscribe((data) => {
+      return (this.startups = data['id']);
     });
   }
   ngOnInit(): void {

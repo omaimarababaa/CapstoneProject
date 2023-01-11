@@ -1,26 +1,15 @@
 <h1>Add sector</h1>
 <div class="container">
     <form #form="ngForm" >
-        <mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-error  *ngIf="SName.invalid"> is required</mat-error>
             <mat-label> sectorName</mat-label>
-            <input matInput  name="companyName" [(ngModel)]='sectors.sectorName'>
+            <input matInput  #SName="ngModel" required  name="companyName" [(ngModel)]='sectors.sectorName' >
+        
         </mat-form-field>
-        <!-- <mat-form-field>
-            <mat-label>Logo</mat-label>
-            <input matInput name="logo" [(ngModel)]='sectors.logo'>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>designcolor</mat-label>
-            <input matInput name="sector" [(ngModel)]='sectors.designcolor'>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>City</mat-label>
-            <input matInput name="city" [(ngModel)]='sectors.city'>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>ParentCategoryName</mat-label>
-            <input matInput name="website" [(ngModel)]='sectors.ParentCategoryName'>
-        </mat-form-field> -->
-        <button (click)="submit()">ADD</button>
+       
+        <div style="color:red ;">{{massge}}</div>
+        <button class="buttonStyle" [disabled]="form.invalid" (click)="submit()" > Add New Sector</button>
+      
     </form>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
@@ -9,6 +10,7 @@ import { DataService } from 'src/app/lib/services/data/data.service';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent {
+  massage:any;
   startups: startups = {
     sector: '',
     city: '',
@@ -16,7 +18,7 @@ export class AddComponent {
     isApproved:true
   }
   startup:startups[] = [];
-  constructor(private startupService:DataService, private router: Router){
+  constructor(private startupService:DataService, private router: Router,private dialogRef: MatDialogRef<AddComponent>){
   }
 
 
@@ -24,9 +26,10 @@ export class AddComponent {
     //this.student.id = this.id++;
     this.startupService.addStartups({
       ...this.startups
-
-     
     });
-    
+  
+  alert('Success For Added New Startups');
+  
+    this.dialogRef.close(true);
   }
 }

@@ -1,82 +1,102 @@
-<h1>Add Startup</h1>
+
 <div class="container">
-    <form #form="ngForm">
+  
+    <form #form="ngForm"  (ngSubmit)="submit()">
+      <h1>Add Startup</h1>
       <div class="row">
         <div class="col-25">
-          <label for="fname">Company Name</label>
+          <label for="companyName">Company Name :</label>
         </div>
         <div class="col-75">
-          <input type="text" id="fname" name="firstname" placeholder="Your Company Name.."  [(ngModel)]='startups.companyName'>
+          <input type="text" id="fname" name="companyName"  #cName="ngModel" required   placeholder="Your Company Name.."  [(ngModel)]='startups.companyName'>
+       <span  *ngIf="cName.touched && cName.invalid">Company name is required</span>
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="lname">City</label>
+          <label for="city">City :</label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="lastname" placeholder="Your City.." [(ngModel)]='startups.city'>
+          <input type="text" id="lname" #aName="ngModel" required  name="city" placeholder="Your City.." [(ngModel)]='startups.city'>
+          <span  *ngIf="aName.touched && aName.invalid">City  is required</span>
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="lname">Years of Extablishment</label>
+          <label for="yearOfEstablishment">Years of Extablishment :</label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="lastname" placeholder="Years of Extablishment.." [(ngModel)]='startups.yearOfEstablishment'>
+          <input type="text" id="lname" name="yearOfEstablishment" placeholder="Years of Extablishment.." [(ngModel)]='startups.yearOfEstablishment'>
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="lname">Number of Employees</label>
+          <label for="numOfEmployees">Number of Employees :</label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="lastname" placeholder="Number of Employees.." [(ngModel)]='startups.numOfEmployees'>
+          <input type="text" id="lname" name="numOfEmployees" placeholder="Number of Employees.." [(ngModel)]='startups.numOfEmployees'>
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="lname">Logo</label>
+          <label for="logo">Logo :</label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="lastname" placeholder="Your URL Logo.."  [(ngModel)]='startups.logo'>
+          <input type="text" id="lname" name="logo" #lName="ngModel" required  placeholder="Your URL Logo.."  [(ngModel)]='startups.logo'>
+          <span  *ngIf="lName.touched && lName.invalid">Logo  is required</span>
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="country">Sectors</label>
+          <label for="sector">Sectors :</label>
         </div>
         
         <div class="col-75">
-            <input type="text" id="lname" name="lastname" placeholder="Your Company Sector.."  [(ngModel)]='startups.sector'>
+            <input type="text" id="lname" name="sector" #sName="ngModel" required placeholder="Your Company Sector.."  [(ngModel)]='startups.sector'>
+            <span *ngIf="sName.touched && sName.invalid">Sector  is required</span>
         </div>
         </div>
       
       <div class="row">
         <div class="col-25">
-          <label for="subject">Website</label>
+          <label for="website">Website :</label>
         </div>
         <div class="col-75">
-            <input type="text" id="lname" name="lastname" placeholder="Your Company website.."  [(ngModel)]='startups.website'>
+            <input type="text" id="lname" name="website" #wName="ngModel" required placeholder="Your Company website.."  [(ngModel)]='startups.website'>
+            <span  *ngIf="wName.touched && wName.invalid">Sector  is required</span>
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="subject">Email</label>
+          <label for="email">Email :</label>
         </div>
         <div class="col-75">
-            <input type="text" id="lname" name="lastname" placeholder="Your Company email.." [(ngModel)]='startups.email'>
+            <input type="text" id="lname" name="email" placeholder="Your Company email.." [(ngModel)]='startups.email'>
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="subject">Phone</label>
+          <label for="phone">Phone :</label>
         </div>
         <div class="col-75">
-            <input type="text" id="lname" name="lastname" placeholder="Your Company Phone.." [(ngModel)]='startups.phone'>
+            <input type="text" id="lname" name="phone" placeholder="Your Company Phone.." [(ngModel)]='startups.phone'>
         </div>
       </div>
       <div class="row">
-        <button (click)="submit()">ADD</button>
+        <div class="col-25">
+          <label for="founder">Founder :</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="lname" name="founder" placeholder="Founder.." [(ngModel)]='startups.founder'>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label ></label>
+        </div>
+        <!-- <button >ADD</button> -->
+        
+        <button class="noselect buttonStyle"  [disabled]="form.invalid"> Add New startup</button>
       </div>
     </form>
   </div>

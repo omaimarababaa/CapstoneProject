@@ -11,7 +11,7 @@ import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
 import { AddsectorComponent } from '../sectors/addsector/addsector.component';
 import { AddComponent } from '../startups/add/add.component';
 import { DeletestartupsComponent } from '../startups/deletestartups/deletestartups.component';
-import { EditstartupsComponent } from '../startups/editstartups/editstartups.component';
+
 
 @Component({
   selector: 'app-admin',
@@ -95,6 +95,7 @@ export class AdminComponent implements AfterViewInit, OnInit {
         this.Allstartups = response;
         this.dataSource = new MatTableDataSource(this.Allstartups);
         console.log(this.Allstartups);
+        this.dataSource.paginator = this.paginator;
       });
     } else {
       this.Allstartups = this.data
@@ -103,6 +104,7 @@ export class AdminComponent implements AfterViewInit, OnInit {
           this.Allstartups = response;
           this.dataSource = new MatTableDataSource(this.Allstartups);
           console.log(this.Allstartups);
+          this.dataSource.paginator = this.paginator;
         });
     }
   }

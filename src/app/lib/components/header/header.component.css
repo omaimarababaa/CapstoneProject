@@ -45,5 +45,11 @@
   button {
     margin: 5px;
   }
+  .active{
+   border:1px solid var(--third-color);
+   padding: 7px;
+   border-radius: 20%;
+background-color:var(--plus-color);
+  }
  
   
