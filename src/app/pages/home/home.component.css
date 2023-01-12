@@ -94,6 +94,14 @@ margin: 5px 5px 60px 10px
     border-color: var(--primary-color);
     padding: 10px;
   }
+  .socialM{
+    background-color: var(--primary-color);
+  }
+  h3{
+    color: var(--third-color);
+   font-weight: bold;
+   margin: 5px;
+}
 /* ---------------------------------------------------------------------------- */
 
 @media  screen and (width <= 1055px) {

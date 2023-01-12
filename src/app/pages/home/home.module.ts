@@ -5,7 +5,8 @@ import { HomeRoutingModule } from './home-routing.module';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ShareButtonsModule,
+    ShareIconsModule
   ]
 })
 export class HomeModule { }
