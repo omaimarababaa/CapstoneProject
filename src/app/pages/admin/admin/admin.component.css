@@ -45,7 +45,7 @@ th{
   margin-top: 110px;
   background-color: var(--primary-color);
   color: var(--third-color);
-  height: 586px;
+  height: 100%;
 }
 .search__input{
   margin: 10px;

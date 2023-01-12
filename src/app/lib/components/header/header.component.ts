@@ -41,8 +41,8 @@ export class HeaderComponent {
         });
       });
     });
-
   }
+  
   @HostListener("document:scroll")
    scrollFunction (){
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0 ){
