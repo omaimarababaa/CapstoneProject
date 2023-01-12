@@ -13,10 +13,10 @@ export class AddsectorComponent {
   massge:any;
   sectors: sectors = {
     sectorName: '',
-    logo:'',
-    city:'',
-    designcolor:'',
-    ParentCategoryName:''
+    // logo:'',
+    // city:'',
+    // designcolor:'',
+    // ParentCategoryName:''
   }
   sector:sectors[] = [];
   constructor(private sectorAdd:SectorsService,  private router: Router,private dialogRef: MatDialogRef<AddsectorComponent>){
@@ -29,7 +29,7 @@ export class AddsectorComponent {
       
     });
       this.massge='success';
-    // this.dialogRef.close(true);
+    this.dialogRef.close(true);
     
   }
 }

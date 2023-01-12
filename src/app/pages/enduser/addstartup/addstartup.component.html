@@ -37,15 +37,15 @@
           <input type="text" id="lname" name="numOfEmployees" placeholder="Number of Employees.." [(ngModel)]='startups.numOfEmployees'>
         </div>
       </div>
+      <br>
       <div class="row">
-        <div class="col-25">
-          <label for="logo">Logo :</label>
-        </div>
         <div class="col-75">
-          <input type="text" id="lname" name="logo" #lName="ngModel" required  placeholder="Your URL Logo.."  [(ngModel)]='startups.logo'>
+          <label for="logo">Logo :</label>
+          <input type="file" id="lname" name="logo" #lName="ngModel" required  placeholder="Your URL Logo.."  [(ngModel)]='startups.logo' (change)="upload($event)">
           <span  *ngIf="lName.touched && lName.invalid">Logo  is required</span>
         </div>
       </div>
+      <br> 
       <div class="row">
         <div class="col-25">
           <label for="sector">Sectors :</label>

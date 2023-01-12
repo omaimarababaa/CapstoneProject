@@ -39,11 +39,17 @@
         <div class="col-25">
           <label for="logo">Logo :</label>
         </div>
-        <div class="col-75">
+        <!-- <div class="col-75">
           <input type="text" id="lname" name="logo"   [(ngModel)]='companyInfo.logo'>
+        </div> -->
+        <div class="imagInfo">
+          <img [src]='companyInfo.logo'class="logoCompany">
         </div>
       </div>
-      <div class="row">
+      <label class="SelectLogo" for="logo">SelectLogo:</label>
+     <input type="file" id="logoo" name="logo" #lName="ngModel" required  placeholder="Your URL Logo.."  [(ngModel)]='companyInfo.logo'  (change)="upload($event)">
+     <br> 
+     <div class="row">
         <div class="col-25">
           <label for="sector">Sectors :</label>
         </div>

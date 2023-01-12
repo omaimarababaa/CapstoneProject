@@ -33,3 +33,7 @@ button{
     color: var(--third-color);
    
 }
+.row{
+    display: flex;
+    margin-left:35%;
+}

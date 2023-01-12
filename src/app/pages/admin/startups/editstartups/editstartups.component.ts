@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
+import { LogoService } from 'src/app/lib/services/storge/logo.service';
 
 @Component({
   selector: 'app-editstartups',
@@ -11,6 +12,7 @@ import { DataService } from 'src/app/lib/services/data/data.service';
   styleUrls: ['./editstartups.component.css'],
 })
 export class EditstartupsComponent implements OnInit {
+  UrlLogo?:string;
   public startups: any;
   public companyInfo: any;
   id!: string;
@@ -19,7 +21,8 @@ export class EditstartupsComponent implements OnInit {
     private route: ActivatedRoute,
     private editstartup: DataService,
     private fs: AngularFirestore,
-    private router: Router
+    private router: Router,
+    private logoSorege:LogoService
   ) {
     this.route.params.subscribe((data) => {
       return (this.startups = data['id']);
@@ -35,10 +38,27 @@ export class EditstartupsComponent implements OnInit {
         console.log(this.companyInfo);
       });
   }
+  upload(event:any){
+    const file = (event.target as HTMLInputElement)?.files?.[0];
+    if (file) {
+      this.logoSorege.uploadLogo(file).subscribe((value) => {
+           console.log(value);
+        this.UrlLogo = value;
 
+      });
+  }
+}
   editStartup(startupE: any) {
     console.log(startupE, 'on edit student');
+   if(this.UrlLogo){
+    
+    this.editstartup.updateStartup(this.startups, {...startupE,logo:this.UrlLogo});
+
+   }else{
     this.editstartup.updateStartup(this.startups, startupE);
-    this.router.navigate(['admin/']);
+   
   }
+   this.router.navigate(['admin/']);
+  }
+
 }

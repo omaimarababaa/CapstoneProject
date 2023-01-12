@@ -7,12 +7,11 @@
             <mat-label>Company Name</mat-label>
             <input matInput #cName="ngModel" required  name="companyName" [(ngModel)]='startups.companyName'>
         </mat-form-field>
-        
-        <mat-form-field appearance="outline">
+        <!-- <mat-form-field appearance="outline">
             <mat-error  *ngIf="lName.invalid">Logo is required</mat-error>
             <mat-label>Logo</mat-label>
-            <input matInput #lName="ngModel" required name="logo" [(ngModel)]='startups.logo'>
-        </mat-form-field>
+            <input matInput  #lName="ngModel" required name="logo" [(ngModel)]='startups.logo'>
+        </mat-form-field> -->
         <mat-form-field appearance="outline">
             <mat-error  *ngIf="sName.invalid">Sector is required</mat-error>
             <mat-label>Sector</mat-label>
@@ -48,6 +47,11 @@
             <mat-label>phone</mat-label>
             <input matInput name="phone" [(ngModel)]='startups.phone'>
         </mat-form-field>
+        <div class="row">
+            <label for="logo">SelectLogo:</label>
+            <input type="file" id="lname" name="logo" #lName="ngModel" required  placeholder="Your URL Logo.."  [(ngModel)]='startups.logo' (change)="upload($event)" >
+            <span style="color:red"  *ngIf="lName.touched && lName.invalid">Logo is required</span>
+          </div>
         <button class="buttonStyle"  [disabled]="form.invalid" (click)="submit()"> Add New Startup</button>
     </form>
 </div>

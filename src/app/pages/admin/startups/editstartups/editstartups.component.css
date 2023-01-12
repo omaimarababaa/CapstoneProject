@@ -160,7 +160,21 @@ input[type=text], select {
       margin-top: 10px;
       /* margin-left: 20%; */
   }
-    
+  img {
+    width: 100px;
+    height: 100px;
+   }
+   .imagInfo{
+        width: 110px;
+     height: 110px;
+     padding: 20px;
+   }
+   .SelectLogo{
+    margin-left: 10%;
+   }
+   #logoo{
+    margin-left: 45%;
+   }
     /* @media screen and (max-width: 600px) {
       .col-25, .col-75, input[type=submit] {
         width: 100%;

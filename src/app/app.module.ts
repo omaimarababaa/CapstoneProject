@@ -13,6 +13,7 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { enviroment } from 'src/enviroments/enviroment';
 import { FormsModule } from '@angular/forms';
 import { AuthModule } from './pages/auth/auth.module';
@@ -42,6 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
     AngularFirestoreModule,
     AngularFireModule.initializeApp(enviroment.firebase),
     AngularFireAuthModule,
+    AngularFireStorageModule,
     FormsModule,
     AuthModule,
     AdminModule,
