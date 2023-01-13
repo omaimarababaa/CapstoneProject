@@ -13,6 +13,7 @@ import { LogoService } from 'src/app/lib/services/storge/logo.service';
   styleUrls: ['./editstartups.component.css'],
 })
 export class EditstartupsComponent implements OnInit {
+  hide:boolean=false;
   public sectors:any;
   sectorClick?:string;
   UrlLogo?:string;
@@ -54,6 +55,7 @@ export class EditstartupsComponent implements OnInit {
       this.logoSorege.uploadLogo(file).subscribe((value) => {
            console.log(value);
         this.UrlLogo = value;
+        this.hide=true;
 
       });
   }

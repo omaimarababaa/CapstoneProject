@@ -178,6 +178,9 @@ input[type=text], select {
    select{
     width: 73%;
    }
+   .hide{
+    display: none;
+   }
     /* @media screen and (max-width: 600px) {
       .col-25, .col-75, input[type=submit] {
         width: 100%;

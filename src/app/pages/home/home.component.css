@@ -96,7 +96,15 @@ margin: 5px 5px 60px 10px
   }
   .socialM{
     background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
   }
+span{
+  color:  var(--third-color);
+  margin-left: 20px;
+  margin-top: 6px;
+  font-weight: bold;
+}
   h3{
     color: var(--third-color);
    font-weight: bold;

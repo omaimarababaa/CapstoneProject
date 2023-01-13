@@ -42,8 +42,9 @@
           <input type="text" id="lname" name="logo"   [(ngModel)]='companyInfo.logo'>
         </div> -->
       <div class="imagInfo">
-        <img *ngIf="companyInfo.logo" [src]='companyInfo.logo' class="logoCompany">
         <img *ngIf="UrlLogo" [src]='UrlLogo' class="logoCompany">
+        <img *ngIf="companyInfo.logo" [src]='companyInfo.logo' class="logoCompany" [class.hide]="hide">
+       
       </div>
     </div>
     <label class="SelectLogo" for="logo">SelectLogo:</label>
