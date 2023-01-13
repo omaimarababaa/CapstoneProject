@@ -9,6 +9,7 @@ import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  
   public sectors: any;
   public companyLogo: any;
 
@@ -41,7 +42,9 @@ export class HomeComponent implements OnInit {
         .getStartupsFilter(fsector)
         .subscribe((response) => {
           this.companyLogo = response;
+          
           console.log(this.companyLogo);
+          console.log(this.companyLogo.id);
         });
     }
   }
