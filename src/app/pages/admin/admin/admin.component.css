@@ -9,6 +9,10 @@
 }
 .demo-table {
   width: 100%;
+
+}
+.table{
+  overflow:scroll;
 }
 
 .mat-mdc-row .mat-mdc-cell {

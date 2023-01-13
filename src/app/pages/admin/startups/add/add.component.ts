@@ -3,6 +3,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
+import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
 import { LogoService } from 'src/app/lib/services/storge/logo.service';
 
 @Component({
@@ -11,6 +12,8 @@ import { LogoService } from 'src/app/lib/services/storge/logo.service';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent {
+  public sectors:any;
+  sectorClick?:string;
   UrlLogo?:string;
   massage:any;
   startups: startups = {
@@ -20,14 +23,23 @@ export class AddComponent {
     isApproved:true
   }
   startup:startups[] = [];
-  constructor(private startupService:DataService, private router: Router,private dialogRef: MatDialogRef<AddComponent>,private logoSorege:LogoService){
+  constructor(private startupService:DataService, private router: Router,private getsector:SectorsService
+    ,private dialogRef: MatDialogRef<AddComponent>,private logoSorege:LogoService){
   }
-
+  public ngOnInit(): void {
+   
+    this.sectors = this.getsector.getSectors().subscribe((response) => {
+      this.sectors = response;
+    });
+  }
+  getValue(key:any){
+    this.sectorClick = key.target.value;
+    }
 
   submit(){
     //this.student.id = this.id++;
     this.startupService.addStartups({
-      ...this.startups,logo:this.UrlLogo  
+      ...this.startups,logo:this.UrlLogo ,sector:this.sectorClick
     });
   
   alert('Success For Added New Startups');

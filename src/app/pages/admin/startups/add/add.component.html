@@ -7,16 +7,13 @@
             <mat-label>Company Name</mat-label>
             <input matInput #cName="ngModel" required  name="companyName" [(ngModel)]='startups.companyName'>
         </mat-form-field>
-        <!-- <mat-form-field appearance="outline">
-            <mat-error  *ngIf="lName.invalid">Logo is required</mat-error>
-            <mat-label>Logo</mat-label>
-            <input matInput  #lName="ngModel" required name="logo" [(ngModel)]='startups.logo'>
-        </mat-form-field> -->
-        <mat-form-field appearance="outline">
-            <mat-error  *ngIf="sName.invalid">Sector is required</mat-error>
-            <mat-label>Sector</mat-label>
-            <input matInput  #sName="ngModel" required name="sector" [(ngModel)]='startups.sector'>
-        </mat-form-field>
+        <select class="selectSector"  (change)="getValue($event)" [(ngModel)]='startups.sector'>
+            <option>Select Sector</option>
+            <option *ngFor="let sector of sectors">
+              {{sector.sectorName}}
+            </option>
+          </select>
+          <br><br>
         <mat-form-field appearance="outline">
             <mat-error  *ngIf="cName.invalid">City is required</mat-error>
             <mat-label>City</mat-label>

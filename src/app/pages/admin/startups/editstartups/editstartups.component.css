@@ -175,6 +175,9 @@ input[type=text], select {
    #logoo{
     margin-left: 45%;
    }
+   select{
+    width: 73%;
+   }
     /* @media screen and (max-width: 600px) {
       .col-25, .col-75, input[type=submit] {
         width: 100%;

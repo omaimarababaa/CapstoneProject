@@ -6,63 +6,28 @@
 </div>
 <div class="titleStartup">
   <div class="titleselect">
-  <h1 class="titleS">Explore the Startups in Jordan</h1>
-  <select class="selectSector" (change)="getValue($event)" >
-   <option  >Filter By sector</option>
-    <option  *ngFor="let sector of sectors" >
-      {{sector.sectorName}}
-    </option>
-  </select>
-</div>
+    <h1 class="titleS">Explore the Startups in Jordan</h1>
+    <select class="selectSector" (change)="getValue($event)">
+      <option>Filter By sector</option>
+      <option *ngFor="let sector of sectors">
+        {{sector.sectorName}}
+      </option>
+    </select>
+  </div>
   <div class="cardsCompany">
     <div class="a-box" *ngFor="let logo of companyLogo">
       <div class="img-container">
         <div class="img-inner">
-          <a  (click)="getInfo(logo.uid)"><img src="{{logo.logo}}" class="logoCompany"></a>
+          <a (click)="getInfo(logo.uid)"><img src="{{logo.logo}}" class="logoCompany"></a>
         </div>
       </div>
     </div>
   </div>
- 
-</div> <div class="social">
-    <!-- <share-buttons theme="modern-dark"
-    [include]="['copy', 'facebook', 'email', 'messenger', 'mix', 'line', 'linkedin', 'pinterest', 'print', 'reddit', 'sms', 'telegram', 'tumblr', 'twitter', 'viber', 'vk', 'xing', 'whatsapp']"
-    [showIcon]="true"
-    [showText]="true"
-    url="https://rodrigo.kamada.com.br/"
-    description="Angular Share Buttons"
-    twitterAccount="rodrigokamada"
-    class="pt-5">
+
+</div>
+<div class="socialM">
+  <share-buttons theme="modern-dark" [include]="[ 'facebook','linkedin','telegram', 'twitter', 'whatsapp']"
+    [showIcon]="true" [showText]="true" url="https://rodrigo.kamada.com.br/" description="Angular Share Buttons"
+    twitterAccount="rodrigokamada" class="pt-5">
   </share-buttons>
-    <share-buttons theme="circles-dark"
-     [include]="['facebook','linkedin', 'twitter','whatsapp']" 
-     [showIcon]="true"
-        [showText]="false"
-         url="https://www.startupsjo.com/startup/startupdirectory/index"
-        description="Angular Share Buttons" twitterAccount="rodrigokamada" class="pt-5">
-    </share-buttons> -->
-    <div class="socialM">
-      
-  
-    
-      <share-buttons theme="modern-dark"
-        [include]="[ 'facebook', 'email', 'messenger', 'linkedin', 'pinterest', 'print', 'reddit', 'telegram', 'twitter', 'viber', 'whatsapp']"
-        [showIcon]="true"
-        [showText]="true"
-        url="https://rodrigo.kamada.com.br/"
-        description="Angular Share Buttons"
-        twitterAccount="rodrigokamada"
-        class="pt-5">
-      </share-buttons>
-    
-      <!-- <share-buttons theme="modern-dark"
-        [include]="['copy', 'facebook', 'email', 'messenger', 'mix', 'line', 'linkedin', 'pinterest', 'print', 'reddit', 'sms', 'telegram', 'tumblr', 'twitter', 'viber', 'vk', 'xing', 'whatsapp']"
-        [showIcon]="false"
-        [showText]="true"
-        url="https://rodrigo.kamada.com.br/"
-        description="Angular Share Buttons"
-        twitterAccount="rodrigokamada"
-        class="pt-5">
-      </share-buttons> -->
-    </div>
 </div>

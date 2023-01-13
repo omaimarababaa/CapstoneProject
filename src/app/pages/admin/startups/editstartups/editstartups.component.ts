@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
+import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
 import { LogoService } from 'src/app/lib/services/storge/logo.service';
 
 @Component({
@@ -12,6 +13,8 @@ import { LogoService } from 'src/app/lib/services/storge/logo.service';
   styleUrls: ['./editstartups.component.css'],
 })
 export class EditstartupsComponent implements OnInit {
+  public sectors:any;
+  sectorClick?:string;
   UrlLogo?:string;
   public startups: any;
   public companyInfo: any;
@@ -22,7 +25,8 @@ export class EditstartupsComponent implements OnInit {
     private editstartup: DataService,
     private fs: AngularFirestore,
     private router: Router,
-    private logoSorege:LogoService
+    private logoSorege:LogoService,
+    private getsector:SectorsService
   ) {
     this.route.params.subscribe((data) => {
       return (this.startups = data['id']);
@@ -37,6 +41,12 @@ export class EditstartupsComponent implements OnInit {
         if (response) this.companyInfo = response;
         console.log(this.companyInfo);
       });
+    
+   
+        this.sectors = this.getsector.getSectors().subscribe((response) => {
+          this.sectors = response;
+        });
+      
   }
   upload(event:any){
     const file = (event.target as HTMLInputElement)?.files?.[0];
@@ -48,16 +58,27 @@ export class EditstartupsComponent implements OnInit {
       });
   }
 }
+getValue(key:any){
+  this.sectorClick = key.target.value
+  console.log( key.target.value);
+  }
   editStartup(startupE: any) {
     console.log(startupE, 'on edit student');
-   if(this.UrlLogo){
+    if(this.UrlLogo && this.sectorClick ){
+    
+      this.editstartup.updateStartup(this.startups, {...startupE,logo:this.UrlLogo,sector:this.sectorClick});
+    }
+   else if(this.UrlLogo){
     
     this.editstartup.updateStartup(this.startups, {...startupE,logo:this.UrlLogo});
 
-   }else{
-    this.editstartup.updateStartup(this.startups, startupE);
+   }else if(this.sectorClick){
+    this.editstartup.updateStartup(this.startups,{...startupE,sector:this.sectorClick});
    
+  }else{
+    this.editstartup.updateStartup(this.startups,{...startupE});
   }
+  
    this.router.navigate(['admin/']);
   }
 

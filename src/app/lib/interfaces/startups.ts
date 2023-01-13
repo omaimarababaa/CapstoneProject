@@ -3,7 +3,7 @@ export interface startups {
   companyName: string;
   logo?: string;
   isApproved:boolean;
-  sector: string;
+  sector?: string;
   city: string;
   founder?: string;
   numOfEmployees?: number;

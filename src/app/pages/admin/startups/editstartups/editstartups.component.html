@@ -1,101 +1,110 @@
-
 <div class="container">
-    
-    <form #form="ngForm" (ngSubmit)="editStartup(form.value)">
-      <h1>Edit Startup</h1>
-      <div class="row">
-        <div class="col-25">
-          <label for="companyName">Company Name :</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="fname" name="companyName"  [(ngModel)]='companyInfo.companyName'>
-        </div>
+
+  <form #form="ngForm" (ngSubmit)="editStartup(form.value)">
+    <h1>Edit Startup</h1>
+    <div class="row">
+      <div class="col-25">
+        <label for="companyName">Company Name :</label>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="city">City :</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="lname" name="city" [(ngModel)]='companyInfo.city'>
-        </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="companyName" [(ngModel)]='companyInfo.companyName'>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="yearOfEstablishment">Years of Extablishment : </label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="lname" name="yearOfEstablishment"  [(ngModel)]='companyInfo.yearOfEstablishment'>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="city">City :</label>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="numOfEmployees">Number of Employees :</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="lname" name="numOfEmployees" [(ngModel)]='companyInfo.numOfEmployees'>
-        </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="city" [(ngModel)]='companyInfo.city'>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="logo">Logo :</label>
-        </div>
-        <!-- <div class="col-75">
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="yearOfEstablishment">Years of Extablishment : </label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="yearOfEstablishment" [(ngModel)]='companyInfo.yearOfEstablishment'>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="numOfEmployees">Number of Employees :</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="numOfEmployees" [(ngModel)]='companyInfo.numOfEmployees'>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="logo">Logo :</label>
+      </div>
+      <!-- <div class="col-75">
           <input type="text" id="lname" name="logo"   [(ngModel)]='companyInfo.logo'>
         </div> -->
-        <div class="imagInfo">
-          <img [src]='companyInfo.logo'class="logoCompany">
-        </div>
+      <div class="imagInfo">
+        <img *ngIf="companyInfo.logo" [src]='companyInfo.logo' class="logoCompany">
+        <img *ngIf="UrlLogo" [src]='UrlLogo' class="logoCompany">
       </div>
-      <label class="SelectLogo" for="logo">SelectLogo:</label>
-     <input type="file" id="logoo" name="logo" #lName="ngModel" required  placeholder="Your URL Logo.."  [(ngModel)]='companyInfo.logo'  (change)="upload($event)">
-     <br> 
-     <div class="row">
-        <div class="col-25">
+    </div>
+    <label class="SelectLogo" for="logo">SelectLogo:</label>
+    <input type="file" id="logoo" name="logo" #lName="ngModel" required placeholder="Your URL Logo.."
+      [(ngModel)]='companyInfo.logo' (change)="upload($event)">
+    <br><br>
+    <div class="row">
+      <select class="selectSector"  (change)="getValue($event)" [(ngModel)]='companyInfo.sector' >
+        <option [selected]="companyInfo.sector">Select Sector</option>
+        <option *ngFor="let sector of sectors" [selected]="companyInfo.sector === sector.sectorName">
+          {{sector.sectorName}}
+        </option>
+      </select>
+    </div>
+    <br>
+    <!-- <div class="col-25">
           <label for="sector">Sectors :</label>
         </div>
         
         <div class="col-75">
             <input type="text" id="lname" name="sector" [(ngModel)]='companyInfo.sector'>
-        </div>
-        </div>
-      
-      <div class="row">
-        <div class="col-25">
-          <label for="website">Website :</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="lname" name="website"   [(ngModel)]='companyInfo.website'>
-        </div>
+        </div> -->
+
+
+    <div class="row">
+      <div class="col-25">
+        <label for="website">Website :</label>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="email">Email :</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="lname" name="email"  [(ngModel)]='companyInfo.email'>
-        </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="website" [(ngModel)]='companyInfo.website'>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="phone">Phone : </label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="lname" name="phone"  [(ngModel)]='companyInfo.phone'>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email :</label>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="founder">Founder :</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="lname" name="founder"  [(ngModel)]='companyInfo.founder'>
-        </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="email" [(ngModel)]='companyInfo.email'>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label ></label>
-        </div>
-        <button class="noselect buttonStyle"> Update startup</button>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="phone">Phone : </label>
       </div>
-    </form>
-  </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="phone" [(ngModel)]='companyInfo.phone'>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="founder">Founder :</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="founder" [(ngModel)]='companyInfo.founder'>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label></label>
+      </div>
+      <button class="noselect buttonStyle"> Update startup</button>
+    </div>
+  </form>
+</div>

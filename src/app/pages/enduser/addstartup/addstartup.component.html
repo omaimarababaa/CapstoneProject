@@ -47,14 +47,22 @@
       </div>
       <br> 
       <div class="row">
-        <div class="col-25">
+        <!-- <div class="col-25">
           <label for="sector">Sectors :</label>
-        </div>
+        </div> -->
         
+        <select class="selectSector" (change)="getValue($event)" [(ngModel)]='startups.sector'>
+          <option>Select Sector</option>
+          <option *ngFor="let sector of sectors">
+            {{sector.sectorName}}
+          </option>
+        </select>
+        <br><br>
+<!--         
         <div class="col-75">
             <input type="text" id="lname" name="sector" #sName="ngModel" required placeholder="Your Company Sector.."  [(ngModel)]='startups.sector'>
             <span *ngIf="sName.touched && sName.invalid">Sector  is required</span>
-        </div>
+        </div> -->
         </div>
       
       <div class="row">
