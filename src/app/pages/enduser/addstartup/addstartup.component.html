@@ -26,7 +26,7 @@
           <label for="yearOfEstablishment">Years of Extablishment :</label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="yearOfEstablishment" placeholder="Years of Extablishment.." [(ngModel)]='startups.yearOfEstablishment'>
+          <input type="text"  name="yearOfEstablishment" placeholder="Years of Extablishment.." [(ngModel)]='startups.yearOfEstablishment'>
         </div>
       </div>
       <div class="row">
@@ -34,14 +34,14 @@
           <label for="numOfEmployees">Number of Employees :</label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="numOfEmployees" placeholder="Number of Employees.." [(ngModel)]='startups.numOfEmployees'>
+          <input type="text"  name="numOfEmployees" placeholder="Number of Employees.." [(ngModel)]='startups.numOfEmployees'>
         </div>
       </div>
       <br>
       <div class="row">
         <div class="col-75">
           <label for="logo">Logo :</label>
-          <input type="file" id="lname" name="logo" #lName="ngModel" required  placeholder="Your URL Logo.."  [(ngModel)]='startups.logo' (change)="upload($event)">
+          <input type="file"  name="logo" #lName="ngModel" required  placeholder="Your URL Logo.."  [(ngModel)]='startups.logo' (change)="upload($event)">
           <span  *ngIf="lName.touched && lName.invalid">Logo  is required</span>
         </div>
       </div>
@@ -51,7 +51,7 @@
           <label for="sector">Sectors :</label>
         </div> -->
         
-        <select class="selectSector" (change)="getValue($event)" [(ngModel)]='startups.sector'>
+        <select class="selectSector" class="wSelect" (change)="getValue($event)" [(ngModel)]='startups.sector'>
           <option>Select Sector</option>
           <option *ngFor="let sector of sectors">
             {{sector.sectorName}}

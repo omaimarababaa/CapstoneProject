@@ -1,5 +1,5 @@
 export interface startups {
-  uid?:number;
+  uid?:string;
   companyName: string;
   logo?: string;
   isApproved:boolean;

@@ -94,18 +94,23 @@ ul,li {
   .display{
     display:flex;
    flex-direction: column;
+   overflow:scroll;
   }
   .containerTable{
-    overflow:scroll;
+   margin-top: 0px;
+ 
   }
   .slidbar{
     margin-top: 110px;
-    background-color: var(--third-color);
-    color: var(--primary-color);
+    /* background-color: var(--third-color);
+    color: var(--primary-color); */
+    width: 325vw;
+    
   }
   ul{
     display: flex;
-    overflow:scroll;
+    /* overflow:scroll; */
+    
   }
 
 }

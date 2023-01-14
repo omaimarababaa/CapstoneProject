@@ -15,7 +15,7 @@
     </select>
   </div>
   <div class="cardsCompany">
-    <div class="a-box" *ngFor="let logo of companyLogo">
+    <div class="a-box" *ngFor="let logo of companyLogo" >
       <div class="img-container">
         <div class="img-inner">
           <a (click)="getInfo(logo.uid)"><img src="{{logo.logo}}" class="logoCompany"></a>

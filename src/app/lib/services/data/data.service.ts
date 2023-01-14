@@ -29,7 +29,7 @@ getStartupsRequest() {
 
     return this.firestore
     .collection<startups>
-    ('Startups', ref => ref.where('sector', '==', sectorF ).where( 'isApproved', '==', true)).valueChanges(); 
+    ('Startups', ref => ref.where('sector', '==', sectorF ).where( 'isApproved', '==', true)).valueChanges({"idField":'uid'}); 
 }
 //  add new startup
 addStartups(startup: startups){
@@ -45,6 +45,7 @@ deleteStartups(id: string){
 getStartupById(id : string){
   return this.startupCollection.doc(id).valueChanges();
 }
+
 //  update startups 
 updateStartup(id: string, startup: startups){
   return this.startupCollection.doc(id).update(startup);

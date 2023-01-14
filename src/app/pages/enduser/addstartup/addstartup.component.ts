@@ -42,8 +42,8 @@ export class AddstartupComponent {
     this.startupService.addStartups({
       ...this.startups ,logo:this.UrlLogo ,sector:this.sectorClick
     });
-    alert("Thanks For Added")
-    this.router.navigate(['']);
+    alert("Thanks For Added, Please wait the admin approval")
+    window.location.reload();
     
   }
   upload(event : any){
