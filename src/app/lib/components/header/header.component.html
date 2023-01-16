@@ -20,9 +20,7 @@
                     
             </mat-icon>
             
-
-            <span class="lenghtR" *ngIf="lenght!=0"></span>
-            <a routerLinkActive="active" routerLink="/about">About</a>
+            <a routerLinkActive="active" routerLink="/about" *ngIf="!isAdmin">About</a>
 
             <a *ngIf="isLoggedn" class="btnLink">
                 <button mat-raised-button (click)="logOut()">Log out</button>
