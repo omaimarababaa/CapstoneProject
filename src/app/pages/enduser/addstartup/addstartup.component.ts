@@ -38,14 +38,19 @@ export class AddstartupComponent {
     this.sectorClick = key.target.value;
     console.log(this.sectorClick)
     }
+    
   submit(){
     console.log("this.startups,this.UrlLogo,this.sectorClick")
     console.log(this.startups,this.UrlLogo,this.sectorClick)
     this.startupService.addStartups({
       ...this.startups,logo:this.UrlLogo,sector:this.sectorClick
+      
+    }).subscribe(()=>{
+      alert("Thanks For Added, Please wait the admin approval")
+      window.location.reload();
     });
-    alert("Thanks For Added, Please wait the admin approval")
-    window.location.reload();
+   
+    // 
     
   }
   upload(event : any){

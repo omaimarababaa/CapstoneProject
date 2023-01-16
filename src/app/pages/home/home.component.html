@@ -10,7 +10,7 @@
     <select class="selectSector" (change)="getValue($event)">
       <option>Filter By sector</option>
       <option *ngFor="let sector of sectors">
-        {{sector.sectorName}}
+        {{sector.sectorName | uppercase }}
       </option>
     </select>
   </div>

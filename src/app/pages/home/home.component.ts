@@ -1,3 +1,4 @@
+import { LowerCasePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/lib/services/data/data.service';
@@ -30,7 +31,7 @@ export class HomeComponent implements OnInit {
     });
   }
   getValue(key: any) {
-    let fsector = key.target.value;
+    let fsector = key.target.value.toLowerCase( );
     console.log(fsector);
     if (fsector == 'Filter By sector') {
       this.companyLogo = this.startup.getStartups().subscribe((response) => {

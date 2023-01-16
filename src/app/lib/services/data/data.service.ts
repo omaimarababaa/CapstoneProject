@@ -31,15 +31,10 @@ getStartupsRequest() {
     .collection<startups>
     ('Startups', ref => ref.where('sector', '==', sectorF ).where( 'isApproved', '==', true)).valueChanges({"idField":'uid'}); 
 }
-// // get all startups add by users
-// getStartupsRequestLenght() {
-//   return this.firestore
-//   .collection<startups>
-//   ('Startups', ref => ref.where('isApproved', '==', false)).valueChanges({"idField":'uid'});
-// }
+
 //  add new startup
 addStartups(startup: startups){
-  let addedstartup = this.startupCollection.add(startup);
+  let addedstartup =from(this.startupCollection.add(startup)) ;
   return addedstartup;
 
 }
