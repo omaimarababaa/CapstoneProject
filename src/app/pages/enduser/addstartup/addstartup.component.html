@@ -1,7 +1,7 @@
 
 <div class="container">
   
-    <form #form="ngForm"  (ngSubmit)="submit()">
+    <form #form="ngForm">
       <h1>Add Startup</h1>
       <div class="row">
         <div class="col-25">
@@ -47,10 +47,6 @@
       </div>
       <br> 
       <div class="row">
-        <!-- <div class="col-25">
-          <label for="sector">Sectors :</label>
-        </div> -->
-        
         <select class="selectSector" class="wSelect" (change)="getValue($event)" [(ngModel)]='startups.sector'>
           <option>Select Sector</option>
           <option *ngFor="let sector of sectors">
@@ -58,11 +54,6 @@
           </option>
         </select>
         <br><br>
-<!--         
-        <div class="col-75">
-            <input type="text" id="lname" name="sector" #sName="ngModel" required placeholder="Your Company Sector.."  [(ngModel)]='startups.sector'>
-            <span *ngIf="sName.touched && sName.invalid">Sector  is required</span>
-        </div> -->
         </div>
       
       <div class="row">
@@ -104,7 +95,7 @@
         </div>
         <!-- <button >ADD</button> -->
         
-        <button class="noselect buttonStyle"  [disabled]="form.invalid"> Add New startup</button>
+        <button class="noselect buttonStyle"  [disabled]="form.invalid"  (click)="submit()"> Add New startup</button>
       </div>
     </form>
   </div>

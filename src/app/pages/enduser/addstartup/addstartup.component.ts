@@ -36,11 +36,13 @@ export class AddstartupComponent {
   }
   getValue(key:any){
     this.sectorClick = key.target.value;
+    console.log(this.sectorClick)
     }
   submit(){
-   
+    console.log("this.startups,this.UrlLogo,this.sectorClick")
+    console.log(this.startups,this.UrlLogo,this.sectorClick)
     this.startupService.addStartups({
-      ...this.startups ,logo:this.UrlLogo ,sector:this.sectorClick
+      ...this.startups,logo:this.UrlLogo,sector:this.sectorClick
     });
     alert("Thanks For Added, Please wait the admin approval")
     window.location.reload();

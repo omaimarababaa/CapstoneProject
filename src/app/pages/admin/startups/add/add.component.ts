@@ -37,7 +37,6 @@ export class AddComponent {
     }
 
   submit(){
-    //this.student.id = this.id++;
     this.startupService.addStartups({
       ...this.startups,logo:this.UrlLogo ,sector:this.sectorClick
     });

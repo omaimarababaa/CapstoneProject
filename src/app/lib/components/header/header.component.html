@@ -10,11 +10,18 @@
         <div class="iconMenu" (click)="openMenu()">
             <img src="./../../../../assets/icons/menu.png" alt="menu" width="35px" height="35px">
         </div>
+
         <div class="links" [class.menuVar]="menuVar">
             <a routerLink="/">Home</a>
             <a routerLinkActive="active" routerLink="addstartup" *ngIf="!isAdmin">AddStartup</a>
             <a routerLinkActive="active" routerLink="admin" *ngIf="isAdmin">Admin</a>
-            <a routerLinkActive="active" routerLink="request" *ngIf="isAdmin">Request</a>
+            <a routerLinkActive="active" routerLink="request" *ngIf="isAdmin">
+               Request</a> <mat-icon *ngIf="lenght!=0 && isAdmin" matBadge="{{lenght}}" matBadgeColor="warn" class="lenghtR">
+                    
+            </mat-icon>
+            
+
+            <span class="lenghtR" *ngIf="lenght!=0"></span>
             <a routerLinkActive="active" routerLink="/about">About</a>
 
             <a *ngIf="isLoggedn" class="btnLink">

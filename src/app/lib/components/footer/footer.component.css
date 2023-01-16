@@ -8,10 +8,14 @@
 }
 .toolbar2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  
   background-color: var(--primary-color);
   box-shadow: 1px 0px 2px var(--shadow-color);
   height: 70px;
+}
+span{
+  text-align: center;
 }
 .social > * {
   margin: 5px;

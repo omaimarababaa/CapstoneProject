@@ -9,10 +9,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {MatBadgeModule} from '@angular/material/badge';
 
 const material=[
   MatToolbarModule,
+  MatBadgeModule,
   MatButtonModule,
   MatButtonModule,
   MatInputModule,

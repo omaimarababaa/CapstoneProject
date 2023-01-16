@@ -97,7 +97,7 @@ margin: 5px 5px 60px 10px
   .socialM{
     background-color: var(--primary-color);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
   }
 span{
   color:  var(--third-color);

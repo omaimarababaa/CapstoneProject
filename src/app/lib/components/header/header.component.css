@@ -12,6 +12,11 @@
   background-color: var(--third-color);
   box-shadow: 1px 0px 2px var(--shadow-color);
 }
+.lenghtR{
+  width: 0px;
+  height: 5px;
+
+}
 .scrollChangeP {
   padding: 55px;
 }
@@ -49,10 +54,11 @@ button {
   margin-left:50px;
 }
 .active {
-  border: 1px solid var(--third-color);
+  /* border: 1px solid var(--third-color);
   padding: 7px;
   border-radius: 20%;
-  background-color: var(--plus-color);
+  background-color: var(--plus-color); */
+color: var(--plus-color);
 }
 .iconMenu{
   display: none;
