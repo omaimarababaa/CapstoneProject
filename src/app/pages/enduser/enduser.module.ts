@@ -6,7 +6,7 @@ import { AddstartupComponent } from './addstartup/addstartup.component';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/lib/components/material/material/material.module';
 import { InfoComponent } from './info/info.component';
-
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -15,6 +15,9 @@ import { InfoComponent } from './info/info.component';
     InfoComponent
   ],
   imports: [
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD7Q1AqBFk3RJ--62kLfUj09zVUp45QzJE'
+    }),
     CommonModule,
     EnduserRoutingModule,
     MaterialModule,

@@ -13,6 +13,9 @@ import { LogoService } from 'src/app/lib/services/storge/logo.service';
   styleUrls: ['./addstartup.component.css']
 })
 export class AddstartupComponent {
+   latitude = 30.5852;
+  longitude = 36.2384;
+ 
   public sectors: any;
   sectorClick?:string;
   UrlLogo?: string;
@@ -21,6 +24,7 @@ export class AddstartupComponent {
     city: '',
     companyName: '',
     isApproved:false,
+    location:[]
     // logo:this.UrlLogo,
   
   }

@@ -10,6 +10,9 @@ import { FooterComponent } from './lib/components/footer/footer.component';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
+import { AgmCoreModule } from '@agm/core';
+
+ 
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -23,7 +26,7 @@ import { AdminModule } from './pages/admin/admin.module';
 import { EnduserModule } from './pages/enduser/enduser.module';
 import { HomeModule } from './pages/home/home.module';
 import { HttpClientModule } from '@angular/common/http';
-
+// import {GoogleMapsModule} from '@angular/google-maps';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +37,10 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD7Q1AqBFk3RJ--62kLfUj09zVUp45QzJE'
+    }),
+    
     ShareButtonsModule,
   ShareIconsModule,
     HttpClientModule,

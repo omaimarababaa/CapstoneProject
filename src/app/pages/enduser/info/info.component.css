@@ -11,7 +11,11 @@ img {
   height: 300px;
   padding: 20px;
 }
-
+agm-map {
+    margin-left: 10%;
+    height: 400px;
+    width: 400px;
+}
 .company{
     margin-top: 65px;
 }
@@ -34,4 +38,9 @@ img {
         margin: 130px 0px 30px 12px;
         display: block;
       }
+      agm-map {
+        margin-left: 10%;
+        height: 200px;
+        width: 300px;
+    }
   }

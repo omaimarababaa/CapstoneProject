@@ -11,8 +11,13 @@ import { startups } from 'src/app/lib/interfaces/startups';
   styleUrls: ['./info.component.css'],
 })
 export class InfoComponent implements OnInit {
+  // latitude = 30.5852;
+  // longitude = 36.2384;
+ public latitude!:number;
+ public longitude!:number;
   public data: any;
   public companyInfo: any;
+  zoom!:number;
 
   constructor(private route: ActivatedRoute, private fs: AngularFirestore) {
     this.route.params.subscribe((query) => {
@@ -28,8 +33,10 @@ export class InfoComponent implements OnInit {
       .subscribe((response) => {
         if(response)
         this.companyInfo=response;
-         console.log( this.companyInfo)
-       
+         console.log( this.companyInfo);
+         this.latitude=this.companyInfo.location[0];
+         this.longitude=this.companyInfo.location[1];
+         this.zoom = 12;
       });
   }
 }

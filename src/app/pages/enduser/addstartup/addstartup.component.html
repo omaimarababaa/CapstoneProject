@@ -90,7 +90,21 @@
       </div>
       <div class="row">
         <div class="col-25">
-          <label ></label>
+          <label for="founder">Location :</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="locatin" placeholder="latitude.." [(ngModel)]='startups.location'>
+            <input type="text"  name="locatin" placeholder="longitude.." [(ngModel)]='startups.location'>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <agm-map 
+          [latitude]="latitude" 
+          [longitude]="longitude"
+           >
+          </agm-map>
         </div>
         <!-- <button >ADD</button> -->
         
