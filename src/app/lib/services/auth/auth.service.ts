@@ -7,6 +7,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   providedIn: 'root'
 })
 export class AuthService {
+  
   userState$ = this.fireAuth.authState;
   user$ = this.fireAuth.user;
   constructor(private fireAuth: AngularFireAuth) {

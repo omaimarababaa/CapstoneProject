@@ -90,21 +90,33 @@
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="founder">Location :</label>
+          <label>Location :</label>
         </div>
         <div class="col-75">
-            <input type="text" name="locatin" placeholder="latitude.." [(ngModel)]='startups.location'>
-            <input type="text"  name="locatin" placeholder="longitude.." [(ngModel)]='startups.location'>
+            <input type="text" name="lat" placeholder="latitude.." value="{{markerLocation.latitude}}" >
         </div>
+        <div class="col-75">
+          <input type="text"  name="long" placeholder="longitude.." value="{{markerLocation.longitude}}" >
+      </div>
       </div>
 
       <div class="row">
         <div class="col-25">
           <agm-map 
-          [latitude]="latitude" 
-          [longitude]="longitude"
-           >
+        [zoom]="9"
+        [latitude]="mapLocation.latitude" 
+        [longitude]="mapLocation.longitude"
+         >
+         <agm-marker
+         [latitude]="markerLocation.latitude" 
+         [longitude]="markerLocation.longitude"
+         [markerDraggable]="true" (dragEnd)="markerDragEnd(m, $event)"
+         #m>
+
+         </agm-marker>
           </agm-map>
+          <!-- <div>Latitude: {{markerLocation.latitude}}</div>
+          <div>Longitude: {{markerLocation.longitude}}</div> -->
         </div>
         <!-- <button >ADD</button> -->
         

@@ -1,6 +1,7 @@
+
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { MapsAPILoader } from '@agm/core';
 import { startups } from 'src/app/lib/interfaces/startups';
 
 import { DataService } from 'src/app/lib/services/data/data.service';
@@ -13,8 +14,15 @@ import { LogoService } from 'src/app/lib/services/storge/logo.service';
   styleUrls: ['./addstartup.component.css']
 })
 export class AddstartupComponent {
-   latitude = 30.5852;
-  longitude = 36.2384;
+  mapLocation = {
+    latitude : 30.5852,
+    longitude : 36.2384
+  } 
+
+  markerLocation = {
+    latitude: 31.9718,
+    longitude:35.8339
+  }
  
   public sectors: any;
   sectorClick?:string;
@@ -31,6 +39,7 @@ export class AddstartupComponent {
   startup:startups[] = [];
  
   constructor(private startupService:DataService, private router: Router,private logoSorege:LogoService,private getsector:SectorsService){
+   
   }
   public ngOnInit(): void {
    
@@ -38,11 +47,32 @@ export class AddstartupComponent {
       this.sectors = response;
     });
   }
+
+  // getCoord($event: any) {
+  //     console.log($event);
+
+     
+     
+  //     // this.longitude = $event.latLng.lng();
+     
+  //     // moveMap(event: google.maps.MapMouseEvent) {
+  //     //   this.center = (event.latLng.toJSON());
+  //     // }
+  // }
+
+  markerDragEnd( m: any, $event: any) {
+    console.log($event);
+         this.markerLocation.latitude  = $event.latLng.lat();
+         this.markerLocation.longitude  = $event.latLng.lng();
+      console.log(this.markerLocation);
+    }
+
+
   getValue(key:any){
     this.sectorClick = key.target.value;
     console.log(this.sectorClick)
     }
-    
+
   submit(){
     console.log("this.startups,this.UrlLogo,this.sectorClick")
     console.log(this.startups,this.UrlLogo,this.sectorClick)

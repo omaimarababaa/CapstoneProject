@@ -40,7 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD7Q1AqBFk3RJ--62kLfUj09zVUp45QzJE'
     }),
-    
+
     ShareButtonsModule,
   ShareIconsModule,
     HttpClientModule,
