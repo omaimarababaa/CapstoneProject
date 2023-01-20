@@ -38,20 +38,17 @@
       <div class="col-25">
         <label for="logo">Logo :</label>
       </div>
-      <!-- <div class="col-75">
-          <input type="text" id="lname" name="logo"   [(ngModel)]='companyInfo.logo'>
-        </div> -->
       <div class="imagInfo">
         <img *ngIf="UrlLogo" [src]='UrlLogo' class="logoCompany">
         <img *ngIf="companyInfo.logo" [src]='companyInfo.logo' class="logoCompany" [class.hide]="hide">
       </div>
     </div>
-    <label class="SelectLogo" for="logo">SelectLogo:</label>
     <input type="file" id="logoo" name="logo" #lName="ngModel" required placeholder="Your URL Logo.."
       [(ngModel)]='companyInfo.logo' (change)="upload($event)">
     <br><br>
+    <label class="SelectLogo" for="logo">SelectLogo:</label>
     <div class="row">
-      <select class="selectSector"  (change)="getValue($event)" [(ngModel)]='companyInfo.sector' >
+      <select class="selectSector" (change)="getValue($event)" [(ngModel)]='companyInfo.sector'>
         <option [selected]="companyInfo.sector">Select Sector</option>
         <option *ngFor="let sector of sectors" [selected]="companyInfo.sector === sector.sectorName">
           {{sector.sectorName}}
@@ -59,15 +56,6 @@
       </select>
     </div>
     <br>
-    <!-- <div class="col-25">
-          <label for="sector">Sectors :</label>
-        </div>
-        
-        <div class="col-75">
-            <input type="text" id="lname" name="sector" [(ngModel)]='companyInfo.sector'>
-        </div> -->
-
-
     <div class="row">
       <div class="col-25">
         <label for="website">Website :</label>
@@ -98,6 +86,36 @@
       </div>
       <div class="col-75">
         <input type="text" id="lname" name="founder" [(ngModel)]='companyInfo.founder'>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>Location :</label>
+      </div>
+      <div class="col-75">
+        <input type="text" placeholder="latitude.." value="{{latitudeAdd}}" name="lat"
+          [(ngModel)]='companyInfo.location[0]'>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label></label>
+      </div>
+      <div class="col-75">
+        <input type="text" placeholder="longitude.." value="{{longitudeAdd}}" name="lng"
+          [(ngModel)]='companyInfo.location[1]'>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-25">
+        <agm-map [latitude]="mapLocation.latitude" [longitude]="mapLocation.longitude" [zoom]="zoom">
+          <agm-marker [latitude]="companyInfo.location[0]" [longitude]="companyInfo.location[1]"
+            [markerDraggable]="true" (dragEnd)="markerDragEnd(m, $event)" #m>
+          </agm-marker>
+        </agm-map>
       </div>
     </div>
     <div class="row">

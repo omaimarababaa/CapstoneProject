@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MapsAPILoader } from '@agm/core';
 import { startups } from 'src/app/lib/interfaces/startups';
@@ -14,6 +14,9 @@ import { LogoService } from 'src/app/lib/services/storge/logo.service';
   styleUrls: ['./addstartup.component.css']
 })
 export class AddstartupComponent {
+  latitudeAdd:any;
+  longitudeAdd:any;
+
   mapLocation = {
     latitude : 30.5852,
     longitude : 36.2384
@@ -23,7 +26,7 @@ export class AddstartupComponent {
     latitude: 31.9718,
     longitude:35.8339
   }
- 
+
   public sectors: any;
   sectorClick?:string;
   UrlLogo?: string;
@@ -37,9 +40,10 @@ export class AddstartupComponent {
   
   }
   startup:startups[] = [];
- 
+
   constructor(private startupService:DataService, private router: Router,private logoSorege:LogoService,private getsector:SectorsService){
-   
+  
+    
   }
   public ngOnInit(): void {
    
@@ -48,32 +52,28 @@ export class AddstartupComponent {
     });
   }
 
-  // getCoord($event: any) {
-  //     console.log($event);
-
-     
-     
-  //     // this.longitude = $event.latLng.lng();
-     
-  //     // moveMap(event: google.maps.MapMouseEvent) {
-  //     //   this.center = (event.latLng.toJSON());
-  //     // }
-  // }
-
   markerDragEnd( m: any, $event: any) {
     console.log($event);
          this.markerLocation.latitude  = $event.latLng.lat();
          this.markerLocation.longitude  = $event.latLng.lng();
       console.log(this.markerLocation);
+
+      this.latitudeAdd=$event.latLng.lat();
+      this.longitudeAdd=$event.latLng.lng();
+
+      this.startups.location?.push(this.latitudeAdd);
+      this.startups.location?.push(this.longitudeAdd);
+      console.log("location "+ this.startups.location);
     }
-
-
   getValue(key:any){
     this.sectorClick = key.target.value;
     console.log(this.sectorClick)
     }
 
   submit(){
+      
+  
+
     console.log("this.startups,this.UrlLogo,this.sectorClick")
     console.log(this.startups,this.UrlLogo,this.sectorClick)
     this.startupService.addStartups({
@@ -84,7 +84,7 @@ export class AddstartupComponent {
       window.location.reload();
     });
    
-    // 
+    
     
   }
   upload(event : any){

@@ -121,6 +121,10 @@ span{
 .imageText-par{
   display: none;
 }
+.titleselect{
+  display: flex;
+  flex-wrap: wrap;
+}
 }
 @media  screen and (width <= 450px) {
   .cardsCompany {
@@ -130,5 +134,9 @@ span{
 }
 .imageText-par{
   display: none;
+}
+.titleselect{
+  display: flex;
+  flex-wrap: wrap;
 }
 }

@@ -1,90 +1,12 @@
-/* .container{
-margin-top: 115px;
 
-}
-
-h1{
-    color: var(--primary-color);
-    margin-left: 25%;
-    font-weight: bold;
-}
-
-input[type=text], select {
-    width: 45%;
-    padding: 11px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
-  
-  label {
-    padding: 10px 10px 02px 0;
-    display: inline-block;
-    margin-left:30%;
-  }
-  
-  input[type=submit] {
-    background-color: var(--secound-color);
-    color: white;
-    padding: 9px 17px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-   
-  }
-  
-  input[type=submit]:hover {
-    background-color: var(--primary-color);
-  }
-  
-
-  .col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 5px;
-  }
-  
-  .col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 5px;
-  }
-  
-
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .buttonStyle {
-    width: 300px;
-    height: 40px;
-    font-size: 12px;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary-color);
-    transition: 500ms;
-    color: var(--third-color);
-    margin: 10px;
-}
-  
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
-  } */
   .container {
 
     margin-top:130px;
   
   }
   form{
-    width: 50%;
-    height: 933px;
+    width: 51%;
+    height:1500px;
   
       /* padding: 20px; */
       position: relative;
@@ -160,6 +82,11 @@ input[type=text], select {
       margin-top: 10px;
       /* margin-left: 20%; */
   }
+  agm-map {
+    margin: 20px;
+    height: 300px;
+    width: 400px;
+  }
   img {
     width: 100px;
     height: 100px;
@@ -181,12 +108,28 @@ input[type=text], select {
    .hide{
     display: none;
    }
-    /* @media screen and (max-width: 600px) {
-      .col-25, .col-75, input[type=submit] {
-        width: 100%;
+    @media screen and (max-width: 600px) {
+      form{
+        width: 83%;
+    height: 1700px;
+    position: relative;
+    left: 9%;
+    margin: 0;
+      }
+      .row {
+       
         display: flex;
         flex-wrap: wrap;
-        margin-top: 0;
+       
       }
-    } */
+      
+      agm-map {
+        margin: 20px;
+        height: 200px;
+        width: 150px;
+      }
+      #logoo{
+        margin-left:5%;
+       }
+    }
   

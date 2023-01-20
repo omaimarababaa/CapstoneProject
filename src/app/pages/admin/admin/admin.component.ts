@@ -65,10 +65,6 @@ export class AdminComponent implements AfterViewInit, OnInit {
      editStartup(id:string){
       console.log(id);
       this.router.navigate(['/edit/'+id]);
-      // dialogRef.afterClosed().subscribe((result)=> {
-      //     console.log(result); 
-  
-      // })
      }
    
   

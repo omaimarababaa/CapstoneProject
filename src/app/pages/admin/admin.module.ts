@@ -10,6 +10,7 @@ import { DeletestartupsComponent } from './startups/deletestartups/deletestartup
 import { EditstartupsComponent } from './startups/editstartups/editstartups.component';
 import { RequstAdminComponent } from './requst-admin/requst-admin.component';
 import { AddsectorComponent } from './sectors/addsector/addsector.component';
+import { AgmCoreModule } from '@agm/core';
 
 
 
@@ -23,7 +24,10 @@ import { AddsectorComponent } from './sectors/addsector/addsector.component';
     CommonModule,
     AdminRoutingModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD7Q1AqBFk3RJ--62kLfUj09zVUp45QzJE'
+    }),
   ]
 })
 export class AdminModule {

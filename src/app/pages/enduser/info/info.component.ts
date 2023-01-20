@@ -36,7 +36,7 @@ export class InfoComponent implements OnInit {
          console.log( this.companyInfo);
          this.latitude=this.companyInfo.location[0];
          this.longitude=this.companyInfo.location[1];
-         this.zoom = 12;
+         this.zoom = 15;
       });
   }
 }
