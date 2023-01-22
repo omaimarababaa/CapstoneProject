@@ -15,10 +15,9 @@ import { LogoService } from 'src/app/lib/services/storge/logo.service';
 export class EditstartupsComponent implements OnInit {
   latitudeAdd: any;
   longitudeAdd: any;
-
   mapLocation = {
-    latitude: 30.5852,
-    longitude: 36.2384,
+    latitude: 31.9539,
+    longitude: 35.9106,
   };
 lat:any;
 lng:any;
@@ -31,6 +30,7 @@ lng:any;
   id!: string;
   markerLocation: number[] = [];
   zoom!: number;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -61,16 +61,23 @@ lng:any;
   }
   markerDragEnd(m: any, $event: any) {
     console.log($event);
-    let lat = $event.latLng.lat();
-    let lng = $event.latLng.lng();
-    // this.markerLocation.longitude  = $event.latLng.lng();
-    console.log(lat);
-    console.log(lng);
-    this.latitudeAdd = lat;
-    this.longitudeAdd = lng;
+    this.latitudeAdd = $event.latLng.lat();
+    this.longitudeAdd =  $event.latLng.lng();
     console.log(this.latitudeAdd + ' and ' + this.longitudeAdd);
-    console.log("m "+m.value);
+   
   }
+  latchang($event:any){
+    console.log($event);
+    console.log($event.target.value);
+    this.latitudeAdd=$event.target.value;
+ 
+  }
+  lngchang($event:any){
+    console.log($event);
+   console.log($event.target.value);
+   this.longitudeAdd=$event.target.value;
+  }
+ 
   upload(event: any) {
     const file = (event.target as HTMLInputElement)?.files?.[0];
     if (file) {
@@ -88,6 +95,7 @@ lng:any;
 
   editStartup(startupE: any) {
     console.log(startupE, 'on edit student');
+    
     if (this.UrlLogo && this.sectorClick) {
       this.editstartup.updateStartup(this.startups, {
         ...startupE,
@@ -108,15 +116,14 @@ lng:any;
         ...startupE,
         location: this.markerLocation,
       });
-
-    }else if (this.markerLocation && this.lat) {
-      this.markerLocation.push(this.lat);
-      this.markerLocation.push(this.lng);
+    }
+    else if (this.longitudeAdd && this.latitudeAdd) {
+      this.markerLocation.push(this.latitudeAdd);
+      this.markerLocation.push(this.longitudeAdd);
       this.editstartup.updateStartup(this.startups, {
         ...startupE,
         location: this.markerLocation,
       });
-
     } else if (this.sectorClick) {
       this.editstartup.updateStartup(this.startups, {
         ...startupE,

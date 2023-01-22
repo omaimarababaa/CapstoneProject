@@ -18,8 +18,8 @@ export class AddstartupComponent {
   longitudeAdd:any;
 
   mapLocation = {
-    latitude : 30.5852,
-    longitude : 36.2384
+    latitude: 31.9539,
+    longitude: 35.9106,
   } 
 
   markerLocation = {
@@ -35,7 +35,7 @@ export class AddstartupComponent {
     city: '',
     companyName: '',
     isApproved:false,
-    location:[]
+    location:[]=[]
     // logo:this.UrlLogo,
   
   }
@@ -61,9 +61,22 @@ export class AddstartupComponent {
       this.latitudeAdd=$event.latLng.lat();
       this.longitudeAdd=$event.latLng.lng();
 
-      this.startups.location?.push(this.latitudeAdd);
-      this.startups.location?.push(this.longitudeAdd);
-      console.log("location "+ this.startups.location);
+      // this.startups.location?.push(this.latitudeAdd);
+      // this.startups.location?.push(this.longitudeAdd);
+      // console.log("location "+ this.startups.location);
+    }
+    latchang($event:any){
+      console.log($event);
+      console.log($event.target.value);
+      this.latitudeAdd=$event.target.value;
+      // this.startups.location?.push(this.latitudeAdd);
+   
+    }
+    lngchang($event:any){
+      console.log($event);
+     console.log($event.target.value);
+     this.longitudeAdd=$event.target.value;
+    //  this.startups.location?.push(this.longitudeAdd);
     }
   getValue(key:any){
     this.sectorClick = key.target.value;
@@ -72,7 +85,8 @@ export class AddstartupComponent {
 
   submit(){
       
-  
+    this.startups.location?.push(parseFloat(this.latitudeAdd));
+    this.startups.location?.push(parseFloat(this.longitudeAdd));
 
     console.log("this.startups,this.UrlLogo,this.sectorClick")
     console.log(this.startups,this.UrlLogo,this.sectorClick)

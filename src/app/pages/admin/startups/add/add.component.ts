@@ -12,6 +12,18 @@ import { LogoService } from 'src/app/lib/services/storge/logo.service';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent {
+  latitudeAdd:any;
+  longitudeAdd:any;
+
+  mapLocation = {
+    latitude: 31.9539,
+    longitude: 35.9106,
+  } 
+
+  markerLocation = {
+    latitude: 31.9718,
+    longitude:35.8339
+  }
   public sectors:any;
   sectorClick?:string;
   UrlLogo?:string;
@@ -20,7 +32,8 @@ export class AddComponent {
     sector: '',
     city: '',
     companyName: '',
-    isApproved:true
+    isApproved:true,
+    location:[]=[]
   }
   startup:startups[] = [];
   constructor(private startupService:DataService, private router: Router,private getsector:SectorsService
@@ -35,8 +48,37 @@ export class AddComponent {
   getValue(key:any){
     this.sectorClick = key.target.value;
     }
+    markerDragEnd( m: any, $event: any) {
+      console.log($event);
+           this.markerLocation.latitude  = $event.latLng.lat();
+           this.markerLocation.longitude  = $event.latLng.lng();
+        console.log(this.markerLocation);
+  
+        this.latitudeAdd=$event.latLng.lat();
+        this.longitudeAdd=$event.latLng.lng();
+  
+        // this.startups.location?.push(this.latitudeAdd);
+        // this.startups.location?.push(this.longitudeAdd);
+        // console.log("location "+ this.startups.location);
+      }
+      latchang($event:any){
+        console.log($event);
+        console.log($event.target.value);
+        this.latitudeAdd=$event.target.value;
+        // this.startups.location?.push(this.latitudeAdd);
+     
+      }
+      lngchang($event:any){
+        console.log($event);
+       console.log($event.target.value);
+       this.longitudeAdd=$event.target.value;
+      //  this.startups.location?.push(this.longitudeAdd);
+      }
 
   submit(){
+        
+    this.startups.location?.push(parseFloat(this.latitudeAdd));
+    this.startups.location?.push(parseFloat(this.longitudeAdd));
     this.startupService.addStartups({
       ...this.startups,logo:this.UrlLogo ,sector:this.sectorClick
     });

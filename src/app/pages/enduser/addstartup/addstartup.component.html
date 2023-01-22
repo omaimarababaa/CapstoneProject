@@ -93,10 +93,10 @@
           <label>Location :</label>
         </div>
         <div class="col-75">
-            <input type="text" name="lat" placeholder="latitude.." name="latitudeAdd" value="{{markerLocation.latitude}}"  [(ngModel)]='markerLocation.latitude'>
+            <input type="text" name="lat" placeholder="latitude.." (keyup)="latchang($event)" name="latitudeAdd" value="{{markerLocation.latitude}}"  >
         </div>
         <div class="col-75">
-          <input type="text"  name="long" placeholder="longitude.." name="longitudeAdd" value="{{markerLocation.longitude}}" [(ngModel)]='markerLocation.longitude' >
+          <input type="te"  name="long" placeholder="longitude.." (keyup)="lngchang($event)" name="longitudeAdd" value="{{markerLocation.longitude}}" >
       </div>
       </div>
 

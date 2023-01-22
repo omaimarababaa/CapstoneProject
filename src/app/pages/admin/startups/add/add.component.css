@@ -11,6 +11,21 @@ h1{
     flex-direction: column;
    
 }
+
+agm-map {
+    margin: 5px;
+    height: 175px;
+    width: 200px;
+  }
+  .llogo{
+width: 100px; 
+margin-left: 55px; }
+.slogo{
+    margin:10px;
+}
+.loc{
+    margin-left: 45%;
+}
 form > *{
     width: 360px;
 }
@@ -38,5 +53,13 @@ button{
 }
 .row{
     display: flex;
-    margin-left:35%;
+    margin-left:20%;
+}
+.location{
+    display: flex;
+}
+
+.map{
+width: 200px;
+height: 200px;
 }

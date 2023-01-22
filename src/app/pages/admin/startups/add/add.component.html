@@ -1,24 +1,16 @@
-
 <div class="container">
     <h1>Add Startup</h1>
-    <form #form="ngForm" >
+    <form #form="ngForm">
         <mat-form-field appearance="outline">
-            <mat-error  *ngIf="cName.invalid">Company name is required</mat-error>
+            <mat-error *ngIf="cName.invalid">Company name is required</mat-error>
             <mat-label>Company Name</mat-label>
-            <input matInput #cName="ngModel" required  name="companyName" [(ngModel)]='startups.companyName'>
+            <input matInput #cName="ngModel" required name="companyName" [(ngModel)]='startups.companyName'>
         </mat-form-field>
-        <select class="selectSector"  (change)="getValue($event)" [(ngModel)]='startups.sector'>
-            <option>Select Sector</option>
-            <option *ngFor="let sector of sectors">
-              {{sector.sectorName}}
-            </option>
-          </select>
-          <br><br>
-          
+
         <mat-form-field appearance="outline">
-            <mat-error  *ngIf="cName.invalid">City is required</mat-error>
+            <mat-error *ngIf="cName.invalid">City is required</mat-error>
             <mat-label>City</mat-label>
-            <input matInput  #cName="ngModel" required name="city" [(ngModel)]='startups.city'>
+            <input matInput #cName="ngModel" required name="city" [(ngModel)]='startups.city'>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Founder</mat-label>
@@ -33,9 +25,9 @@
             <input matInput name="yearOfEstablishment" [(ngModel)]='startups.yearOfEstablishment'>
         </mat-form-field>
         <mat-form-field appearance="outline">
-            <mat-error  *ngIf="wName.invalid">Website is required</mat-error>
+            <mat-error *ngIf="wName.invalid">Website is required</mat-error>
             <mat-label>Website</mat-label>
-            <input matInput  #wName="ngModel" required name="website" [(ngModel)]='startups.website'>
+            <input matInput #wName="ngModel" required name="website" [(ngModel)]='startups.website'>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
@@ -45,11 +37,40 @@
             <mat-label>phone</mat-label>
             <input matInput name="phone" [(ngModel)]='startups.phone'>
         </mat-form-field>
-        <div class="row">
-            <label for="logo">SelectLogo:</label>
-            <input type="file" id="lname" name="logo" #lName="ngModel" required  placeholder="Your URL Logo.."  [(ngModel)]='startups.logo' (change)="upload($event)" >
-            <span style="color:red"  *ngIf="lName.touched && lName.invalid">Logo is required</span>
-          </div>
-        <button class="buttonStyle"  [disabled]="form.invalid" (click)="submit()"> Add New Startup</button>
+        <select class="selectSector" (change)="getValue($event)" [(ngModel)]='startups.sector'>
+            <option>Select Sector</option>
+            <option *ngFor="let sector of sectors">
+                {{sector.sectorName}}
+            </option>
+        </select>
+        <br>
+        <div class="location">
+            <div class="llogo">
+                <label  for="logo">SelectLogo:</label>
+                <input class="slogo" type="file" id="lname" name="logo" #lName="ngModel" required placeholder="Your URL Logo.."
+                    [(ngModel)]='startups.logo' (change)="upload($event)">
+                <span style="color:red" *ngIf="lName.touched && lName.invalid">Logo is required</span>
+            </div>
+
+            <div class="loc">
+                <label> Location </label>
+                <mat-form-field appearance="outline">
+                    <mat-label>latitude</mat-label>
+                    <input matInput (keyup)="latchang($event)" name="latitudeAdd" value="{{markerLocation.latitude}}" >
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>longitude</mat-label>
+                    <input matInput (keyup)="lngchang($event)" name="longitudeAdd" value="{{markerLocation.longitude}}">
+                </mat-form-field>
+            </div>
+            <div class="map">
+                <agm-map [zoom]="10" [latitude]="mapLocation.latitude" [longitude]="mapLocation.longitude">
+                    <agm-marker [latitude]="markerLocation.latitude" [longitude]="markerLocation.longitude"
+                        [markerDraggable]="true" (dragEnd)="markerDragEnd(m, $event)" #m>
+                    </agm-marker>
+                </agm-map>
+            </div>
+        </div>
+        <button class="buttonStyle" [disabled]="form.invalid" (click)="submit()"> Add New Startup</button>
     </form>
 </div>
