@@ -10,12 +10,12 @@
     <select class="selectSector" (change)="getValue($event)">
       <option>Filter By sector</option>
       <option *ngFor="let sector of sectors">
-        {{sector.sectorName | uppercase }}
+        {{sector.sectorName }}
       </option>
     </select>
   </div>
   <div class="cardsCompany">
-    <div class="a-box" *ngFor="let logo of companyLogo" >
+    <div class="a-box" *ngFor="let logo of companyLogo">
       <div class="img-container">
         <div class="img-inner">
           <a (click)="getInfo(logo.uid)"><img src="{{logo.logo}}" class="logoCompany"></a>
@@ -25,10 +25,31 @@
   </div>
 
 </div>
+<div class="margintitlemap">
+    <h1 class="titleS">Explore the Global Startup Technology Map in Jordan</h1>
+  </div>
+
+  
+ 
+    <div class="mapw">
+      <agm-map [latitude]="mapLocation.latitude" [longitude]="mapLocation.longitude">
+        >
+        <agm-marker *ngFor="let logo of companyLogo" [latitude]="logo.location[0]" [longitude]="logo.location[1]"
+            (mouseOver)="onMouseOver(logo.companyName)" 
+       [title]="text">
+       <agm-info-window #infowindow>
+        <div><strong>Startup:</strong>{{logo.companyName}}</div>
+        <div><strong>City: </strong>{{logo.city}}</div>
+       <div><strong>Sector: </strong>{{logo.sector}}</div>
+      </agm-info-window></agm-marker>
+      </agm-map>
+    </div> 
+
+
 <div class="socialM">
   <span>Share the website to social media</span>
-  <share-buttons theme="modern-dark" [include]="[ 'facebook','linkedin', 'whatsapp']"
-    [showIcon]="true" [showText]="true" url="https://startupstech-8a142.web.app/" description="Angular Share Buttons"
+  <share-buttons theme="modern-dark" [include]="[ 'facebook','linkedin', 'whatsapp']" [showIcon]="true"
+    [showText]="true" url="https://startupstech-8a142.web.app/" description="Angular Share Buttons"
     twitterAccount="rodrigokamada" class="pt-5">
   </share-buttons>
 </div>

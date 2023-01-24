@@ -7,7 +7,7 @@ import { HomeComponent } from './home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
-
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     AboutComponent,
@@ -15,6 +15,9 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
      
   ],
   imports: [
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD7Q1AqBFk3RJ--62kLfUj09zVUp45QzJE'
+    }),
     CommonModule,
     HomeRoutingModule,
     HttpClientModule,

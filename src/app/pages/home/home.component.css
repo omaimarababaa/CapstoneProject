@@ -110,6 +110,36 @@ span{
    font-weight: bold;
    margin: 5px;
 }
+agm-map {
+  margin: 20px;
+  height: 600px;
+  width: 100%;
+}
+.map{
+  display: grid;
+  width: 100%;
+  justify-content: space-around;
+}
+.mapw{
+  /* width: 50%; */
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+ 
+}
+.flexmap{
+  display: flex;
+}
+.margintitlemap{
+ text-align: center;
+}
+.infomap{
+  margin-top: 25%;
+    margin-left: 10%;
+}
+.infomap > *{
+  padding: 10px;
+}
 /* ---------------------------------------------------------------------------- */
 
 @media  screen and (width <= 1055px) {

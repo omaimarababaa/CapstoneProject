@@ -57,5 +57,6 @@ export class LogInComponent implements OnInit {
       .catch((error) => {
          this.massegError="Email Or Password Is Incorrect";
       });
+    
   }
 }
