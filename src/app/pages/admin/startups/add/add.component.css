@@ -63,3 +63,53 @@ button{
 width: 200px;
 height: 200px;
 }
+@media screen and (max-width: 600px) {
+    form > *{
+        width: 150px;
+
+    }
+    form{
+        overflow: scroll;
+        height: 500px;
+    }
+
+    agm-map {
+      margin: 20px;
+      height: 200px;
+      width: 3500px;
+    }
+    .location{
+        display: flex;
+        flex-direction: column;
+    }
+    .map {
+        width: 350px;
+        height: 230px;
+    }
+   
+  }
+  @media screen and (max-width: 1000px) {
+    form > *{
+        width: 150px;
+
+    }
+    form{
+        overflow: scroll;
+        height: 500px;
+    }
+
+    agm-map {
+      margin: 20px;
+      height: 200px;
+      width: 3500px;
+    }
+    .location{
+        display: flex;
+        flex-direction: column;
+    }
+    .map {
+        width: 350px;
+        height: 230px;
+    }
+   
+  }

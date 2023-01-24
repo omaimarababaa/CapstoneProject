@@ -3,8 +3,7 @@
   top: 0;
   right: 0;
   left: 0;
-
-  z-index: 1;
+  z-index: 99;
 }
 .toolbar {
   display: flex;
@@ -12,10 +11,9 @@
   background-color: var(--third-color);
   box-shadow: 1px 0px 2px var(--shadow-color);
 }
-.lenghtR{
+.lenghtR {
   width: 0px;
   height: 5px;
-
 }
 .scrollChangeP {
   padding: 55px;
@@ -48,45 +46,38 @@
   margin: 10px;
 }
 
-
 button {
   margin: 5px;
-  margin-left:50px;
+  margin-left: 50px;
 }
 .active {
-  /* border: 1px solid var(--third-color);
-  padding: 7px;
-  border-radius: 20%;
-  background-color: var(--plus-color); */
-color: var(--plus-color);
+  color: var(--plus-color);
 }
-.iconMenu{
+.iconMenu {
   display: none;
 }
 /* Responsive */
 @media screen and (max-width: 700px) {
-  .iconMenu{
+  .iconMenu {
     display: block;
     position: absolute;
     right: 50px;
     /* top: 40px; */
-   
   }
   a {
     display: block;
     text-align: center;
- 
   }
   .links > * {
-  margin:30 px;
-}
-.btnLink{
-  margin-right: 0px;
-}
-  .links{
+    margin: 15px;
+  }
+  .btnLink {
+    margin-right: 0px;
+  }
+  .links {
     display: none;
- /* border: 1px solid var(--shadow-color); */
- background-color: var(--third-color);
+
+    background-color: var(--third-color);
     position: relative;
     top: 460px;
     left: 56px;
@@ -94,11 +85,15 @@ color: var(--plus-color);
     height: 864px;
     z-index: 10;
   }
-  .menuVar{
-    display: block;
-   
+  .lenghtR{
+    position: relative;
+    top: -48px;
+    left: -26px;
   }
- 
+  .menuVar {
+    display: block;
+    margin-left: -12px;
+  }
 }
 
 /* @media screen and (max-width: 600px) {
