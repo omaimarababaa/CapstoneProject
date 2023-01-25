@@ -56,11 +56,11 @@
                 <label> Location </label>
                 <mat-form-field appearance="outline">
                     <mat-label>latitude</mat-label>
-                    <input matInput (keyup)="latchang($event)" name="latitudeAdd" value="{{markerLocation.latitude}}" >
+                    <input matInput (keyup)="latchang($event)" name="latitudeAdd" value="{{markerLocation.latitude}}"  [(ngModel)]='markerLocation.latitude' >
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-label>longitude</mat-label>
-                    <input matInput (keyup)="lngchang($event)" name="longitudeAdd" value="{{markerLocation.longitude}}">
+                    <input matInput (keyup)="lngchang($event)" name="longitudeAdd" value="{{markerLocation.longitude}}"  [(ngModel)]='markerLocation.longitude' >
                 </mat-form-field>
             </div>
             <div class="map">
