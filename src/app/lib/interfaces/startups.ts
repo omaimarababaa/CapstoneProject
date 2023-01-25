@@ -9,7 +9,7 @@ export interface startups {
   numOfEmployees?: number;
   yearOfEstablishment?: number;
   website?: string;
-  email?: string;
+  email?: string ;
   phone?: string;
   location?: number[];
 }

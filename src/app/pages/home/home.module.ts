@@ -8,10 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { AgmCoreModule } from '@agm/core';
+import { PnfComponent } from './pnf/pnf.component';
 @NgModule({
   declarations: [
     AboutComponent,
     HomeComponent,
+    PnfComponent,
      
   ],
   imports: [

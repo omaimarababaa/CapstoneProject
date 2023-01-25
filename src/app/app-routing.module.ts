@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './lib/guards/auth.guard';
-
-
 import { HomeComponent } from './pages/home/home.component';
+
 
 const routes: Routes = [
   {
@@ -20,7 +19,7 @@ const routes: Routes = [
     path: 'enduser',
     loadChildren: () =>
       import('./pages/enduser/enduser.module').then((m) => m.EnduserModule)
-  },
+  }
 
 ];
 
