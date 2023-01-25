@@ -12,8 +12,6 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 import { AgmCoreModule } from '@agm/core';
 
- 
-
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
