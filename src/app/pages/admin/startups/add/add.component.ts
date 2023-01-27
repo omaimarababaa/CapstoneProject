@@ -79,6 +79,7 @@ export class AddComponent {
         
     this.startups.location?.push(parseFloat(this.latitudeAdd));
     this.startups.location?.push(parseFloat(this.longitudeAdd));
+    
     this.startupService.addStartups({
       ...this.startups,logo:this.UrlLogo ,sector:this.sectorClick
     });

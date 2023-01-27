@@ -1,13 +1,13 @@
 <div class="conteiner">
 
-    <h1>About</h1>
-    <div class="display-flex">
+  <h1>About</h1>
+  <div class="display-flex">
     <img src="./../../../../assets/image/about.jpg" alt="about" width="275px" height="250px">
     <p>
-        TechStartups is display the startups in Jordan with their information. <br>
-        A total of +20 startups have been mapped across various verticals.<br>
-         Among the most important  sectors : 
-       E-commerce,Healthtech, Edtech, Agritech, Fintech, Data, AI & ML.
+      TechStartups is display the startups in Jordan with their information. <br>
+      A total of +20 startups have been mapped across various verticals.<br>
+      Among the most important sectors :
+      <span *ngFor="let sector of sectors">{{sector.sectorName }},</span>
     </p>
   </div>
 </div>

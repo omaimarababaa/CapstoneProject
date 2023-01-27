@@ -3,44 +3,43 @@
   display: flex;
 }
 img {
- width: 250px;
- height: 250px;
+  width: 250px;
+  height: 250px;
 }
-.imagInfo{
-     width: 300px;
+.imagInfo {
+  width: 300px;
   height: 300px;
   padding: 20px;
 }
 agm-map {
-    margin-left: 10%;
-    height: 400px;
-    width: 400px;
+  margin-left: 10%;
+  height: 400px;
+  width: 400px;
 }
-.company{
-    margin-top: 65px;
+.company {
+  margin-top: 65px;
 }
-.colorS{
-    color: var(--secound-color);
-    font-weight: bold;
+.colorS {
+  color: var(--secound-color);
+  font-weight: bold;
 }
-.paddingleft{
-    /* display: block; */
-    padding-left: 10px;
-    /* padding-top: 10px; */
+.paddingleft {
+  padding-left: 10px;
 }
-.link{
-    text-decoration: none;
-    color: var(--black-color);
+.link {
+  text-decoration: none;
+  color: var(--black-color);
 }
-/* Responsive */
-@media  screen and (width <= 450px) {
-    .info {
-        margin: 130px 0px 30px 12px;
-        display: block;
-      }
-      agm-map {
-        margin-left: 10%;
-        height: 200px;
-        width: 300px;
-    }
+
+/* -------------------Responsive-------------------- */
+@media screen and (width <= 450px) {
+  .info {
+    margin: 130px 0px 30px 12px;
+    display: block;
   }
+  agm-map {
+    margin-left: 10%;
+    height: 200px;
+    width: 300px;
+  }
+}

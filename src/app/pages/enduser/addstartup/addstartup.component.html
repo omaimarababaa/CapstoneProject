@@ -1,122 +1,121 @@
-
 <div class="container">
-    <form #form="ngForm">
-      <h1>Add Startup</h1>
-      <div class="row">
-        <div class="col-25">
-          <label for="companyName">Company Name :</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="fname" name="companyName"  #cName="ngModel" required   placeholder="Your Company Name.."  [(ngModel)]='startups.companyName'>
-       <span  *ngIf="cName.touched && cName.invalid">Company name is required</span>
-        </div>
+  <form #form="ngForm">
+    <h1>Add Startup</h1>
+    <div class="row">
+      <div class="margin">
+        <label for="companyName">Company Name :</label>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="city">City :</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="lname" #aName="ngModel" required  name="city" placeholder="Your City.." [(ngModel)]='startups.city'>
-          <span  *ngIf="aName.touched && aName.invalid">City  is required</span>
-        </div>
+      <div class="margin">
+        <input type="text" id="fname" name="companyName" #cName="ngModel" required placeholder="Your Company Name.."
+          [(ngModel)]='startups.companyName'>
+        <span *ngIf="cName.touched && cName.invalid">Company name is required</span>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="yearOfEstablishment">Years of Extablishment :</label>
-        </div>
-        <div class="col-75">
-          <input type="text"  name="yearOfEstablishment" placeholder="Years of Extablishment.." [(ngModel)]='startups.yearOfEstablishment'>
-        </div>
+    </div>
+    <div class="row">
+      <div class="margin">
+        <label for="city">City :</label>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="numOfEmployees">Number of Employees :</label>
-        </div>
-        <div class="col-75">
-          <input type="text"  name="numOfEmployees" placeholder="Number of Employees.." [(ngModel)]='startups.numOfEmployees'>
-        </div>
+      <div class="margin">
+        <input type="text" id="lname" #aName="ngModel" required name="city" placeholder="Your City.."
+          [(ngModel)]='startups.city'>
+        <span *ngIf="aName.touched && aName.invalid">City is required</span>
       </div>
-      <br>
-      <div class="row">
-        <div class="col-75">
-          <label for="logo">Logo :</label>
-          <input type="file"  name="logo" #lName="ngModel" required  placeholder="Your URL Logo.."  [(ngModel)]='startups.logo' (change)="upload($event)">
-          <span  *ngIf="lName.touched && lName.invalid">Logo  is required</span>
-        </div>
+    </div>
+    <div class="row">
+      <div class="margin">
+        <label for="yearOfEstablishment">Years of Extablishment :</label>
       </div>
-      <br> 
-      <div class="row">
-        <select class="selectSector" class="wSelect" (change)="getValue($event)" [(ngModel)]='startups.sector'>
-          <option>Select Sector</option>
-          <option *ngFor="let sector of sectors">
-            {{sector.sectorName}}
-          </option>
-        </select>
-        <br><br>
-        </div>
-      
-      <div class="row">
-        <div class="col-25">
-          <label for="website">Website :</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="lname" name="website" #wName="ngModel" required placeholder="Your Company website.."  [(ngModel)]='startups.website'>
-            <span  *ngIf="wName.touched && wName.invalid">Sector  is required</span>
-        </div>
+      <div class="margin">
+        <input type="text" name="yearOfEstablishment" placeholder="Years of Extablishment.."
+          [(ngModel)]='startups.yearOfEstablishment'>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="email">Email :</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="lname" name="email" placeholder="Your Company email.." [(ngModel)]='startups.email'>
-        </div>
+    </div>
+    <div class="row">
+      <div class="margin">
+        <label for="numOfEmployees">Number of Employees :</label>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="phone">Phone :</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="lname" name="phone" placeholder="Your Company Phone.." [(ngModel)]='startups.phone'>
-        </div>
+      <div class="margin">
+        <input type="text" name="numOfEmployees" placeholder="Number of Employees.."
+          [(ngModel)]='startups.numOfEmployees'>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="founder">Founder :</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="lname" name="founder" placeholder="Founder.." [(ngModel)]='startups.founder'>
-        </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="margin">
+        <label for="logo">Logo :</label>
+        <input type="file" name="logo" #lName="ngModel" required placeholder="Your URL Logo.."
+          [(ngModel)]='startups.logo' (change)="upload($event)">
+        <span *ngIf="lName.touched && lName.invalid">Logo is required</span>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label>Location :</label>
-        </div>
-        <div class="col-75">
-            <input type="text"  placeholder="latitude.." (keyup)="latchang($event)" name="latitudeAdd" value="{{markerLocation.latitude}}"  [(ngModel)]='markerLocation.latitude' >
-        </div>
-        <div class="col-75">
-          <input type="text"   placeholder="longitude.." (keyup)="lngchang($event)" name="longitudeAdd" value="{{markerLocation.longitude}}"  [(ngModel)]='markerLocation.longitude'>
-      </div>
-      </div>
+    </div>
+    <br>
+    <div class="row">
+      <select class="selectSector" class="wSelect" (change)="getValue($event)" [(ngModel)]='startups.sector'>
+        <option>Select Sector</option>
+        <option *ngFor="let sector of sectors">
+          {{sector.sectorName}}
+        </option>
+      </select>
+      <br><br>
+    </div>
 
-      <div class="row">
-        <div class="col-25">
-          <agm-map 
-        [zoom]="10"
-        [latitude]="mapLocation.latitude" 
-        [longitude]="mapLocation.longitude">
-         <agm-marker
-         [latitude]="markerLocation.latitude" 
-         [longitude]="markerLocation.longitude"
-         [markerDraggable]="true" (dragEnd)="markerDragEnd(m, $event)"
-         #m>
-         </agm-marker>
-          </agm-map>
-        </div>
-        <!-- <button >ADD</button> -->
-        
-        <button class="noselect buttonStyle"  [disabled]="form.invalid"  (click)="submit()"> Add New startup</button>
+    <div class="row">
+      <div class="margin">
+        <label for="website">Website :</label>
       </div>
-    </form>
-  </div>
+      <div class="margin">
+        <input type="text" id="lname" name="website" #wName="ngModel" required placeholder="Your Company website.."
+          [(ngModel)]='startups.website'>
+        <span *ngIf="wName.touched && wName.invalid">Sector is required</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="margin">
+        <label for="email">Email :</label>
+      </div>
+      <div class="margin">
+        <input type="text" id="lname" name="email" placeholder="Your Company email.." [(ngModel)]='startups.email'>
+      </div>
+    </div>
+    <div class="row">
+      <div class="margin">
+        <label for="phone">Phone :</label>
+      </div>
+      <div class="margin">
+        <input type="text" id="lname" name="phone" placeholder="Your Company Phone.." [(ngModel)]='startups.phone'>
+      </div>
+    </div>
+    <div class="row">
+      <div class="margin">
+        <label for="founder">Founder :</label>
+      </div>
+      <div class="margin">
+        <input type="text" id="lname" name="founder" placeholder="Founder.." [(ngModel)]='startups.founder'>
+      </div>
+    </div>
+    <div class="row">
+      <div class="margin">
+        <label>Location :</label>
+      </div>
+      <div class="margin">
+        <input type="text" placeholder="latitude.." (keyup)="latchang($event)" name="latitudeAdd"
+          value="{{markerLocation.latitude}}" [(ngModel)]='markerLocation.latitude'>
+      </div>
+      <div class="margin">
+        <input type="text" placeholder="longitude.." (keyup)="lngchang($event)" name="longitudeAdd"
+          value="{{markerLocation.longitude}}" [(ngModel)]='markerLocation.longitude'>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="margin">
+        <agm-map [zoom]="10" [latitude]="mapLocation.latitude" [longitude]="mapLocation.longitude">
+          <agm-marker [latitude]="markerLocation.latitude" [longitude]="markerLocation.longitude"
+            [markerDraggable]="true" (dragEnd)="markerDragEnd($event)">
+          </agm-marker>
+        </agm-map>
+      </div>
+      <button class="noselect buttonStyle" [disabled]="form.invalid" (click)="submit()"> Add New startup</button>
+    </div>
+  </form>
+</div>

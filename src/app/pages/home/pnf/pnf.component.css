@@ -1,13 +1,10 @@
-
-.contenair{
-    height: 90vh;
-    background:var(    --third-color    );
-    text-align: center;
-    color: var(--primary-color);
-    margin-top: 120px;
-
+.contenair {
+  height: 90vh;
+  background: var(--third-color);
+  text-align: center;
+  color: var(--primary-color);
+  margin-top: 120px;
 }
-h1{
-    font-size: 2.5rem;  
+h1 {
+  font-size: 2.5rem;
 }
-

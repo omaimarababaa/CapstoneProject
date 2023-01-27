@@ -1,9 +1,9 @@
+<!-- platform purpose -->
 <div class="container">
   <p class="imageText-title">Discover the Best Startups technology<br> in Jordan</p>
-  <p class="imageText-par">StartupsTech is the most comprehensive startup technology<br>
-    research center in Jordan, working to uncover the momentum <br>
-    of startup technology and accelerate its growth.</p>
+  <p class="imageText-par">Jordan TechStartups aims to accelerate the growth of startup technology in Jordan.</p>
 </div>
+<!-- display sector by filter -->
 <div class="titleStartup">
   <div class="titleselect">
     <h1 class="titleS">Explore the Startups in Jordan</h1>
@@ -14,6 +14,7 @@
       </option>
     </select>
   </div>
+  <!-- display Logo -->
   <div class="cardsCompany">
     <div class="a-box" *ngFor="let logo of companyLogo">
       <div class="img-container">
@@ -23,29 +24,27 @@
       </div>
     </div>
   </div>
-
 </div>
+<!-- marker -->
 <div class="margintitlemap">
-    <h1 class="titleS">Explore the Global Startup Technology Map in Jordan</h1>
-  </div>
-
-  
- 
-    <div class="mapw">
-      <agm-map [latitude]="mapLocation.latitude" [longitude]="mapLocation.longitude">
-        >
-        <agm-marker *ngFor="let logo of companyLogo" [latitude]="logo.location[0]" [longitude]="logo.location[1]"
-            (mouseOver)="onMouseOver(logo.companyName)" 
-       [title]="text">
-       <agm-info-window #infowindow>
+  <h1 class="titleS">Explore the Global Startup Technology Map in Jordan</h1>
+</div>
+<!-- display Map -->
+<div class="mapw">
+  <agm-map [latitude]="mapLocation.latitude" [longitude]="mapLocation.longitude">
+    >
+    <agm-marker *ngFor="let logo of companyLogo" [latitude]="logo.location[0]" [longitude]="logo.location[1]"
+      [title]="text">
+      <agm-info-window #infowindow>
         <div><strong>Startup:</strong>{{logo.companyName}}</div>
         <div><strong>City: </strong>{{logo.city}}</div>
-       <div><strong>Sector: </strong>{{logo.sector}}</div>
-      </agm-info-window></agm-marker>
-      </agm-map>
-    </div> 
+        <div><strong>Sector: </strong>{{logo.sector}}</div>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+</div>
 
-
+<!-- Share Social Media -->
 <div class="socialM">
   <span>Share the website to social media</span>
   <share-buttons theme="modern-dark" [include]="[ 'facebook','linkedin', 'whatsapp']" [showIcon]="true"

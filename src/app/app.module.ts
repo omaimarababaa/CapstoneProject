@@ -28,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-   
+
     HeaderComponent,
     FooterComponent,
     LayoutComponent,
@@ -36,11 +36,11 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD7Q1AqBFk3RJ--62kLfUj09zVUp45QzJE'
+      apiKey: 'AIzaSyD7Q1AqBFk3RJ--62kLfUj09zVUp45QzJE',
     }),
 
     ShareButtonsModule,
-  ShareIconsModule,
+    ShareIconsModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -54,7 +54,7 @@ import { HttpClientModule } from '@angular/common/http';
     AdminModule,
     EnduserModule,
     HomeModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

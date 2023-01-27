@@ -7,26 +7,18 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/lib/components/material/material/material.module';
 import { InfoComponent } from './info/info.component';
 import { AgmCoreModule } from '@agm/core';
-// import {GoogleMapsModule} from '@angular/google-maps';
-
-
-
-
 
 @NgModule({
-  declarations: [
-    AddstartupComponent,
-    InfoComponent
-  ],
+  declarations: [AddstartupComponent, InfoComponent],
   imports: [
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD7Q1AqBFk3RJ--62kLfUj09zVUp45QzJE'
+      apiKey: 'AIzaSyD7Q1AqBFk3RJ--62kLfUj09zVUp45QzJE',
     }),
-  
+
     CommonModule,
     EnduserRoutingModule,
     MaterialModule,
-    FormsModule
-  ]
+    FormsModule,
+  ],
 })
-export class EnduserModule { }
+export class EnduserModule {}

@@ -3,16 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { PnfComponent } from './pnf/pnf.component';
 
-const routes: Routes = [ 
-  {path:'about', component: AboutComponent},
-  
-  {
-     path: '**',component: PnfComponent
-  }
+const routes: Routes = [
+  { path: 'about', component: AboutComponent },
+  { path: '**', component: PnfComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class HomeRoutingModule { }
+export class HomeRoutingModule {}

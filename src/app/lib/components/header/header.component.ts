@@ -69,7 +69,7 @@ export class HeaderComponent implements OnInit {
 
   logOut() {
     this.fireAuth.signOut();
-     this.router.navigate(['']);
+     this.router.navigate(['/']);
     window.location.reload();
   }
   openMenu() {

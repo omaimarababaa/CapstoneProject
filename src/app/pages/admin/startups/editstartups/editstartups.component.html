@@ -46,14 +46,19 @@
     <input type="file" id="logoo" name="logo" #lName="ngModel" required placeholder="Your URL Logo.."
       [(ngModel)]='companyInfo.logo' (change)="upload($event)">
     <br><br>
-    <label class="SelectLogo" for="logo">SelectLogo:</label>
+    <!-- <label class="SelectLogo" for="logo">SelectLogo:</label> -->
+
     <div class="row">
+
+      
       <select class="selectSector" (change)="getValue($event)" [(ngModel)]='companyInfo.sector'>
-        <option [selected]="companyInfo.sector">Select Sector</option>
         <option *ngFor="let sector of sectors" [selected]="companyInfo.sector === sector.sectorName">
           {{sector.sectorName}}
         </option>
       </select>
+
+
+
     </div>
     <br>
     <div class="row">

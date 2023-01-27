@@ -13,8 +13,9 @@ import { UserFirebaseService } from 'src/app/lib/services/users/user-firebase.se
 })
 export class LogInComponent implements OnInit {
   massegError:string | undefined;
-  data: users[] = [];
+  userInfo: users[] = [];
   userid?: string;
+  
   form = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
@@ -39,12 +40,12 @@ export class LogInComponent implements OnInit {
     this.auth
       .signIn(this.email?.value + '', this.password?.value + '')
       .then((response) => {
-        console.log(response);
         this.users.getUser().subscribe((response) => {
           this.auth.user$.subscribe((user) => {
             this.userid = user?.uid;
-            this.data = response;
-            this.data.forEach((element) => {
+            this.userInfo = response;
+            this.userInfo.forEach((element) => {
+              // check is user or admin
               if (this.userid == element.userId) {
                 if (element.isAdmin == true) 
                 this.router.navigate(['admin/']);
@@ -54,7 +55,7 @@ export class LogInComponent implements OnInit {
           });
         });
       })
-      .catch((error) => {
+      .catch(() => {
          this.massegError="Email Or Password Is Incorrect";
       });
     

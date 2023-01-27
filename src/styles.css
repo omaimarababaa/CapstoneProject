@@ -14,6 +14,7 @@ html, body { height: 100%; }
     --shadow-color:#aca0aa;
     --black-color:rgb(0, 0, 0);
     --color-error:rgb(198, 4, 4);
+    --border-color:#ccc;
 }
 
 

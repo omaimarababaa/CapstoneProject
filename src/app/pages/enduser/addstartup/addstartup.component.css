@@ -1,129 +1,112 @@
 .container {
-
-  margin-top:130px;
-
+  margin-top: 130px;
 }
-form{
+form {
   width: 50%;
   height: 1500px;
-
-    /* padding: 20px; */
-    position: relative;
-    left: 20%;
-    margin: 12px;
-    border-radius: 12px;
-    box-shadow: 1px 10px 10px var(--primary-color), 1px 3px 9px var(--third-color);
+  position: relative;
+  left: 20%;
+  margin: 12px;
+  border-radius: 12px;
+  box-shadow: 1px 10px 10px var(--primary-color), 1px 3px 9px var(--third-color);
 }
 agm-map {
   margin: 20px;
   height: 300px;
   width: 500px;
 }
-h1{
+h1 {
   color: var(--primary-color);
-text-align: center;
+  text-align: center;
   font-weight: bold;
 }
 
-span{
-  color: red ;
+span {
+  color: var(--color-error);
   display: block;
-  /* font-family:12px !important; */
 }
-  input[type=text], select {
-    width: 80%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  label {
-    padding: 12px 12px 12px 12px;
-    /* display: inline-block; */
-    /* margin-left: 10%; */
-    
-  }
-  .row{
-    margin-left: 10%;
-  }
-  input[type=submit] {
-    background-color: var(--secound-color);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-   
-  } 
-  .col-25 {
-    /* float: left;
-    width: 25%; */
-    margin-top: 6px;
-  }
-  
-  .col-75 {
-    /* float: left;
-    width: 75%; */
-    margin-top: 6px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .buttonStyle {
-    width: 165px;
-    height: 40px;
-    font-size: 12px;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary-color);
- 
-    color: var(--third-color);
+input[type="text"],
+select {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
 
+label {
+  padding: 12px;
 }
-.wSelect{
+.row {
+  margin-left: 10%;
+}
+input[type="submit"] {
+  background-color: var(--secound-color);
+  color: var(--third-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.margin {
+  margin-top: 6px;
+}
+.buttonStyle {
+  width: 165px;
+  height: 40px;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+}
+
+.wSelect {
   width: 84%;
 }
-
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
-
-      
-      form{
-        width: 65%;
-        margin-left: 0px;
-      }
-    
-      agm-map {
-        margin: 20px;
-        height: 300px;
-        width: 70%;
-      }
+/* ------------------------------------------------- */
+@media screen and (max-width: 600px) {
+  .margin,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
   }
-  @media screen and (max-width: 1200px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
 
-      
-      form{
-        width: 65%;
-        margin-left: 0px;
-      }
-    
-      agm-map {
-        margin: 20px;
-        height: 300px;
-        width: 50%;
-      }
+  form {
+    width: 65%;
+    margin-left: 0px;
+  }
+
+  agm-map {
+    margin: 20px;
+    height: 300px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .margin,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+  form {
+    width: 65%;
+    margin-left: 0px;
+  }
+
+  agm-map {
+    margin: 20px;
+    height: 300px;
+    width: 50%;
+  }
+}
+@media screen and (width <500px) {
+  agm-map {
+    margin: 20px;
+    height: 300px;
+    width: 80%;
+  }
+
   }
