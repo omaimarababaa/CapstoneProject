@@ -13,12 +13,9 @@ export class UserFirebaseService {
   userCollection!: AngularFirestoreCollection<users>;
   constructor(private firestore: AngularFirestore) {
     this.userCollection = this.firestore.collection('user');
-    
   }
 
   getUser() {
     return this.userCollection.valueChanges();
   }
-  
-
 }

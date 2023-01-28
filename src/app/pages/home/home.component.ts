@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnDestroy, OnInit} from '@angular/core';
 
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/lib/services/data/data.service';
@@ -27,18 +27,19 @@ export class HomeComponent implements OnInit {
     private sector: SectorsService,
     private router: Router
   ) {}
+ 
 
-  public ngOnInit(): void {
+   ngOnInit(): void {
     this.getAllStartups();
     this.getAllSector();
   }
   getAllStartups() {
-    this.startup.getStartups().subscribe((response) => {
+    this.companyLogo = this.startup.getStartups().subscribe((response) => {
       this.companyLogo = response;
     });
   }
   getAllSector() {
-    this.sector.getSectors().subscribe((response) => {
+   this.sectors= this.sector.getSectors().subscribe((response) => {
       this.sectors = response;
     });
   }

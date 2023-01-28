@@ -1,116 +1,111 @@
-
-*{
-    margin:3px; text-align: center;
+* {
+  margin: 3px;
+  text-align: center;
 }
-h1{
-    color: var(--primary-color);
-   font-weight: bold;
+h1 {
+  color: var(--primary-color);
+  font-weight: bold;
 }
-.container  {
-    display: flex;
-    flex-direction: column;
-   
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
 agm-map {
-    margin: 5px;
-    height: 175px;
-    width: 200px;
-  }
-  .llogo{
-width: 100px; 
-margin-left: 55px; }
-.slogo{
-    margin:10px;
+  margin: 5px;
+  height: 175px;
+  width: 200px;
 }
-.loc{
-    margin-left: 45%;
+.llogo {
+  width: 100px;
+  margin-left: 55px;
 }
-form > *{
-    width: 360px;
+.slogo {
+  margin: 10px;
 }
-.selectSector{
-    padding: 19px;
-    border-radius: 6px;
+.loc {
+  margin-left: 45%;
 }
-button{
-    color: var(--third-color);
-    background-color: var(--primary-color);
-    width: 100;
-
+form > * {
+  width: 360px;
+}
+.selectSector {
+  padding: 19px;
+  border-radius: 6px;
+}
+button {
+  color: var(--third-color);
+  background-color: var(--primary-color);
+  width: 100;
 }
 .buttonStyle {
-    width: 250px;
-    height: 50px;
-    font-size: 12px;
-    cursor: pointer;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary-color);
-    transition: 500ms;
-    color: var(--third-color);
-   
+  width: 250px;
+  height: 50px;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  transition: 500ms;
+  color: var(--third-color);
 }
-.row{
-    display: flex;
-    margin-left:20%;
+.row {
+  display: flex;
+  margin-left: 20%;
 }
-.location{
-    display: flex;
+.location {
+  display: flex;
 }
 
-.map{
-width: 200px;
-height: 200px;
+.map {
+  width: 200px;
+  height: 200px;
 }
+/* ----------------------------Responsive------------------------------------ */
 @media screen and (max-width: 600px) {
-    form > *{
-        width: 150px;
-
-    }
-    form{
-        overflow: scroll;
-        height: 500px;
-    }
-
-    agm-map {
-      margin: 20px;
-      height: 200px;
-      width: 3500px;
-    }
-    .location{
-        display: flex;
-        flex-direction: column;
-    }
-    .map {
-        width: 350px;
-        height: 230px;
-    }
-   
+  form > * {
+    width: 150px;
   }
-  @media screen and (max-width: 1000px) {
-    form > *{
-        width: 150px;
-
-    }
-    form{
-        overflow: scroll;
-        height: 500px;
-    }
-
-    agm-map {
-      margin: 20px;
-      height: 200px;
-      width: 3500px;
-    }
-    .location{
-        display: flex;
-        flex-direction: column;
-    }
-    .map {
-        width: 350px;
-        height: 230px;
-    }
-   
+  form {
+    overflow: scroll;
+    height: 500px;
   }
+
+  agm-map {
+    margin: 20px;
+    height: 200px;
+    width: 3500px;
+  }
+  .location {
+    display: flex;
+    flex-direction: column;
+  }
+  .map {
+    width: 350px;
+    height: 230px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  form > * {
+    width: 150px;
+  }
+  form {
+    overflow: scroll;
+    height: 500px;
+  }
+
+  agm-map {
+    margin: 20px;
+    height: 200px;
+    width: 3500px;
+  }
+  .location {
+    display: flex;
+    flex-direction: column;
+  }
+  .map {
+    width: 350px;
+    height: 230px;
+  }
+}

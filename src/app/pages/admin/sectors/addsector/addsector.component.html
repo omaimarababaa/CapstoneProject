@@ -5,11 +5,8 @@
             <mat-error  *ngIf="SName.invalid"> is required</mat-error>
             <mat-label> sectorName</mat-label>
             <input matInput  #SName="ngModel" required  name="companyName" [(ngModel)]='sectors.sectorName' >
-        
         </mat-form-field>
-       
         <div style="color:red ;">{{massge}}</div>
         <button class="buttonStyle" [disabled]="form.invalid" (click)="submit()" > Add New Sector</button>
-      
     </form>
 </div>

@@ -20,22 +20,5 @@ export class LogoService {
           return storageRef.getDownloadURL();
         })
       );
-      
   }
-  // updateLogo(file: File) {
-  //   const filePath = `startupsLogo/${file.name}`;
-  //   const storageRef = this.firestorage.ref(filePath);
-  //   return storageRef
-  //     .updateMetadata()
-  //     .snapshotChanges()
-  //     .pipe(
-  //       last(),
-  //       switchMap((val) => {
-  //         return storageRef.getDownloadURL();
-  //       })
-  //     );
-      
-      
-      
-  // }
 }

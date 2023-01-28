@@ -46,19 +46,12 @@
     <input type="file" id="logoo" name="logo" #lName="ngModel" required placeholder="Your URL Logo.."
       [(ngModel)]='companyInfo.logo' (change)="upload($event)">
     <br><br>
-    <!-- <label class="SelectLogo" for="logo">SelectLogo:</label> -->
-
     <div class="row">
-
-      
       <select class="selectSector" (change)="getValue($event)" [(ngModel)]='companyInfo.sector'>
         <option *ngFor="let sector of sectors" [selected]="companyInfo.sector === sector.sectorName">
           {{sector.sectorName}}
         </option>
       </select>
-
-
-
     </div>
     <br>
     <div class="row">
@@ -115,7 +108,7 @@
       <div class="col-25">
         <agm-map [latitude]="mapLocation.latitude" [longitude]="mapLocation.longitude" [zoom]="zoom">
           <agm-marker [latitude]="companyInfo.location[0]" [longitude]="companyInfo.location[1]"
-            [markerDraggable]="true" (dragEnd)="markerDragEnd(m, $event)"  #m>
+            [markerDraggable]="true" (dragEnd)="markerDragEnd($event)">
           </agm-marker>
         </agm-map>
       </div>

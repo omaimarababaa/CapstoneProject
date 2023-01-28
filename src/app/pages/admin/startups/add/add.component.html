@@ -6,7 +6,6 @@
             <mat-label>Company Name</mat-label>
             <input matInput #cName="ngModel" required name="companyName" [(ngModel)]='startups.companyName'>
         </mat-form-field>
-
         <mat-form-field appearance="outline">
             <mat-error *ngIf="cName.invalid">City is required</mat-error>
             <mat-label>City</mat-label>
@@ -51,7 +50,6 @@
                     [(ngModel)]='startups.logo' (change)="upload($event)">
                 <span style="color:red" *ngIf="lName.touched && lName.invalid">Logo is required</span>
             </div>
-
             <div class="loc">
                 <label> Location </label>
                 <mat-form-field appearance="outline">
@@ -66,7 +64,7 @@
             <div class="map">
                 <agm-map [zoom]="10" [latitude]="mapLocation.latitude" [longitude]="mapLocation.longitude">
                     <agm-marker [latitude]="markerLocation.latitude" [longitude]="markerLocation.longitude"
-                        [markerDraggable]="true" (dragEnd)="markerDragEnd(m, $event)" #m>
+                        [markerDraggable]="true" (dragEnd)="markerDragEnd($event)">
                     </agm-marker>
                 </agm-map>
             </div>

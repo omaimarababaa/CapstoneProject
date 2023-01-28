@@ -12,12 +12,6 @@ import { RequstAdminComponent } from './requst-admin/requst-admin.component';
 import { AddsectorComponent } from './sectors/addsector/addsector.component';
 import { AgmCoreModule } from '@agm/core';
 
-
-
-
-
-
-
 @NgModule({
   declarations: [AdminComponent, AddComponent, DeletestartupsComponent, EditstartupsComponent, RequstAdminComponent, AddsectorComponent],
   imports: [

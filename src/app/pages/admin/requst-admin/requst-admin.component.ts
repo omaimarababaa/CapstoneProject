@@ -1,17 +1,17 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
 import { DeletestartupsComponent } from '../startups/deletestartups/deletestartups.component';
-import { EditstartupsComponent } from '../startups/editstartups/editstartups.component';
+
 
 @Component({
   selector: 'app-requst-admin',
   templateUrl: './requst-admin.component.html',
-  styleUrls: ['./requst-admin.component.css']
+  styleUrls: ['./requst-admin.component.css'],
 })
-export class RequstAdminComponent implements AfterViewInit, OnInit {
+export class RequstAdminComponent implements OnInit {
   public Allstartups: any;
   displayedColumns: string[] = [
     'Logo',
@@ -23,43 +23,36 @@ export class RequstAdminComponent implements AfterViewInit, OnInit {
     'Websit',
     'email',
     'founder',
-    'actions'
-    
+    'actions',
   ];
   dataSource = new MatTableDataSource<startups>();
-  constructor(private data: DataService,public dialog: MatDialog) {   
-  }
-  deleteStartup(id:string){
-      console.log(id);
-      let dialogRef = this.dialog.open(DeletestartupsComponent, {
-         width: '500px',
-         data: {id: id}
-       });
-       dialogRef.afterClosed().subscribe((result)=> {
-           console.log(result); 
-       })
-   
-     }
-     
-     acceptStartup(id:string){
-            this.data.updateStartupRequest(id);
-     }
-   
+  constructor(private data: DataService, public dialog: MatDialog) {}
   
-  // @ViewChild(MatPaginator) paginator!: MatPaginator;
-
-  ngAfterViewInit() {
-   
-  //  this.dataSource.paginator = this.paginator;
-  }
   ngOnInit(): void {
-  
-    this.data.getStartupsRequest().subscribe((response) => {
-      this.Allstartups=response;
+    this.getAllStartups();
+  }
+ 
+// Get All startups add by user
+  getAllStartups() {
+    this.Allstartups = this.data.getStartupsRequest().subscribe((response) => {
+      this.Allstartups = response;
       this.dataSource = new MatTableDataSource(this.Allstartups);
-      
     });
   }
+  // Delete startups add by user
+  deleteStartup(id: string) {
+    console.log(id);
+    let dialogRef = this.dialog.open(DeletestartupsComponent, {
+      width: '500px',
+      data: { id: id },
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(result);
+    });
+  }
+
+  // Aproved startups add by user
+  acceptStartup(id: string) {
+    this.data.updateStartupRequest(id);
+  }
 }
-
-

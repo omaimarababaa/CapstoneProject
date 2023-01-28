@@ -12,8 +12,6 @@ export class DeletestartupsComponent {
   constructor(private startups: DataService,private dialogRef: MatDialogRef<DeletestartupsComponent>, @Inject(MAT_DIALOG_DATA) private data: any){}
 
 confirm(){
-  console.log(this.data); 
-  //delete student
   this.startups.deleteStartups(this.data.id).subscribe((_)=> {
     this.dialogRef.close(true);
   });

@@ -1,5 +1,5 @@
 import { query } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ActivatedRoute } from '@angular/router';
 import { startups } from 'src/app/lib/interfaces/startups';
@@ -9,26 +9,31 @@ import { startups } from 'src/app/lib/interfaces/startups';
   templateUrl: './info.component.html',
   styleUrls: ['./info.component.css'],
 })
-export class InfoComponent implements OnInit {
+export class InfoComponent implements OnInit,OnDestroy {
   latitude!: number;
   longitude!: number;
   idStartup: any;
   companyInfo: any;
   zoom!: number;
+  startup: any;
 
   constructor(
     private route: ActivatedRoute,
     private firestore: AngularFirestore
   ) {
-    this.route.params.subscribe((query) => {
+   this.startup= this.route.params.subscribe((query) => {
       return (this.idStartup = query['id']);
     });
+  }
+  ngOnDestroy(): void {
+    this.startup.unsubscribe();
+  
   }
   ngOnInit(): void {
     this.getInfoStartup();
   }
   getInfoStartup() {
-    this.firestore
+   this.companyInfo= this.firestore
       .collection<startups>('Startups')
       .doc(this.idStartup)
       .valueChanges()

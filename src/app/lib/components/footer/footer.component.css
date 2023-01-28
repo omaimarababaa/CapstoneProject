@@ -1,28 +1,20 @@
-
 .titleCopy {
   color: var(--third-color);
-}
-.active {
-  background-color:var(--four-color);
-  padding: 20px;
 }
 .toolbar2 {
   display: flex;
   justify-content: center;
-  
   background-color: var(--primary-color);
   box-shadow: 1px 0px 2px var(--shadow-color);
   height: 70px;
 }
-span{
+span {
   text-align: center;
 }
-.social > * {
-  margin: 5px;
-}
-@media  screen and (width <= 450px) {
+
+/* ----------------------------------------------------------------- */
+@media screen and (width <= 450px) {
   .toolbar2 {
     display: block;
-   
   }
 }

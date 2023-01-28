@@ -1,116 +1,104 @@
-
-.containerTable{
+.containerTable {
   margin-top: 106px;
 }
 .demo-table {
   width: 100%;
-
 }
-.table{
-  overflow:scroll;
+.table {
+  overflow: scroll;
 }
-
 .mat-mdc-row .mat-mdc-cell {
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
   cursor: pointer;
 }
-
 .mat-mdc-row:hover .mat-mdc-cell {
   border-color: currentColor;
 }
-
 .demo-row-is-clicked {
   font-weight: bold;
 }
-th{
-  
-  color: var( --primary-color);
- 
+th {
+  color: var(--primary-color);
 }
-.website{
+.website {
   text-decoration: none;
-  color: var( --primary-color);
+  color: var(--primary-color);
 }
-.display{
+.display {
   display: flex;
   flex-direction: row;
 }
-.icon{
+.icon {
   margin: 4px;
 }
 /* slidbar */
-.slidbar{
+.slidbar {
   margin-top: 110px;
   background-color: var(--primary-color);
   color: var(--third-color);
   height: 101%;
 }
-.search__input{
+.search__input {
   margin: 10px;
 }
-.fbs{
+.fbs {
   padding-top: 15px;
 }
-ul,li {
-  margin:12px 10px 4px -8px;
+ul,
+li {
+  margin: 12px 10px 4px -8px;
   list-style-type: none;
 }
-.sector > *{
+.sector > * {
   padding: 3px;
 }
 
-
 .buttonStyle {
-    width: 200px;
-    height: 40px;
-    font-size: 12px;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: #7f5a83; */
-    background-image: linear-gradient(315deg,var(--primary-color)  0%, var(--secound-color) 74%);
-    background-size: 200% 100%;
-    background-position: left;
-    background-repeat: no-repeat;
-    transition: 500ms;
-    color: var(--third-color);
-    margin: 5px;
+  width: 200px;
+  height: 40px;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    315deg,
+    var(--primary-color) 0%,
+    var(--secound-color) 74%
+  );
+  background-size: 200% 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  transition: 500ms;
+  color: var(--third-color);
+  margin: 5px;
 }
 
-.btnDelete{
-  color:var(--third-color);
+.btnDelete {
+  color: var(--third-color);
   display: flex;
 }
 
-.flex{
-  display:flex;
-
+.flex {
+  display: flex;
 }
-
- @media screen and (max-width: 915px) {
-  .display{
-    display:flex;
-   flex-direction: column;
-   overflow:scroll;
-  }
-  .containerTable{
-   margin-top: 0px;
- 
-  }
-  .slidbar{
-    margin-top: 110px;
-    /* background-color: var(--third-color);
-    color: var(--primary-color); */
-    width: 361mm;
-    
-  }
-  ul{
+/* --------------------------------------------------------------------------- */
+@media screen and (max-width: 915px) {
+  .display {
     display: flex;
-    /* overflow:scroll; */
-    
+    flex-direction: column;
+    overflow: scroll;
   }
-
+  .containerTable {
+    margin-top: 0px;
+  }
+  .slidbar {
+    margin-top: 110px;
+    width: 361mm;
+  }
+  ul {
+    display: flex;
+  }
 }

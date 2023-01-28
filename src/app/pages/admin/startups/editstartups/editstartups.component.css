@@ -1,135 +1,112 @@
-
-  .container {
-
-    margin-top:130px;
-  
-  }
-  form{
-    width: 51%;
-    height:1500px;
-  
-      /* padding: 20px; */
-      position: relative;
-      left: 20%;
-      margin: 12px;
-      border-radius: 12px;
-      box-shadow: 1px 10px 10px var(--primary-color), 1px 3px 9px var(--third-color);
-  }
-  h1{
-    color: var(--primary-color);
+.container {
+  margin-top: 130px;
+}
+form {
+  width: 51%;
+  height: 1500px;
+  position: relative;
+  left: 20%;
+  margin: 12px;
+  border-radius: 12px;
+  box-shadow: 1px 10px 10px var(--primary-color), 1px 3px 9px var(--third-color);
+}
+h1 {
+  color: var(--primary-color);
   text-align: center;
-    font-weight: bold;
-  }
-    input[type=text], select {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      color: var(--secound-color);
-      font-weight: 800;
-    }
-    
-    label {
-      padding: 12px 12px 12px 20px;
-      /* font-weight: bold; */
-      /* display: inline-block; */
-      /* margin-left: 10%; */
-      
-    }
-    .row{
-      margin-left: 10%;
-      display: flex;
-    }
-    input[type=submit] {
-      background-color: var(--secound-color);
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-     
-    } 
-    .col-25 {
-      /* float: left;
-      width: 25%; */
-      width: 40%;
-      margin-top: 6px;
-    }
-    
-    .col-75 {
-      display: flex;
-      margin-top: 6px;
-    }
-    
-  
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    .buttonStyle {
-      width: 222px;
-      height: 40px;
-      font-size: 12px;
-      cursor: pointer;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--primary-color);
-      /* transition: 500ms; */
-      color: var(--third-color);
-      margin-top: 10px;
-      /* margin-left: 20%; */
-  }
-  agm-map {
-    margin: 20px;
-    height: 300px;
-    width: 400px;
-  }
-  img {
-    width: 100px;
-    height: 100px;
-   }
-   .imagInfo{
-        width: 110px;
-     height: 110px;
-     padding: 20px;
-   }
-   .SelectLogo{
-    margin-left: 10%;
-   }
-   #logoo{
-    margin-left: 45%;
-   }
-   select{
-    width: 73%;
-   }
-   .hide{
-    display: none;
-   }
-    @media screen and (max-width: 600px) {
-      form{
-        width: 83%;
+  font-weight: bold;
+}
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: var(--secound-color);
+  font-weight: 800;
+}
+
+label {
+  padding: 12px 12px 12px 20px;
+}
+.row {
+  margin-left: 10%;
+  display: flex;
+}
+input[type="submit"] {
+  background-color: var(--secound-color);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.col-25 {
+  width: 40%;
+  margin-top: 6px;
+}
+.col-75 {
+  display: flex;
+  margin-top: 6px;
+}
+.buttonStyle {
+  width: 222px;
+  height: 40px;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  margin-top: 10px;
+}
+agm-map {
+  margin: 20px;
+  height: 300px;
+  width: 400px;
+}
+img {
+  width: 100px;
+  height: 100px;
+}
+.imagInfo {
+  width: 110px;
+  height: 110px;
+  padding: 20px;
+}
+.SelectLogo {
+  margin-left: 10%;
+}
+#logoo {
+  margin-left: 45%;
+}
+select {
+  width: 73%;
+}
+.hide {
+  display: none;
+}
+/* ----------------------------------------------------------------- */
+@media screen and (max-width: 600px) {
+  form {
+    width: 83%;
     height: 1700px;
     position: relative;
     left: 9%;
     margin: 0;
-      }
-      .row {
-       
-        display: flex;
-        flex-wrap: wrap;
-       
-      }
-      
-      agm-map {
-        margin: 20px;
-        height: 200px;
-        width: 150px;
-      }
-      #logoo{
-        margin-left:5%;
-       }
-    }
-  
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  agm-map {
+    margin: 20px;
+    height: 200px;
+    width: 150px;
+  }
+  #logoo {
+    margin-left: 5%;
+  }
+}
