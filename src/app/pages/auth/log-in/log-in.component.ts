@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 import { users } from 'src/app/lib/interfaces/users';
 import { AuthService } from 'src/app/lib/services/auth/auth.service';
@@ -11,7 +12,7 @@ import { UserFirebaseService } from 'src/app/lib/services/users/user-firebase.se
   templateUrl: './log-in.component.html',
   styleUrls: ['./log-in.component.css'],
 })
-export class LogInComponent implements OnInit {
+export class LogInComponent implements OnInit ,OnDestroy{
   massegError:string | undefined;
   userInfo: users[] = [];
   userid?: string;
@@ -20,12 +21,16 @@ export class LogInComponent implements OnInit {
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
   });
+  subscription?: Subscription;
   constructor(
     private fb: FormBuilder,
     private auth: AuthService,
     private router: Router,
     private users: UserFirebaseService
   ) {}
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+   }
   ngOnInit(): void {}
 
   get email() {

@@ -1,6 +1,7 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { users } from '../../interfaces/users';
 
 import { AuthService } from '../../services/auth/auth.service';
@@ -12,7 +13,7 @@ import { UserFirebaseService } from '../../services/users/user-firebase.service'
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit,OnDestroy {
   menuVar: boolean = false;
   scrollChangeP: boolean = true;
   titleChange: boolean = true;
@@ -22,6 +23,7 @@ export class HeaderComponent implements OnInit {
   data: users[] = [];
   userid?: string;
   lenght:any;
+  subscription?: Subscription;
   constructor(
     private auth: AuthService,
     private fireAuth: AngularFireAuth,
@@ -46,6 +48,9 @@ export class HeaderComponent implements OnInit {
       });
     });
   }
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+   }
   ngOnInit(): void {
   this.requstLenght.getStartupsRequest().subscribe(response=>{
     this.lenght= response.length;
@@ -70,7 +75,10 @@ export class HeaderComponent implements OnInit {
   logOut() {
     this.fireAuth.signOut();
      this.router.navigate(['/']);
-    window.location.reload();
+     setTimeout(function(){
+      window.location.reload();
+    },500);
+    
   }
   openMenu() {
     this.menuVar = !this.menuVar;

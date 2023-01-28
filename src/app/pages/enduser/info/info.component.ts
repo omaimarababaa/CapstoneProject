@@ -2,6 +2,7 @@ import { query } from '@angular/animations';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { startups } from 'src/app/lib/interfaces/startups';
 
 @Component({
@@ -16,6 +17,7 @@ export class InfoComponent implements OnInit,OnDestroy {
   companyInfo: any;
   zoom!: number;
   startup: any;
+  subscription?: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,9 +28,8 @@ export class InfoComponent implements OnInit,OnDestroy {
     });
   }
   ngOnDestroy(): void {
-    this.startup.unsubscribe();
-  
-  }
+    this.subscription?.unsubscribe();
+   }
   ngOnInit(): void {
     this.getInfoStartup();
   }

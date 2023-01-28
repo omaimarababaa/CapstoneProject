@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { Subscription } from 'rxjs';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
 import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
@@ -10,7 +11,7 @@ import { LogoService } from 'src/app/lib/services/storge/logo.service';
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.css'],
 })
-export class AddComponent implements OnInit {
+export class AddComponent implements OnInit,OnDestroy {
   latitudeAdd: any;
   longitudeAdd: any;
 
@@ -35,19 +36,22 @@ export class AddComponent implements OnInit {
     location: ([] = []),
   };
   startup: startups[] = [];
+  subscription?: Subscription;
   constructor(
     private startupService: DataService,
     private getsector: SectorsService,
     private dialogRef: MatDialogRef<AddComponent>,
     private logoSorege: LogoService
   ) {}
-
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+   }
   ngOnInit(): void {
     this.getAllSectors();
   }
 
   getAllSectors() {
-    this.sectors = this.getsector.getSectors().subscribe((response) => {
+     this.getsector.getSectors().subscribe((response) => {
       this.sectors = response;
     });
   }

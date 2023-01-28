@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
 import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
@@ -9,7 +10,7 @@ import { LogoService } from 'src/app/lib/services/storge/logo.service';
   templateUrl: './addstartup.component.html',
   styleUrls: ['./addstartup.component.css'],
 })
-export class AddstartupComponent {
+export class AddstartupComponent implements OnInit, OnDestroy{
   latitudeAdd: any;
   longitudeAdd: any;
 
@@ -33,12 +34,16 @@ export class AddstartupComponent {
     location: ([] = []),
   };
   startup: startups[] = [];
+  subscription?: Subscription;
 
   constructor(
     private startupService: DataService,
     private logoStorege: LogoService,
     private getsector: SectorsService
   ) {}
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+   }
   public ngOnInit(): void {
     this.getAllSector();
   }

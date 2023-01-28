@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, switchMap } from 'rxjs';
+import { Subscription} from 'rxjs';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
 import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
@@ -31,6 +31,7 @@ export class EditstartupsComponent implements OnInit,OnDestroy {
   markerLocation: number[] = [];
   zoom!: number;
   startup: any;
+  subscription?: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -45,8 +46,8 @@ export class EditstartupsComponent implements OnInit,OnDestroy {
     });
   }
   ngOnDestroy(): void {
-    this.startup.unsubscribe();
-  }
+    this.subscription?.unsubscribe();
+   }
   ngOnInit(): void {
     this.getStartupById();
     this.getAllSectors();
@@ -62,7 +63,7 @@ export class EditstartupsComponent implements OnInit,OnDestroy {
       });
   }
   getAllSectors() {
-    this.sectors = this.getsector.getSectors().subscribe((response) => {
+      this.getsector.getSectors().subscribe((response) => {
       this.sectors = response;
     });
   }

@@ -1,6 +1,7 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnDestroy, OnInit} from '@angular/core';
 
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/lib/services/data/data.service';
 import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
 
@@ -9,7 +10,7 @@ import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit,OnDestroy {
   
   text: string = 'Click For More Details';
   // location jordan
@@ -21,12 +22,15 @@ export class HomeComponent implements OnInit {
   longitude!: number;
   sectors: any;
   companyLogo: any;
-
+  subscription?:Subscription;
   public constructor(
     private startup: DataService,
     private sector: SectorsService,
     private router: Router
   ) {}
+  ngOnDestroy(): void {
+   this.subscription?.unsubscribe();
+  }
  
 
    ngOnInit(): void {

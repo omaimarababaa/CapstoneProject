@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
 import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
@@ -15,7 +16,7 @@ import { DeletestartupsComponent } from '../startups/deletestartups/deletestartu
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css'],
 })
-export class AdminComponent implements OnInit
+export class AdminComponent implements OnInit,OnDestroy
  {
   Allstartups: any;
   displayedColumns: string[] = [
@@ -32,6 +33,7 @@ export class AdminComponent implements OnInit
   ];
   dataSource = new MatTableDataSource<startups>();
   sectors: any;
+  subscription?:Subscription;
 
   constructor(
     private data: DataService,
@@ -40,20 +42,22 @@ export class AdminComponent implements OnInit
     private router: Router
   ) {}
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+   }
   ngOnInit(): void {
     this.getAllStartups();
     this.getAllSector();
   }
   getAllStartups() {
-   this.Allstartups= this.data.getStartups().subscribe((response) => {
+    this.data.getStartups().subscribe((response) => {
       this.Allstartups = response;
       this.dataSource = new MatTableDataSource(this.Allstartups);
       this.dataSource.paginator = this.paginator;
     });
   }
   getAllSector() {
- this.sectors= this.sector.getSectors().subscribe((response) => {
+this.sector.getSectors().subscribe((response) => {
       this.sectors = response;
     });
   }

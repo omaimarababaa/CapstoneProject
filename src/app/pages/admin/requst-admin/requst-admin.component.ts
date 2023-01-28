@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
+import { Subscription } from 'rxjs';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
 import { DeletestartupsComponent } from '../startups/deletestartups/deletestartups.component';
@@ -11,7 +12,7 @@ import { DeletestartupsComponent } from '../startups/deletestartups/deletestartu
   templateUrl: './requst-admin.component.html',
   styleUrls: ['./requst-admin.component.css'],
 })
-export class RequstAdminComponent implements OnInit {
+export class RequstAdminComponent implements OnInit,OnDestroy {
   public Allstartups: any;
   displayedColumns: string[] = [
     'Logo',
@@ -26,15 +27,18 @@ export class RequstAdminComponent implements OnInit {
     'actions',
   ];
   dataSource = new MatTableDataSource<startups>();
+  subscription?: Subscription;
   constructor(private data: DataService, public dialog: MatDialog) {}
-  
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+   }
   ngOnInit(): void {
     this.getAllStartups();
   }
  
 // Get All startups add by user
   getAllStartups() {
-    this.Allstartups = this.data.getStartupsRequest().subscribe((response) => {
+    this.data.getStartupsRequest().subscribe((response) => {
       this.Allstartups = response;
       this.dataSource = new MatTableDataSource(this.Allstartups);
     });
