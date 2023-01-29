@@ -90,8 +90,7 @@ this.sector.getSectors().subscribe((response) => {
   }
   // deleate Sector
   getIdSec(id:any){
-    console.log(id);
-this.idSector=id;
+     this.idSector=id;
   }
   openDialogD() {
     console.log(this.idSector)
