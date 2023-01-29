@@ -34,7 +34,7 @@ export class InfoComponent implements OnInit,OnDestroy {
     this.getInfoStartup();
   }
   getInfoStartup() {
-   this.companyInfo= this.firestore
+   this.firestore
       .collection<startups>('Startups')
       .doc(this.idStartup)
       .valueChanges()

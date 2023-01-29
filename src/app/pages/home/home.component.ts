@@ -38,12 +38,12 @@ export class HomeComponent implements OnInit,OnDestroy {
     this.getAllSector();
   }
   getAllStartups() {
-    this.companyLogo = this.startup.getStartups().subscribe((response) => {
+    this.startup.getStartups().subscribe((response) => {
       this.companyLogo = response;
     });
   }
   getAllSector() {
-   this.sectors= this.sector.getSectors().subscribe((response) => {
+    this.sector.getSectors().subscribe((response) => {
       this.sectors = response;
     });
   }

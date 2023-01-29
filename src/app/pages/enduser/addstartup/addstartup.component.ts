@@ -49,7 +49,7 @@ export class AddstartupComponent implements OnInit, OnDestroy{
   }
 
   getAllSector() {
-    this.sectors = this.getsector.getSectors().subscribe((response) => {
+    this.getsector.getSectors().subscribe((response) => {
       this.sectors = response;
     });
   }
