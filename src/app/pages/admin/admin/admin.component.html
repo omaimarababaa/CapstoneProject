@@ -9,13 +9,14 @@
                             <label for="Ecommerce">All Sector</label>
                         </li>
                         <li *ngFor="let sector of sectors">
-                            <input type="radio" name="sector" value="{{sector.sectorName}}">
+                            <input type="radio" name="sector"(change)="getIdSec(sector.uid)"  value="{{sector.sectorName}}">
                             <label for="Ecommerce"> {{sector.sectorName}}</label>
                         </li>
                     </ul>
                 </li>
                 <li><button class="noselect buttonStyle" (click)="openDialog()">ADD Startup</button></li>
-                <li><button class="noselect buttonStyle" id="btn1" (click)="openDialogS()">ADD Sector</button></li>
+                <li><button class="noselect buttonStyle" id="btn1" (click)="openDialogS()">ADD Sector</button>
+                    <button class="noselect buttonStyle" id="btn1" (click)="openDialogD()" >Delete Sector</button></li>
             </ul>
         </div>
     </div>

@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
 import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
+import { DeletesectoreComponent } from '../sectores/deletesectore/deletesectore.component';
 import { AddsectorComponent } from '../sectors/addsector/addsector.component';
 import { AddComponent } from '../startups/add/add.component';
 import { DeletestartupsComponent } from '../startups/deletestartups/deletestartups.component';
@@ -34,6 +35,7 @@ export class AdminComponent implements OnInit,OnDestroy
   dataSource = new MatTableDataSource<startups>();
   sectors: any;
   subscription?:Subscription;
+  idSector: any;
 
   constructor(
     private data: DataService,
@@ -77,7 +79,7 @@ this.sector.getSectors().subscribe((response) => {
   }
   // Delete Startup
   deleteStartup(id: string) {
-    console.log(id);
+ 
     let dialogRef = this.dialog.open(DeletestartupsComponent, {
       width: '500px',
       data: { id: id },
@@ -86,20 +88,33 @@ this.sector.getSectors().subscribe((response) => {
       console.log(result);
     });
   }
+  // deleate Sector
+  getIdSec(id:any){
+    console.log(id);
+this.idSector=id;
+  }
+  openDialogD() {
+    console.log(this.idSector)
+    let dialogRef = this.dialog.open(DeletesectoreComponent, {
+      width: '500px',
+      data: { id: this.idSector },
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(result);
+    });
+  }
   // update startup
   editStartup(id: string) {
-    console.log(id);
     this.router.navigate(['/edit/' + id]);
   }
   // Filter by sector
   getValue(key: any) {
     let fsector = key.target.value;
-    console.log(fsector);
+    
     if (fsector == 'AllSector') {
       this.Allstartups = this.data.getStartups().subscribe((response) => {
         this.Allstartups = response;
         this.dataSource = new MatTableDataSource(this.Allstartups);
-        console.log(this.Allstartups);
         this.dataSource.paginator = this.paginator;
       });
     } else {
@@ -108,9 +123,9 @@ this.sector.getSectors().subscribe((response) => {
         .subscribe((response) => {
           this.Allstartups = response;
           this.dataSource = new MatTableDataSource(this.Allstartups);
-          console.log(this.Allstartups);
           this.dataSource.paginator = this.paginator;
         });
     }
   }
+
 }

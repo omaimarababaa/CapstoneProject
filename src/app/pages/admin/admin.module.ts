@@ -11,9 +11,10 @@ import { EditstartupsComponent } from './startups/editstartups/editstartups.comp
 import { RequstAdminComponent } from './requst-admin/requst-admin.component';
 import { AddsectorComponent } from './sectors/addsector/addsector.component';
 import { AgmCoreModule } from '@agm/core';
+import { DeletesectoreComponent } from './sectores/deletesectore/deletesectore.component';
 
 @NgModule({
-  declarations: [AdminComponent, AddComponent, DeletestartupsComponent, EditstartupsComponent, RequstAdminComponent, AddsectorComponent],
+  declarations: [AdminComponent, AddComponent, DeletestartupsComponent, EditstartupsComponent, RequstAdminComponent, AddsectorComponent, DeletesectoreComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

@@ -1,0 +1,8 @@
+h1{
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: bold;
+}
+.container{
+    padding: 5px;
+}

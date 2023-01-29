@@ -54,7 +54,6 @@ export class HeaderComponent implements OnInit,OnDestroy {
   ngOnInit(): void {
   this.requstLenght.getStartupsRequest().subscribe(response=>{
     this.lenght= response.length;
-    console.log(this.lenght);
   });
 
   }

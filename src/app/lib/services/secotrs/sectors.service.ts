@@ -14,11 +14,14 @@ export class SectorsService {
  
 }
 getSectors() {
-  return this.sectorsCollection.valueChanges();
+  return this.sectorsCollection.valueChanges({ idField: 'uid' });
 }
 addSsctor(sector: sectors){
   let addedTodo = this.sectorsCollection.add(sector);
   return from(addedTodo);
 
+}
+deleteSector(id: string) {
+  return from(this.sectorsCollection.doc(id).delete());
 }
 }
