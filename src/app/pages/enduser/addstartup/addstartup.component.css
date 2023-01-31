@@ -6,10 +6,10 @@ form {
   height: 1500px;
   position: relative;
   left: 20%;
-  margin: 12px;
+  margin: 12px 12px 12px 60px;
   border-radius: 12px;
   box-shadow: 1px 10px 10px var(--primary-color), 1px 3px 9px var(--third-color);
-  margin-left: 60px;
+
 }
 agm-map {
   margin: 20px;
