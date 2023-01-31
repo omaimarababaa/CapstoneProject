@@ -103,7 +103,7 @@ input[type="submit"] {
     width: 50%;
   }
 }
-@media screen and (width <500px) {
+@media screen and (width <=500px) {
   agm-map {
     margin: 20px;
     height: 300px;
@@ -111,3 +111,11 @@ input[type="submit"] {
   }
 
   }
+  @media screen and (width <= 600px) {
+    agm-map {
+      margin: 20px;
+      height: 300px;
+      width: 80%;
+    }
+  
+    }

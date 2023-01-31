@@ -171,6 +171,21 @@ agm-map {
     flex-wrap: wrap;
   }
 }
+@media screen and (width <= 650px) {
+  .cardsCompany {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  .imageText-par {
+    display: none;
+  }
+  .titleselect {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (width <= 450px) {
   .cardsCompany {
     display: grid;

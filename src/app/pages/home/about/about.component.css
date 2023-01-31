@@ -38,3 +38,13 @@ h1 {
     left: 10%;
   }
 }
+@media screen and (width <= 650px) {
+  .display-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .conteiner {
+    position: relative;
+    left: 10%;
+  }
+}
