@@ -11,7 +11,7 @@ import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit,OnDestroy {
-  
+  public show:boolean=false;
   text: string = 'Click For More Details';
   // location jordan
   mapLocation = {
@@ -62,5 +62,8 @@ export class HomeComponent implements OnInit,OnDestroy {
   }
   getInfo(id: any) {
     this.router.navigate(['/info/' + id]);
+  }
+  openSocial(){
+     this.show=!this.show;
   }
 }

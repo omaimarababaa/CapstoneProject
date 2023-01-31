@@ -96,6 +96,7 @@ img {
 .socialM {
   background-color: var(--primary-color);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 span {
@@ -136,6 +137,23 @@ agm-map {
 }
 .infomap > * {
   padding: 10px;
+}
+.stylebtn{
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  margin: 1em;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  
+}
+.hide{
+  display: none;
+  text-align: center;
+}
+.show{
+  display: inline;
+  text-align: center;
 }
 /* ---------------------------------------------------------------------------- */
 

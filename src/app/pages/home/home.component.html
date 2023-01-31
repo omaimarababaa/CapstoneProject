@@ -1,7 +1,8 @@
 <!-- platform purpose -->
 <div class="container">
   <p class="imageText-title">Discover the Best Startups technology<br> in Jordan</p>
-  <p class="imageText-par">Jordan TechStartups objective to accelerate the growth of startup <br>Information and Communications Technology  in Jordan.</p>
+  <p class="imageText-par">Jordan TechStartups objective to accelerate the growth of startup <br>Information and
+    Communications Technology in Jordan.</p>
 </div>
 <!-- display sector by filter -->
 <div class="titleStartup">
@@ -43,12 +44,13 @@
     </agm-marker>
   </agm-map>
 </div>
-
 <!-- Share Social Media -->
 <div class="socialM">
-  <span>Share the website to social media</span>
-  <share-buttons theme="modern-dark" [include]="[ 'facebook','linkedin', 'whatsapp']" [showIcon]="true"
-    [showText]="true" url="https://startupstech-8a142.web.app/" description="Angular Share Buttons"
+  <button class="stylebtn" (click)="openSocial()">Share</button>
+  <div class="hide" [class.show]="show">
+  <share-buttons theme="circles-dark" [include]="[ 'facebook','linkedin', 'whatsapp']" [showIcon]="true"
+    [showText]="false" url="https://startupstech-8a142.web.app/" description="Angular Share Buttons"
     twitterAccount="rodrigokamada" class="pt-5">
   </share-buttons>
+</div>
 </div>
