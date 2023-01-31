@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
 import { startups } from 'src/app/lib/interfaces/startups';
 import { DataService } from 'src/app/lib/services/data/data.service';
 import { SectorsService } from 'src/app/lib/services/secotrs/sectors.service';
-import { DeletesectoreComponent } from '../sectores/deletesectore/deletesectore.component';
+import { DeletesectoreComponent } from '../sectors/deletesectore/deletesectore.component';
 import { AddsectorComponent } from '../sectors/addsector/addsector.component';
 import { AddComponent } from '../startups/add/add.component';
 import { DeletestartupsComponent } from '../startups/deletestartups/deletestartups.component';
