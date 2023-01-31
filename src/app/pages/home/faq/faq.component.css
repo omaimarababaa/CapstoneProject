@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.contanier {
+  margin-top: 160px;
+}
+h2{
+    color: var(--primary-color);
+    margin: 2em;
+    font-weight: bold;
+}
+div.c {
+  position: relative;
+  margin: 2em;
+}
+input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: 0;
+}
+h1 {
+  background: var(--primary-color);
+  color: var(--third-color);
+  padding: 1em;
+  position: relative;
+}
+label::before {
+  content: "";
+  display: inline-block;
+  border: 15px solid transparent;
+  border-left: 20px solid var(--third-color);
+}
+label {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+div.p {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  background-color: var(--third-color);
+  box-shadow: 0 0 10px 0 var(--shadow-color);
+}
+div.p p {
+  padding: 2em;
+}
+input:checked ~ h1 label::before {
+  border-left: 15px solid transparent;
+  border-top: 20px solid var(--third-color);
+  margin-top: 12px;
+  margin-right: 10px;
+}
+input:checked ~ h1 ~ div.p {
+  max-height: 100px;
+}
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  
+}

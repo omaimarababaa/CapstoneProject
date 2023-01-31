@@ -18,6 +18,7 @@
             <mat-icon *ngIf="lenght!=0 && isAdmin" matBadge="{{lenght}}" matBadgeColor="warn" class="lenghtR">
             </mat-icon>
             <a routerLinkActive="active" routerLink="/about" *ngIf="!isAdmin">About</a>
+            <a routerLinkActive="active" routerLink="/faq" *ngIf="!isAdmin">FAQ</a>
 
             <a *ngIf="isLoggedn" class="btnLink">
                 <button mat-raised-button (click)="logOut()">Log out</button>

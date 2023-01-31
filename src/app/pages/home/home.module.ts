@@ -9,11 +9,13 @@ import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { AgmCoreModule } from '@agm/core';
 import { PnfComponent } from './pnf/pnf.component';
+import { FaqComponent } from './faq/faq.component';
 @NgModule({
   declarations: [
     AboutComponent,
     HomeComponent,
     PnfComponent,
+    FaqComponent,
      
   ],
   imports: [
