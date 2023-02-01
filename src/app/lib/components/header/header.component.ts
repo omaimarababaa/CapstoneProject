@@ -14,6 +14,7 @@ import { UserFirebaseService } from '../../services/users/user-firebase.service'
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit,OnDestroy {
+  
   menuVar: boolean = false;
   scrollChangeP: boolean = true;
   titleChange: boolean = true;
@@ -24,6 +25,7 @@ export class HeaderComponent implements OnInit,OnDestroy {
   userid?: string;
   lenght:any;
   subscription?: Subscription;
+
   constructor(
     private auth: AuthService,
     private fireAuth: AngularFireAuth,

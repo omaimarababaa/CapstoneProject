@@ -9,7 +9,7 @@
                             <label for="Ecommerce">All Sector</label>
                         </li>
                         <li *ngFor="let sector of sectors">
-                            <input type="radio" name="sector"(change)="getIdSec(sector.uid)"  value="{{sector.sectorName}}">
+                            <input type="radio" name="sector"(change)="getIdSec(sector.uid,sector.sectorName)"  value="{{sector.sectorName}}">
                             <label for="Ecommerce"> {{sector.sectorName}}</label>
                         </li>
                     </ul>

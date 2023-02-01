@@ -17,8 +17,7 @@ import { DeletestartupsComponent } from '../startups/deletestartups/deletestartu
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css'],
 })
-export class AdminComponent implements OnInit,OnDestroy
- {
+export class AdminComponent implements OnInit, OnDestroy {
   Allstartups: any;
   displayedColumns: string[] = [
     'Logo',
@@ -34,8 +33,10 @@ export class AdminComponent implements OnInit,OnDestroy
   ];
   dataSource = new MatTableDataSource<startups>();
   sectors: any;
-  subscription?:Subscription;
+  subscription?: Subscription;
   idSector: any;
+  nameSec: any;
+  lenghtSec?: number;
 
   constructor(
     private data: DataService,
@@ -46,7 +47,7 @@ export class AdminComponent implements OnInit,OnDestroy
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   ngOnDestroy(): void {
     this.subscription?.unsubscribe();
-   }
+  }
   ngOnInit(): void {
     this.getAllStartups();
     this.getAllSector();
@@ -59,7 +60,7 @@ export class AdminComponent implements OnInit,OnDestroy
     });
   }
   getAllSector() {
-this.sector.getSectors().subscribe((response) => {
+    this.sector.getSectors().subscribe((response) => {
       this.sectors = response;
     });
   }
@@ -79,7 +80,6 @@ this.sector.getSectors().subscribe((response) => {
   }
   // Delete Startup
   deleteStartup(id: string) {
- 
     let dialogRef = this.dialog.open(DeletestartupsComponent, {
       width: '500px',
       data: { id: id },
@@ -89,19 +89,32 @@ this.sector.getSectors().subscribe((response) => {
     });
   }
   // deleate Sector
-  getIdSec(id:any){
-     this.idSector=id;
+  getIdSec(id: any, name: any) {
+    this.idSector = id;
+    this.nameSec = name;
   }
   openDialogD() {
-    console.log(this.idSector)
-    let dialogRef = this.dialog.open(DeletesectoreComponent, {
-      width: '500px',
-      data: { id: this.idSector },
-    });
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log(result);
+    console.log(this.idSector, this.nameSec);
+    this.data.getStartupsFilter(this.nameSec).subscribe((response) => {
+      this.lenghtSec = response.length;
+      if (this.lenghtSec !== 0) {
+        alert(
+          'You can not delete this sector, it contains ' +
+            this.lenghtSec +
+            ' startups.'
+        );
+      } else {
+        let dialogRef = this.dialog.open(DeletesectoreComponent, {
+          width: '500px',
+          data: { id: this.idSector},
+        });
+        dialogRef.afterClosed().subscribe((result) => {
+          console.log(result);
+        });
+      }
     });
   }
+
   // update startup
   editStartup(id: string) {
     this.router.navigate(['/edit/' + id]);
@@ -109,7 +122,7 @@ this.sector.getSectors().subscribe((response) => {
   // Filter by sector
   getValue(key: any) {
     let fsector = key.target.value;
-    
+
     if (fsector == 'AllSector') {
       this.Allstartups = this.data.getStartups().subscribe((response) => {
         this.Allstartups = response;
@@ -126,5 +139,4 @@ this.sector.getSectors().subscribe((response) => {
         });
     }
   }
-
 }

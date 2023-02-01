@@ -30,6 +30,7 @@ export class DataService {
       )
       .valueChanges({ idField: 'uid' });
   }
+  
   // get all startup filter by sectors
   getStartupsFilter(sectorF: string): Observable<startups[]> {
     return this.firestore
