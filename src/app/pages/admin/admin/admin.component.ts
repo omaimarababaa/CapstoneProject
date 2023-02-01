@@ -36,21 +36,25 @@ export class AdminComponent implements OnInit, OnDestroy {
   subscription?: Subscription;
   idSector: any;
   nameSec: any;
- lenghtSec?: number;
+  lenghtSec: number=0;
 
   constructor(
     private data: DataService,
     public dialog: MatDialog,
     private sector: SectorsService,
     private router: Router
-  ) {}
+  ) {
+    
+  }
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   ngOnDestroy(): void {
     this.subscription?.unsubscribe();
   }
   ngOnInit(): void {
+   
     this.getAllStartups();
     this.getAllSector();
+   
   }
   getAllStartups() {
     this.data.getStartups().subscribe((response) => {
@@ -63,6 +67,7 @@ export class AdminComponent implements OnInit, OnDestroy {
     this.sector.getSectors().subscribe((response) => {
       this.sectors = response;
     });
+  
   }
   // Add new startups
   openDialog() {
@@ -92,21 +97,23 @@ export class AdminComponent implements OnInit, OnDestroy {
   getIdSec(id: any, name: any) {
     this.idSector = id;
     this.nameSec = name;
-  }
-  openDialogD() {
     this.data.getStartupsFilter(this.nameSec).subscribe((response) => {
       this.lenghtSec = response.length;
-
-      if (this.lenghtSec !== 0) {
-        alert(
-          'You can not delete this sector, it contains ' +
-            this.lenghtSec +
-            ' startups.'
-        );
-      } else {
-        this.deleateSec();
-      }
+      console.log(this.lenghtSec);
     });
+  }
+  openDialogD() {
+   
+    console.log(this.lenghtSec);
+    if (this.lenghtSec !== 0) {
+      alert(
+        'You can not delete this sector, it contains ' +
+          this.lenghtSec +
+          ' startups.'
+      );
+    } else {
+      this.deleateSec();
+    }
   }
   // Delete Sector
   deleateSec() {
@@ -123,6 +130,10 @@ export class AdminComponent implements OnInit, OnDestroy {
   editStartup(id: string) {
     this.router.navigate(['/edit/' + id]);
   }
+  // 
+  
+
+
   // Filter by sector
   getValue(key: any) {
     let fsector = key.target.value;
