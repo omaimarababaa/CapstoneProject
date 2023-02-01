@@ -36,7 +36,7 @@ export class AdminComponent implements OnInit, OnDestroy {
   subscription?: Subscription;
   idSector: any;
   nameSec: any;
-  lenghtSec?: number;
+ lenghtSec?: number;
 
   constructor(
     private data: DataService,
@@ -94,9 +94,9 @@ export class AdminComponent implements OnInit, OnDestroy {
     this.nameSec = name;
   }
   openDialogD() {
-    console.log(this.idSector, this.nameSec);
     this.data.getStartupsFilter(this.nameSec).subscribe((response) => {
       this.lenghtSec = response.length;
+
       if (this.lenghtSec !== 0) {
         alert(
           'You can not delete this sector, it contains ' +
@@ -104,14 +104,18 @@ export class AdminComponent implements OnInit, OnDestroy {
             ' startups.'
         );
       } else {
-        let dialogRef = this.dialog.open(DeletesectoreComponent, {
-          width: '500px',
-          data: { id: this.idSector},
-        });
-        dialogRef.afterClosed().subscribe((result) => {
-          console.log(result);
-        });
+        this.deleateSec();
       }
+    });
+  }
+  // Delete Sector
+  deleateSec() {
+    let dialogRef = this.dialog.open(DeletesectoreComponent, {
+      width: '500px',
+      data: { id: this.idSector },
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(result);
     });
   }
 
