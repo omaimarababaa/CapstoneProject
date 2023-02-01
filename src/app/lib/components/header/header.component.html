@@ -10,20 +10,20 @@
             <img src="./../../../../assets/icons/menu.png" alt="menu" width="35px" height="35px">
         </div>
         <div class="links" [class.menuVar]="menuVar">
-            <a routerLink="/">Home</a>
-            <a routerLinkActive="active" routerLink="addstartup" *ngIf="!isAdmin">AddStartup</a>
-            <a routerLinkActive="active" routerLink="admin" *ngIf="isAdmin">Admin</a>
-            <a routerLinkActive="active" routerLink="request" *ngIf="isAdmin">
+            <a routerLink="/" (click)="closeMenu()">Home</a>
+            <a routerLinkActive="active" routerLink="addstartup" (click)="closeMenu()" *ngIf="!isAdmin">AddStartup</a>
+            <a routerLinkActive="active" routerLink="admin" (click)="closeMenu()" *ngIf="isAdmin">Admin</a>
+            <a routerLinkActive="active" routerLink="request" (click)="closeMenu()" *ngIf="isAdmin">
                 Request</a>
             <mat-icon *ngIf="lenght!=0 && isAdmin" matBadge="{{lenght}}" matBadgeColor="warn" class="lenghtR">
             </mat-icon>
-            <a routerLinkActive="active" routerLink="/about" *ngIf="!isAdmin">About</a>
-            <a routerLinkActive="active" routerLink="/faq" *ngIf="!isAdmin">FAQ</a>
+            <a routerLinkActive="active" routerLink="/about" (click)="closeMenu()" *ngIf="!isAdmin">About</a>
+            <a routerLinkActive="active" routerLink="/faq" (click)="closeMenu()" *ngIf="!isAdmin">FAQ</a>
 
             <a *ngIf="isLoggedn" class="btnLink">
-                <button mat-raised-button (click)="logOut()">Log out</button>
+                <button mat-raised-button (click)="closeMenu()" (click)="logOut()">Log out</button>
             </a>
-            <a *ngIf="!isLoggedn" class="btnLink" routerLink="/login">
+            <a *ngIf="!isLoggedn" class="btnLink" (click)="closeMenu()" routerLink="/login">
                 <button mat-raised-button>Log in</button>
             </a>
         </div>

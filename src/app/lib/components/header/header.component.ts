@@ -84,4 +84,7 @@ export class HeaderComponent implements OnInit,OnDestroy {
   openMenu() {
     this.menuVar = !this.menuVar;
   }
+  closeMenu(){
+    this.menuVar = !this.menuVar;
+  }
 }
